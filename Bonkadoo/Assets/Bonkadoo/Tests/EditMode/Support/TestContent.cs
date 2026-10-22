@@ -44,6 +44,12 @@ namespace Bonkadoo.Tests.Support
                 WorldJson = File.ReadAllText(ContentPath("world/world.json")),
                 PuzzlesJson = File.ReadAllText(ContentPath("puzzles/puzzles.json")),
                 EventsJson = File.ReadAllText(ContentPath("events/catalog.json")),
+                AmbientJson = File.ReadAllText(ContentPath("scenes/ambient.json")),
+                ScenesJson = File.ReadAllText(ContentPath("scenes/scenes.json")),
+                ItemsJson = File.ReadAllText(ContentPath("items/items.json")),
+                DialogueLinesJson = File.ReadAllText(ContentPath("dialogue/lines.json")),
+                YarnSources = Directory.GetFiles(ContentPath("dialogue"), "*.yarn").OrderBy(f => f, StringComparer.Ordinal)
+                    .ToDictionary(f => Path.GetFileNameWithoutExtension(f), File.ReadAllText),
                 ChapterJsons = chapters,
                 LocalizationJsons = new Dictionary<string, string>
                 {

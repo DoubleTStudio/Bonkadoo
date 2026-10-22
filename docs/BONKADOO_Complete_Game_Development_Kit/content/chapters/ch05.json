@@ -2,12 +2,12 @@
   "id": "ch05",
   "title": "Who Is Wrong?",
   "locations": [
-    "LOGIC lobby",
-    "core",
-    "broadcast roof"
+    "scene.ch05.lobby",
+    "scene.ch05.core",
+    "scene.ch05.roof"
   ],
-  "objective": "Confront LOGIC and choose the city’s future.",
-  "reveal": "Tí learns consistency is not the same as truth.",
+  "objective": "Confront LOGIC and choose the city's future.",
+  "reveal": "Tí learns that consistency is not the same as truth.",
   "puzzles": [
     "ch05.p01",
     "ch05.p02",
@@ -24,5 +24,9 @@
     "Tí/Bốp quiet beat",
     "clue to next chapter"
   ],
-  "chapterCompleteFlag": "flag.ch05.complete"
+  "chapterCompleteFlag": "flag.ch05.complete",
+  "startScene": "scene.ch05.lobby",
+  "titleKey": "txt.chapter.ch05.title",
+  "objectiveKey": "txt.chapter.ch05.objective",
+  "revealKey": "txt.chapter.ch05.reveal"
 }

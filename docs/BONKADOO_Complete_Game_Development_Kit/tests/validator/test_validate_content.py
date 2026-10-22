@@ -139,6 +139,42 @@ class ValidatorRejectsInvalidContent(unittest.TestCase):
         self.f.edit('content/puzzles/puzzles.json', lambda p: p.append('not a puzzle'))
         self.assertRejected('must be an object')
 
+    def test_locked_exit_never_unlocked(self):
+        def lock(scenes):
+            for sc in scenes:
+                for h in sc['hotspots']:
+                    if h['kind'] == 'Exit': h['startUnlocked'] = False; h['id'] = h['id'] + '_x'
+        self.f.edit('content/scenes/scenes.json', lock)
+        self.assertRejected('never unlocked (softlock)')
+
+    def test_conversation_node_missing(self):
+        self.f.edit('content/scenes/ambient.json',
+                    lambda a: a[0]['effects'].append({'startConversation': {'node': 'ghost_node'}}))
+        self.assertRejected('startConversation ghost_node')
+
+    def test_unknown_speaker(self):
+        self.f.edit('content/scenes/ambient.json',
+                    lambda a: a[0]['effects'].append({'queueDialogue': {'key': 'dlg.common.fail', 'speaker': 'nobody'}}))
+        self.assertRejected('speaker nobody')
+
+    def test_item_not_defined(self):
+        self.f.edit('content/puzzles/puzzles.json', lambda p: first_rule(p)['effects'].append({'addItem': {'itemId': 'item.ghost'}}))
+        self.assertRejected('addItem item.ghost')
+
+    def test_puzzle_hotspot_outside_scene(self):
+        self.f.edit('content/puzzles/puzzles.json', lambda p: p[0]['hotspots'].append('prop.ch05.door_patch'))
+        self.assertRejected('not in scene')
+
+    def test_yarn_act_without_rule(self):
+        path = self.f.dir / 'content/dialogue/ch01.yarn'
+        path.write_text(path.read_text(encoding='utf-8').replace('<<act choice.ch01.ask_truth>>', '<<act choice.ghost>>'), encoding='utf-8')
+        self.assertRejected('Yarn act choice.ghost')
+
+    def test_yarn_unregistered_function(self):
+        path = self.f.dir / 'content/dialogue/ch01.yarn'
+        path.write_text(path.read_text(encoding='utf-8').replace('metric("trust_bop") >= 2', 'secret("x") >= 2'), encoding='utf-8')
+        self.assertRejected('secret() not registered')
+
     def test_scene_outside_chapter(self):
         self.f.edit('content/puzzles/puzzles.json', lambda p: p[0].__setitem__('scene', 'scene.ch02.01'))
         self.assertRejected('outside chapter')

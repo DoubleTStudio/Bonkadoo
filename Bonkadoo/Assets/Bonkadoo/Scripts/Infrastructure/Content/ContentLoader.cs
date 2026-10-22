@@ -18,6 +18,11 @@ namespace Bonkadoo.Infrastructure.Content
         public string WorldJson;
         public string PuzzlesJson;
         public string EventsJson;
+        public string AmbientJson;
+        public string ScenesJson;
+        public string ItemsJson;
+        public string DialogueLinesJson;
+        public IReadOnlyDictionary<string, string> YarnSources = new Dictionary<string, string>();
         public IReadOnlyList<string> ChapterJsons = Array.Empty<string>();
         public IReadOnlyDictionary<string, string> LocalizationJsons = new Dictionary<string, string>();
     }
@@ -28,6 +33,10 @@ namespace Bonkadoo.Infrastructure.Content
         public string Title;
         public IReadOnlyList<string> PuzzleIds;
         public string CompleteFlag;
+        public string StartScene;
+        public string TitleKey;
+        public string ObjectiveKey;
+        public string RevealKey;
     }
 
     public sealed class GameContent
@@ -37,6 +46,18 @@ namespace Bonkadoo.Infrastructure.Content
         public IReadOnlyList<ChapterDefinition> Chapters;
         public ISet<string> EventTypes;
         public IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> Localization;
+        public SceneCatalog Scenes;
+        /// <summary>Yarn localization key -> speaker id.</summary>
+        public IReadOnlyDictionary<string, string> DialogueSpeakers;
+        public IReadOnlyDictionary<string, string> YarnSources;
+
+        public ChapterDefinition ChapterOfScene(string sceneId)
+        {
+            var scene = Scenes?.Scene(sceneId);
+            if (scene == null) return null;
+            foreach (var c in Chapters) if (c.Id == scene.ChapterId) return c;
+            return null;
+        }
     }
 
     /// <summary>
@@ -67,13 +88,20 @@ namespace Bonkadoo.Infrastructure.Content
                 var pid = Str(p, "id", "puzzle");
                 var path = "puzzle " + pid;
                 var prereqs = StrArray(p, "prerequisites", path, optional: true);
-                var failure = (p["failureResponses"] as JArray)?.OfType<JObject>()
-                    .Select(f => (string)f["dialogueKey"]).FirstOrDefault(k => k != null);
+                var failure = (p["failureResponses"] as JArray)?.OfType<JObject>().FirstOrDefault(f => f["dialogueKey"] != null);
                 puzzles.Add(new PuzzleDefinition(pid, Str(p, "scene", path), StrArray(p, "hotspots", path), prereqs,
-                    failure, StrArray(p, "hints", path)));
+                    (string)failure?["dialogueKey"], StrArray(p, "hints", path), (string)failure?["speaker"],
+                    (string)p["chapter"]));
 
                 foreach (var r in (JArray)p["rules"] ?? throw new ContentException($"{path}: rules missing"))
                     rules.Add(ParseRule((JObject)r, pid, prereqs));
+            }
+
+            if (!string.IsNullOrEmpty(src.AmbientJson))
+            {
+                var ambient = Parse(src.AmbientJson, "ambient.json") as JArray
+                              ?? throw new ContentException("ambient.json: root must be an array");
+                foreach (var r in ambient) rules.Add(ParseRule((JObject)r, null, null));
             }
 
             var chapters = src.ChapterJsons.Select((c, i) => ParseChapter(Parse(c, $"chapter[{i}]"))).ToList();
@@ -81,6 +109,9 @@ namespace Bonkadoo.Infrastructure.Content
             var content = new GameContent
             {
                 World = world, Rules = ruleSet, Chapters = chapters, EventTypes = eventTypes, Localization = localization,
+                Scenes = ParseScenes(src.ScenesJson, src.ItemsJson),
+                DialogueSpeakers = ParseStringMap(src.DialogueLinesJson, "dialogue/lines.json"),
+                YarnSources = src.YarnSources ?? new Dictionary<string, string>(),
             };
             CrossCheck(content, puzzleArray);
             return content;
@@ -146,7 +177,67 @@ namespace Bonkadoo.Infrastructure.Content
                 Title = (string)o["title"],
                 PuzzleIds = StrArray(o, "puzzles", "chapter " + id),
                 CompleteFlag = Str(o, "chapterCompleteFlag", "chapter " + id),
+                StartScene = (string)o["startScene"],
+                TitleKey = (string)o["titleKey"],
+                ObjectiveKey = (string)o["objectiveKey"],
+                RevealKey = (string)o["revealKey"],
             };
+        }
+
+        private static SceneCatalog ParseScenes(string scenesJson, string itemsJson)
+        {
+            var scenes = new List<SceneDefinition>();
+            if (!string.IsNullOrEmpty(scenesJson))
+            {
+                foreach (var token in Parse(scenesJson, "scenes.json") as JArray ?? throw new ContentException("scenes.json: array expected"))
+                {
+                    var s = (JObject)token;
+                    var sid = Str(s, "id", "scene");
+                    var hotspots = ((JArray)s["hotspots"] ?? new JArray()).OfType<JObject>().Select(h =>
+                    {
+                        var hid = Str(h, "id", sid + ".hotspot");
+                        var path = $"{sid}.{hid}";
+                        if (!Enum.TryParse(Str(h, "kind", path), false, out HotspotType type))
+                            throw new ContentException($"{path}: unknown kind {h["kind"]}");
+                        return new HotspotDefinition(hid, type, Str(h, "labelKey", path), Num(h, "x", path), Num(h, "y", path),
+                            Num(h, "w", path), Num(h, "h", path), (string)h["color"], (string)h["character"],
+                            h["visibleWhen"] == null ? null : ParsePredicate(h["visibleWhen"], path + ".visibleWhen"),
+                            (string)h["exitTo"], h["startUnlocked"]?.Type == JTokenType.Boolean && (bool)h["startUnlocked"]);
+                    });
+                    scenes.Add(new SceneDefinition(sid, (string)s["chapter"], Str(s, "nameKey", sid), (string)s["background"],
+                        (string)s["music"], hotspots));
+                }
+            }
+            var items = new List<ItemDefinition>();
+            if (!string.IsNullOrEmpty(itemsJson))
+            {
+                foreach (var token in Parse(itemsJson, "items.json") as JArray ?? throw new ContentException("items.json: array expected"))
+                {
+                    var i = (JObject)token;
+                    var iid = Str(i, "id", "item");
+                    items.Add(new ItemDefinition(iid, (string)i["chapter"], Str(i, "labelKey", iid), Str(i, "descKey", iid),
+                        (string)i["color"]));
+                }
+            }
+            try { return new SceneCatalog(scenes, items); }
+            catch (ArgumentException ex) { throw new ContentException("duplicate scene or item id: " + ex.Message); }
+        }
+
+        private static IReadOnlyDictionary<string, string> ParseStringMap(string json, string name)
+        {
+            var map = new Dictionary<string, string>(StringComparer.Ordinal);
+            if (string.IsNullOrEmpty(json)) return map;
+            foreach (var p in (Parse(json, name) as JObject ?? throw new ContentException($"{name}: object expected")).Properties())
+                map[p.Name] = (string)p.Value;
+            return map;
+        }
+
+        private static float Num(JObject o, string key, string path)
+        {
+            var t = o[key];
+            if (t == null || (t.Type != JTokenType.Float && t.Type != JTokenType.Integer))
+                throw new ContentException($"{path}.{key}: expected number");
+            return (float)t;
         }
 
         public static Rule ParseRule(JObject r, string puzzleId, IReadOnlyList<string> prerequisites)
@@ -220,7 +311,9 @@ namespace Bonkadoo.Infrastructure.Content
                 case "addItem": return new AddItemEffect(Str(o, "itemId", path));
                 case "removeItem": return new RemoveItemEffect(Str(o, "itemId", path));
                 case "emitEvent": return new EmitEventEffect(Str(o, "type", path));
-                case "queueDialogue": return new QueueDialogueEffect(Str(o, "key", path));
+                case "queueDialogue":
+                    return new QueueDialogueEffect(Str(o, "key", path), o["speaker"] == null ? null : Str(o, "speaker", path));
+                case "startConversation": return new StartConversationEffect(Str(o, "node", path));
                 case "queueAnimation": return new QueueAnimationEffect(Str(o, "cue", path));
                 case "unlockExit": return new UnlockExitEffect(Str(o, "exitId", path));
                 case "setNpcDisposition": return new SetNpcDispositionEffect(Str(o, "npcId", path), Int(o, "value", path));
@@ -244,6 +337,28 @@ namespace Bonkadoo.Infrastructure.Content
                     if (e is AdjustMetricEffect m && !content.World.TryGetMetric(m.Key, out _))
                         errors.Add($"{rule.Id}: unknown metric {m.Key}");
                 }
+            }
+            if (content.Scenes != null && content.Scenes.Scenes.Count > 0)
+            {
+                foreach (var p in content.Rules.Puzzles)
+                {
+                    var scene = content.Scenes.Scene(p.SceneId);
+                    if (scene == null) { errors.Add($"{p.Id}: unknown scene {p.SceneId}"); continue; }
+                    foreach (var h in p.Hotspots)
+                        if (scene.Find(h) == null) errors.Add($"{p.Id}: hotspot {h} not in {p.SceneId}");
+                }
+                foreach (var scene in content.Scenes.Scenes)
+                foreach (var h in scene.Hotspots)
+                {
+                    if (h.Type == HotspotType.Exit && content.Scenes.Scene(h.ExitTo) == null)
+                        errors.Add($"{h.Id}: exit to unknown scene {h.ExitTo}");
+                    foreach (var table in content.Localization)
+                        if (!table.Value.ContainsKey(h.LabelKey)) errors.Add($"{h.Id}: label {h.LabelKey} missing in {table.Key}");
+                }
+                foreach (var rule in content.Rules.OrderedRules)
+                foreach (var e in rule.Effects)
+                    if (e is AddItemEffect add && content.Scenes.Item(add.ItemId) == null)
+                        errors.Add($"{rule.Id}: gives unknown item {add.ItemId}");
             }
             var ids = new HashSet<string>(content.Rules.Puzzles.Select(p => p.Id), StringComparer.Ordinal);
             foreach (var ch in content.Chapters)

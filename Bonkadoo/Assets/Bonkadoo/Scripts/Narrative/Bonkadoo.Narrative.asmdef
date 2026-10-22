@@ -1,0 +1,14 @@
+{
+    "name": "Bonkadoo.Narrative",
+    "rootNamespace": "Bonkadoo.Narrative",
+    "references": ["Bonkadoo.Domain", "Bonkadoo.Application"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": ["YarnSpinner.dll", "YarnSpinner.Compiler.dll", "Yarn.Google.Protobuf.dll"],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

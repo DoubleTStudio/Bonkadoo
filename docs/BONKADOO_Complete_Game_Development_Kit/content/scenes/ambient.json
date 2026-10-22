@@ -1,0 +1,9200 @@
+[
+  {
+    "id": "rule.talk.npc.vuong.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "npc.vuong"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch01.p03.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.vuong.1",
+          "speaker": "vuong"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.vuong.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "npc.vuong"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.vuong.2",
+          "speaker": "vuong"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.desk_stamp",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.desk_stamp"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.desk_stamp",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.notice",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.notice"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.notice",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.staff_manual",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.staff_manual"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.staff_manual",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.badge_reader",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.badge_reader"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.badge_reader",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.lost_tray",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.lost_tray"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.lost_tray",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.visitor_box",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.visitor_box"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.visitor_box",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.agenda_board",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.agenda_board"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.agenda_board",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.room_schedule",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.room_schedule"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.room_schedule",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.meeting_chair",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "prop.ch01.meeting_chair"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.meeting_chair",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch01.office_hall",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestTarget": "exit.ch01.office_hall"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch01.office_hall",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.enter.scene.ch01.office",
+    "priority": 50,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.office"
+        },
+        {
+          "requestVerb": "Enter"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "startConversation": {
+          "node": "ch01_intro"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.bop.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "npc.bop"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "trust_bop",
+            "value": 1
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop.1",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "npc.bop"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop.2",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.janitor.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "npc.janitor"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch01.p05.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.janitor.1",
+          "speaker": "janitor"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.janitor.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "npc.janitor"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.janitor.2",
+          "speaker": "janitor"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.printer",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.printer"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.printer",
+          "speaker": "printer"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.complaint_box",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.complaint_box"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.complaint_box",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.elevator",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.elevator"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.elevator",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.plaque",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.plaque"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.plaque",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.floor_panel",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.floor_panel"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.floor_panel",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.label_maker",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.label_maker"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.label_maker",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.alarm_sign",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.alarm_sign"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.alarm_sign",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.squeaky_cart",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.squeaky_cart"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.squeaky_cart",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.permit_kiosk",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "prop.ch01.permit_kiosk"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.permit_kiosk",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch01.hall_office",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "exit.ch01.hall_office"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch01.hall_office",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch01.hall_gate",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.hallway"
+        },
+        {
+          "requestTarget": "exit.ch01.hall_gate"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch01.hall_gate",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "npc.coc"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch01.p01.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch01.p07.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc.1",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "npc.coc"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch01.p01.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch01.p07.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc.2",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "npc.coc"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "officer_suspicion",
+            "value": 2
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc.3",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc.04",
+    "priority": 37,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "npc.coc"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc.4",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.checklist_board",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "prop.ch01.checklist_board"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.checklist_board",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.security_mirror",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "prop.ch01.security_mirror"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.security_mirror",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.form_rack",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "prop.ch01.form_rack"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.form_rack",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.key_ledger",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "prop.ch01.key_ledger"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.key_ledger",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.locker_drawer",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "prop.ch01.locker_drawer"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.locker_drawer",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.exit_door",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "prop.ch01.exit_door"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.exit_door",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch01.fire_alarm",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "prop.ch01.fire_alarm"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch01.fire_alarm",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch01.gate_hall",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch01.checkpoint"
+        },
+        {
+          "requestTarget": "exit.ch01.gate_hall"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch01.gate_hall",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.choice.ch01.ask_truth",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch01.ask_truth"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch01.ask_truth"
+        }
+      },
+      {
+        "adjustMetric": {
+          "key": "trust_bop",
+          "delta": 1
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.choice.ch01.not_today",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch01.not_today"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch01.not_today"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.lan_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.lan_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch02.p03.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch02.1",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.lan_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch02.2",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.roster",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.roster"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.roster",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.witness_forms",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.witness_forms"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.witness_forms",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.correction_box",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.correction_box"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.correction_box",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.coc_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch01.p07.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch02.p02.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch02.1",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.coc_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch01.p07.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch02.p02.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch02.2",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch02.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.coc_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch02.3",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.queue_rope",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.queue_rope"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.queue_rope",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.ticket_machine",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.ticket_machine"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.ticket_machine",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.ticket_bin",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.ticket_bin"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.ticket_bin",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.clerk_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.clerk_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch02.p03.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.clerk_ch02.1",
+          "speaker": "clerk"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.clerk_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.clerk_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "not": {
+            "flagEquals": {
+              "key": "flag.ch02.p02.complete",
+              "value": true
+            }
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.clerk_ch02.2",
+          "speaker": "clerk"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.clerk_ch02.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "npc.clerk_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.clerk_ch02.3",
+          "speaker": "clerk"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.mailbox",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.mailbox"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.mailbox",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.city_map",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.city_map"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.city_map",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.notice_board",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "prop.ch02.notice_board"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.notice_board",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch02.registry_station",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestTarget": "exit.ch02.registry_station"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch02.registry_station",
+          "speaker": "guard"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.enter.scene.ch02.registry",
+    "priority": 50,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.registry"
+        },
+        {
+          "requestVerb": "Enter"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "startConversation": {
+          "node": "ch02_intro"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.look.prop.ch02.photo_booth",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "prop.ch02.photo_booth"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.photo_booth",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.regulation_board",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "prop.ch02.regulation_board"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.regulation_board",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.station_lamp",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "prop.ch02.station_lamp"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.station_lamp",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.bop_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch02.p04.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch02.1",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.bop_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch02.2",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_station_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.lan_station_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch02.p05.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_station_ch02.1",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_station_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.lan_station_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_station_ch02.2",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.notary_stamp",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "prop.ch02.notary_stamp"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.notary_stamp",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.dead_letter_bin",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "prop.ch02.dead_letter_bin"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.dead_letter_bin",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.tram_inspector_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.tram_inspector_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p06.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.tram_inspector_ch02.1",
+          "speaker": "inspector"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.tram_inspector_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.tram_inspector_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.tram_inspector_ch02.2",
+          "speaker": "inspector"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.ticket_window",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "prop.ch02.ticket_window"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.ticket_window",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.validator",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "prop.ch02.validator"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.validator",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_tram_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.coc_tram_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p02.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_tram_ch02.1",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_tram_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.coc_tram_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p02.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_tram_ch02.2",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_tram_ch02.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "npc.coc_tram_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_tram_ch02.3",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch02.station_registry",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "exit.ch02.station_registry"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch02.station_registry",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch02.station_counter",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.station"
+        },
+        {
+          "requestTarget": "exit.ch02.station_counter"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch02.station_counter",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.lost_found",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.lost_found"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.lost_found",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.claim_forms",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.claim_forms"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.claim_forms",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_counter_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.lan_counter_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p05.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_counter_ch02.1",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_counter_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.lan_counter_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p05.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_counter_ch02.2",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_counter_ch02.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.lan_counter_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_counter_ch02.3",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_counter_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.bop_counter_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch02.p08.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_counter_ch02.1",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_counter_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.bop_counter_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_counter_ch02.2",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.request_slips",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.request_slips"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.request_slips",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.counter_clerk_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.counter_clerk_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p08.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.counter_clerk_ch02.1",
+          "speaker": "clerk"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.counter_clerk_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.counter_clerk_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p08.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.counter_clerk_ch02.2",
+          "speaker": "clerk"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.counter_clerk_ch02.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.counter_clerk_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.counter_clerk_ch02.3",
+          "speaker": "clerk"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.number_plates",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.number_plates"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.number_plates",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.counter_zero",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.counter_zero"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.counter_zero",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.supersede_forms",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.supersede_forms"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.supersede_forms",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.records_terminal",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.records_terminal"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.records_terminal",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.crowd_ch02.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.crowd_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch02.p02.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.crowd_ch02.1",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.crowd_ch02.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "npc.crowd_ch02"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.crowd_ch02.2",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch02.archive_door",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "prop.ch02.archive_door"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch02.archive_door",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch02.counter_station",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch02.counter"
+        },
+        {
+          "requestTarget": "exit.ch02.counter_station"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch02.counter_station",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.choice.ch02.together",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch02.together"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch02.together"
+        }
+      },
+      {
+        "adjustMetric": {
+          "key": "trust_bop",
+          "delta": 1
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.choice.ch02.files_myself",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch02.files_myself"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch02.files_myself"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.mai_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.mai_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch03.p03.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch03.1",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.mai_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch03.p01.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch03.2",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.mai_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch03.3",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.baker_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.baker_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch03.p01.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.baker_ch03.1",
+          "speaker": "baker"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.baker_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.baker_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch03.p01.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.baker_ch03.2",
+          "speaker": "baker"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.baker_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.baker_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.baker_ch03.3",
+          "speaker": "baker"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.neighbors_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.neighbors_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch03.p02.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.neighbors_ch03.1",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.neighbors_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.neighbors_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch03.p03.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.neighbors_ch03.2",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.neighbors_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "npc.neighbors_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.neighbors_ch03.3",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.bread_display",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.bread_display"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.bread_display",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.cash_tin",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.cash_tin"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.cash_tin",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.price_board",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.price_board"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.price_board",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.permit_notice",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.permit_notice"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.permit_notice",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.art_poster",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.art_poster"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.art_poster",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.compliment_jar",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.compliment_jar"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.compliment_jar",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.standee",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.standee"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.standee",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.protest_circle",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.protest_circle"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.protest_circle",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.ticket_dispenser",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "prop.ch03.ticket_dispenser"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.ticket_dispenser",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch03.bakery_market",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestTarget": "exit.ch03.bakery_market"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch03.bakery_market",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.enter.scene.ch03.bakery",
+    "priority": 50,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.bakery"
+        },
+        {
+          "requestVerb": "Enter"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "startConversation": {
+          "node": "ch03_intro"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.coc_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.coc_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p01.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p04.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch03.1",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.coc_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p01.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p04.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch03.2",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.coc_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch03.p06.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch03.3",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch03.04",
+    "priority": 37,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.coc_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch03.p06.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch03.4",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch03.05",
+    "priority": 36,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.coc_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch03.5",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.inspector_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.inspector_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p02.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p05.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.inspector_ch03.1",
+          "speaker": "inspector"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.inspector_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.inspector_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.inspector_ch03.2",
+          "speaker": "inspector"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_market_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.mai_market_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p03.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p05.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_market_ch03.1",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_market_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.mai_market_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p03.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p05.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_market_ch03.2",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_market_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "npc.mai_market_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_market_ch03.3",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.rejection_bin",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.rejection_bin"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.rejection_bin",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.permit_window",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.permit_window"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.permit_window",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.stale_loaf",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.stale_loaf"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.stale_loaf",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.tax_ledger",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.tax_ledger"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.tax_ledger",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.ped_sign",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.ped_sign"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.ped_sign",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.delivery_sign",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.delivery_sign"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.delivery_sign",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.shoe_stall",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.shoe_stall"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.shoe_stall",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.bread_cart",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "prop.ch03.bread_cart"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.bread_cart",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch03.market_bakery",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "exit.ch03.market_bakery"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch03.market_bakery",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch03.market_plaza",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.market"
+        },
+        {
+          "requestTarget": "exit.ch03.market_plaza"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch03.market_plaza",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mayor_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.mayor_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p07.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p09.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mayor_ch03.1",
+          "speaker": "mayor"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mayor_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.mayor_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p07.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p09.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mayor_ch03.2",
+          "speaker": "mayor"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mayor_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.mayor_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mayor_ch03.3",
+          "speaker": "mayor"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_plaza_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.mai_plaza_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p05.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p09.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_plaza_ch03.1",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_plaza_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.mai_plaza_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch03.p05.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch03.p09.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_plaza_ch03.2",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_plaza_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.mai_plaza_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_plaza_ch03.3",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.crowd_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.crowd_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "public_trust",
+            "value": 2
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.crowd_ch03.1",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.crowd_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.crowd_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "not": {
+            "metricAtLeast": {
+              "key": "public_trust",
+              "value": 0
+            }
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.crowd_ch03.2",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.crowd_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.crowd_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.crowd_ch03.3",
+          "speaker": "crowd"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch03.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.bop_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "trust_bop",
+            "value": 2
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch03.1",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch03.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.bop_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "rule_instability",
+            "value": 3
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch03.2",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch03.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "npc.bop_ch03"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch03.3",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.pa_console",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "prop.ch03.pa_console"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.pa_console",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.pa_schedule",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "prop.ch03.pa_schedule"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.pa_schedule",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.town_clock",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "prop.ch03.town_clock"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.town_clock",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.festival_banner",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "prop.ch03.festival_banner"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.festival_banner",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.soup_pot",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "prop.ch03.soup_pot"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.soup_pot",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.receipt_spike",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "prop.ch03.receipt_spike"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.receipt_spike",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch03.council_slot",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "prop.ch03.council_slot"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch03.council_slot",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch03.plaza_market",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch03.plaza"
+        },
+        {
+          "requestTarget": "exit.ch03.plaza_market"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch03.plaza_market",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.choice.ch03.name_the_cost",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch03.name_the_cost"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch03.name_the_cost"
+        }
+      },
+      {
+        "adjustMetric": {
+          "key": "trust_bop",
+          "delta": 1
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.choice.ch03.results_first",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch03.results_first"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch03.results_first"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.curator_ch04.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.curator_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch04.p02.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.curator_ch04.1",
+          "speaker": "curator"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.curator_ch04.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.curator_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch04.p02.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.curator_ch04.2",
+          "speaker": "curator"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.curator_ch04.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.curator_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.curator_ch04.3",
+          "speaker": "curator"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.reconcile_kiosk",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.reconcile_kiosk"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.reconcile_kiosk",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.birth_cert_case",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.birth_cert_case"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.birth_cert_case",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.birthday_register",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.birthday_register"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.birthday_register",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.lan_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch04.p01.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04.1",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.lan_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch04.p01.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04.2",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.lan_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04.3",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.placard_rack",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.placard_rack"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.placard_rack",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.empty_plinth",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.empty_plinth"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.empty_plinth",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.guestbook",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.guestbook"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.guestbook",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch04.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.coc_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch04.p03.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch04.1",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch04.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "npc.coc_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch04.2",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.audio_guide",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.audio_guide"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.audio_guide",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.testimony_booth",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.testimony_booth"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.testimony_booth",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.sealed_door",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "prop.ch04.sealed_door"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.sealed_door",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch04.museum_stacks",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestTarget": "exit.ch04.museum_stacks"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch04.museum_stacks",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.enter.scene.ch04.museum",
+    "priority": 50,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.museum"
+        },
+        {
+          "requestVerb": "Enter"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "startConversation": {
+          "node": "ch04_intro"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.look.exit.ch04.stacks_museum",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "exit.ch04.stacks_museum"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch04.stacks_museum",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.time_clock",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.time_clock"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.time_clock",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.door_audit",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.door_audit"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.door_audit",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.log_terminal",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.log_terminal"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.log_terminal",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.card_catalog",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.card_catalog"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.card_catalog",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch04.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "npc.bop_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch04.p04.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch04.1",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch04.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "npc.bop_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch04.2",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04_stacks.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "npc.lan_ch04_stacks"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch04.p01.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch04.p05.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04_stacks.1",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04_stacks.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "npc.lan_ch04_stacks"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch04.p01.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch04.p05.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04_stacks.2",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04_stacks.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "npc.lan_ch04_stacks"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04_stacks.3",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.errors_shelf",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.errors_shelf"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.errors_shelf",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.stamp_desk",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.stamp_desk"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.stamp_desk",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.perfect_file",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.perfect_file"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.perfect_file",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.ink_pad",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.ink_pad"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.ink_pad",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.duplicate_files",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "prop.ch04.duplicate_files"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.duplicate_files",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch04.stacks_lab",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.stacks"
+        },
+        {
+          "requestTarget": "exit.ch04.stacks_lab"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch04.stacks_lab",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch04.lab_stacks",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "exit.ch04.lab_stacks"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch04.lab_stacks",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.memory_projector",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.memory_projector"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.memory_projector",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.apology_safe",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.apology_safe"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.apology_safe",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch04_lab.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.bop_ch04_lab"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "flagEquals": {
+                "key": "flag.ch04.p07.complete",
+                "value": true
+              }
+            },
+            {
+              "metricAtLeast": {
+                "key": "trust_bop",
+                "value": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch04_lab.1",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch04_lab.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.bop_ch04_lab"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch04.p07.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch04_lab.2",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch04_lab.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.bop_ch04_lab"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "trust_bop",
+            "value": 1
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch04_lab.3",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch04_lab.04",
+    "priority": 37,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.bop_ch04_lab"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch04_lab.4",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.map_cabinet",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.map_cabinet"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.map_cabinet",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.light_table",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.light_table"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.light_table",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.city_calendar",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.city_calendar"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.city_calendar",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_ch04.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.mai_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch04.p02.solved.a"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch04.p08.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch04.1",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_ch04.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.mai_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch04.p02.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch04.p08.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch04.2",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_ch04.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.mai_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch04.p08.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch04.3",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_ch04.04",
+    "priority": 37,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.mai_ch04"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch04.4",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.error_forms",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.error_forms"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.error_forms",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04_lab.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.lan_ch04_lab"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "all": [
+            {
+              "eventOccurred": {
+                "type": "evt.ch04.p05.solved.b"
+              }
+            },
+            {
+              "not": {
+                "flagEquals": {
+                  "key": "flag.ch04.p08.complete",
+                  "value": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04_lab.1",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04_lab.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.lan_ch04_lab"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch04.p09.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04_lab.2",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch04_lab.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "npc.lan_ch04_lab"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch04_lab.3",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.logic_terminal",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.logic_terminal"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.logic_terminal",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.hearing_bench",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.hearing_bench"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.hearing_bench",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch04.broadcast_notice",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch04.memory_lab"
+        },
+        {
+          "requestTarget": "prop.ch04.broadcast_notice"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch04.broadcast_notice",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.choice.ch04.see_together",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch04.see_together"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch04.see_together"
+        }
+      },
+      {
+        "adjustMetric": {
+          "key": "trust_bop",
+          "delta": 1
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.choice.ch04.demand_index",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch04.demand_index"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch04.demand_index"
+        }
+      },
+      {
+        "adjustMetric": {
+          "key": "trust_bop",
+          "delta": -1
+        }
+      },
+      {
+        "adjustMetric": {
+          "key": "evidence_count",
+          "delta": 1
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.logic_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "npc.logic_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p03.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.logic_ch05.1",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.logic_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "npc.logic_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.logic_ch05.2",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.vuong_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "npc.vuong_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p01.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.vuong_ch05.1",
+          "speaker": "vuong"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.vuong_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "npc.vuong_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p02.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.vuong_ch05.2",
+          "speaker": "vuong"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.vuong_ch05.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "npc.vuong_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch01.p02.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.vuong_ch05.3",
+          "speaker": "vuong"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.vuong_ch05.04",
+    "priority": 37,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "npc.vuong_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.vuong_ch05.4",
+          "speaker": "vuong"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.agreement_turnstile",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.agreement_turnstile"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.agreement_turnstile",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.compliance_kiosk",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.compliance_kiosk"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.compliance_kiosk",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.complaint_terminal",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.complaint_terminal"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.complaint_terminal",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.org_chart",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.org_chart"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.org_chart",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.shredder_bin",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.shredder_bin"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.shredder_bin",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.approval_desk",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.approval_desk"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.approval_desk",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.answer_catalog",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.answer_catalog"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.answer_catalog",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.question_box",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.question_box"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.question_box",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.quality_poster",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "prop.ch05.quality_poster"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.quality_poster",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch05.lobby_core",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestTarget": "exit.ch05.lobby_core"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch05.lobby_core",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.enter.scene.ch05.lobby",
+    "priority": 50,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.lobby"
+        },
+        {
+          "requestVerb": "Enter"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "startConversation": {
+          "node": "ch05_intro"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.lan_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.lan_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p03.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch05.1",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.lan_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.lan_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p03.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch05.2",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.lan_ch05.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.lan_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p06.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch05.3",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.lan_ch05.04",
+    "priority": 37,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.lan_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.lan_ch05.4",
+          "speaker": "lan"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_core_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.mai_core_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p05.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_core_ch05.1",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_core_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.mai_core_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_core_ch05.2",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.bop_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p06.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch05.1",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.bop_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "trust_bop",
+            "value": 1
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch05.2",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.bop_ch05.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "npc.bop_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.bop_ch05.3",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.truth_meter",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "prop.ch05.truth_meter"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.truth_meter",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.certificate_rack",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "prop.ch05.certificate_rack"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.certificate_rack",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.exception_register",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "prop.ch05.exception_register"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.exception_register",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.erasure_queue",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "prop.ch05.erasure_queue"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.erasure_queue",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.decision_log",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "prop.ch05.decision_log"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.decision_log",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.archive_port",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "prop.ch05.archive_port"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.archive_port",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.witness_stand",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "prop.ch05.witness_stand"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.witness_stand",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch05.core_lobby",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "exit.ch05.core_lobby"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch05.core_lobby",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch05.core_roof",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.core"
+        },
+        {
+          "requestTarget": "exit.ch05.core_roof"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch05.core_roof",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.logic_roof_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.logic_roof_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.logic_roof_ch05.1",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.logic_roof_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.logic_roof_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.logic_roof_ch05.2",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.mai_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.mai_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p05.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch05.1",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.mai_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.mai_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p05.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch05.2",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.mai_ch05.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.mai_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.mai_ch05.3",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch05.01",
+    "priority": 40,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.coc_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p01.solved.a"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch05.1",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.coc_ch05.02",
+    "priority": 39,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.coc_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch05.p01.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch05.2",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.coc_ch05.03",
+    "priority": 38,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.coc_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "eventOccurred": {
+            "type": "evt.ch01.p07.solved.b"
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch05.3",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.talk.npc.coc_ch05.04",
+    "priority": 37,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.coc_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "metricAtLeast": {
+            "key": "officer_suspicion",
+            "value": 2
+          }
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch05.4",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.talk.npc.coc_ch05.05",
+    "priority": 36,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "npc.coc_ch05"
+        },
+        {
+          "requestVerb": "Talk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.talk.npc.coc_ch05.5",
+          "speaker": "coc"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.door_patch",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.door_patch"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.door_patch",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.door_rewrite",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.door_rewrite"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.door_rewrite",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.door_reveal",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.door_reveal"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.door_reveal",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.door_walk",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.door_walk"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.door_walk",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.audit_terminal",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.audit_terminal"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.audit_terminal",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.future_panel",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.future_panel"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.future_panel",
+          "speaker": "sign"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.broadcast_antenna",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.broadcast_antenna"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.broadcast_antenna",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.binary_switch",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.binary_switch"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.binary_switch",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.prop.ch05.charter_lectern",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "prop.ch05.charter_lectern"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.prop.ch05.charter_lectern",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.look.exit.ch05.roof_core",
+    "priority": 1,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestTarget": "exit.ch05.roof_core"
+        },
+        {
+          "any": [
+            {
+              "requestVerb": "Inspect"
+            },
+            {
+              "requestVerb": "Tap"
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.look.exit.ch05.roof_core",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.choice.ch05.both_records",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch05.both_records"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch05.both_records"
+        }
+      },
+      {
+        "adjustMetric": {
+          "key": "trust_bop",
+          "delta": 1
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.choice.ch05.no_hiding",
+    "priority": 200,
+    "when": {
+      "all": [
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "choice.ch05.no_hiding"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "emitEvent": {
+          "type": "evt.choice.ch05.no_hiding"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.ending.choose.patch",
+    "priority": 300,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestVerb": "Inspect"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p09.complete",
+            "value": false
+          }
+        },
+        {
+          "requestTarget": "prop.ch05.door_patch"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "setFlag": {
+          "key": "flag.ending",
+          "value": "PATCH"
+        }
+      },
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.choose.patch",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.ending.choose.rewrite",
+    "priority": 300,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestVerb": "Inspect"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p09.complete",
+            "value": false
+          }
+        },
+        {
+          "requestTarget": "prop.ch05.door_rewrite"
+        },
+        {
+          "any": [
+            {
+              "metricAtLeast": {
+                "key": "public_trust",
+                "value": 0
+              }
+            },
+            {
+              "flagEquals": {
+                "key": "flag.ch05.corrective.testimony",
+                "value": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "setFlag": {
+          "key": "flag.ending",
+          "value": "REWRITE"
+        }
+      },
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.choose.rewrite",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.ending.locked.rewrite",
+    "priority": 290,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestVerb": "Inspect"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p09.complete",
+            "value": false
+          }
+        },
+        {
+          "requestTarget": "prop.ch05.door_rewrite"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.locked.rewrite",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.ending.choose.reveal",
+    "priority": 300,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestVerb": "Inspect"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p09.complete",
+            "value": false
+          }
+        },
+        {
+          "requestTarget": "prop.ch05.door_reveal"
+        },
+        {
+          "any": [
+            {
+              "metricAtLeast": {
+                "key": "evidence_count",
+                "value": 4
+              }
+            },
+            {
+              "flagEquals": {
+                "key": "flag.ch05.corrective.audit",
+                "value": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "effects": [
+      {
+        "setFlag": {
+          "key": "flag.ending",
+          "value": "REVEAL"
+        }
+      },
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.choose.reveal",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.ending.locked.reveal",
+    "priority": 290,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestVerb": "Inspect"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p09.complete",
+            "value": false
+          }
+        },
+        {
+          "requestTarget": "prop.ch05.door_reveal"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.locked.reveal",
+          "speaker": "bop"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.ending.choose.walk",
+    "priority": 300,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "requestVerb": "Inspect"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p09.complete",
+            "value": false
+          }
+        },
+        {
+          "requestTarget": "prop.ch05.door_walk"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "setFlag": {
+          "key": "flag.ending",
+          "value": "WALK_AWAY"
+        }
+      },
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.choose.walk",
+          "speaker": "ti"
+        }
+      }
+    ],
+    "once": false
+  },
+  {
+    "id": "rule.ending.corrective.testimony",
+    "priority": 250,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "requestVerb": "Talk"
+        },
+        {
+          "requestTarget": "npc.mai_ch05"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "setFlag": {
+          "key": "flag.ch05.corrective.testimony",
+          "value": true
+        }
+      },
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.corrective.testimony",
+          "speaker": "mai"
+        }
+      }
+    ],
+    "once": true
+  },
+  {
+    "id": "rule.ending.corrective.audit",
+    "priority": 250,
+    "when": {
+      "all": [
+        {
+          "currentScene": "scene.ch05.roof"
+        },
+        {
+          "flagEquals": {
+            "key": "flag.ch05.p08.complete",
+            "value": true
+          }
+        },
+        {
+          "requestVerb": "Inspect"
+        },
+        {
+          "requestTarget": "prop.ch05.audit_terminal"
+        }
+      ]
+    },
+    "effects": [
+      {
+        "setFlag": {
+          "key": "flag.ch05.corrective.audit",
+          "value": true
+        }
+      },
+      {
+        "queueDialogue": {
+          "key": "dlg.ending.corrective.audit",
+          "speaker": "logic"
+        }
+      }
+    ],
+    "once": true
+  }
+]

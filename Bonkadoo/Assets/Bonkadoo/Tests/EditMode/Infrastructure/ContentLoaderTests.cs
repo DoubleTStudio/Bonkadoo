@@ -16,11 +16,13 @@ namespace Bonkadoo.Tests.Infrastructure
         {
             var c = TestContent.Load();
             Assert.AreEqual(45, c.Rules.Puzzles.Count);
-            Assert.AreEqual(90, c.Rules.OrderedRules.Count);
             Assert.AreEqual(5, c.Chapters.Count);
-            Assert.AreEqual(90, c.EventTypes.Count);
+            Assert.AreEqual(15, c.Scenes.Scenes.Count);
+            Assert.Greater(c.Scenes.Items.Count, 45);
+            Assert.Greater(c.Rules.OrderedRules.Count, 400, "step rules + look/talk/memory rules");
             Assert.AreEqual(5, c.World.Metrics.Count);
             CollectionAssert.AreEquivalent(new[] { "en", "vi" }, c.Localization.Keys);
+            Assert.AreEqual(5, c.YarnSources.Count);
         }
 
         [Test]
@@ -28,41 +30,28 @@ namespace Bonkadoo.Tests.Infrastructure
         {
             var c = TestContent.Load();
             var session = NewSession(c);
-            session.EnterScene("scene.ch01.01", "boot", 0);
-            // p02 needs p01 complete; choosing p02's option first must not solve it
-            var outcome = session.Interact(Choose("ch01.p02", "a", "scene.ch01.01", "r1"));
-            Assert.AreEqual(OutcomeStatus.Fallback, outcome.Status);
-            Assert.AreEqual("dlg.ch01.p02.fail", outcome.FeedbackKey);
+            session.EnterScene("scene.ch01.office", "boot", 0);
+            // p02's lost-form step must not fire before p01 is complete
+            var outcome = session.Interact(new InteractionRequest("r1", InteractionVerb.Inspect, null, "prop.ch01.lost_tray",
+                "scene.ch01.office", 1));
+            Assert.AreNotEqual("rule.ch01.p02.a.s1", outcome.MatchedRuleId);
+            Assert.IsFalse(session.State.HasItem("item.ch01.lost_form"));
         }
 
-        // engine-executable seed: proves every authored route resolves in order, not that the puzzle is fun or final
         [Test]
-        public void EverySeedRouteIsReachableInChapterOrder([Values("a", "b")] string route)
+        public void EveryPropAndExitGivesFeedback()
         {
+            // GDD pillar 1: every touch creates feedback
             var c = TestContent.Load();
-            foreach (var chapter in c.Chapters)
+            foreach (var scene in c.Scenes.Scenes)
             {
                 var session = NewSession(c);
-                var n = 0;
-                foreach (var pid in chapter.PuzzleIds)
+                session.EnterScene(scene.Id, "s", 0);
+                foreach (var h in scene.Hotspots)
                 {
-                    Assert.IsTrue(c.Rules.TryGetPuzzle(pid, out var puzzle), pid);
-                    session.EnterScene(puzzle.SceneId, $"{chapter.Id}-scene-{n}", n);
-
-                    var miss = session.Interact(new InteractionRequest($"{pid}-miss", InteractionVerb.Tap, null, "nothing.here",
-                        puzzle.SceneId, n));
-                    Assert.AreEqual(OutcomeStatus.Fallback, miss.Status, pid);
-
-                    var outcome = session.Interact(Choose(pid, route, puzzle.SceneId, $"{pid}-{route}"));
-                    Assert.AreEqual(OutcomeStatus.Committed, outcome.Status, $"{pid} route {route}: {outcome.ErrorMessage}");
-                    Assert.AreEqual($"rule.{pid}.{route}", outcome.MatchedRuleId);
-                    Assert.IsTrue(session.State.HasEvent($"evt.{pid}.solved.{route}"), pid);
-                    Assert.IsTrue(session.State.HasFlag(puzzle.CompletionFlag), pid);
-                    Assert.AreEqual($"dlg.{pid}.success.{route}", outcome.FeedbackKey);
-
-                    var again = session.Interact(Choose(pid, route == "a" ? "b" : "a", puzzle.SceneId, $"{pid}-again"));
-                    Assert.AreNotEqual(OutcomeStatus.Committed, again.Status, $"{pid} solvable twice");
-                    n++;
+                    var verb = h.Type == HotspotType.Npc ? InteractionVerb.Talk : InteractionVerb.Inspect;
+                    var o = session.Interact(new InteractionRequest("t-" + h.Id, verb, null, h.Id, scene.Id, 1));
+                    Assert.IsTrue(o.DialogueKeys.Count > 0 || o.FeedbackKey != null, $"{h.Id} is silent");
                 }
             }
         }
@@ -112,9 +101,9 @@ namespace Bonkadoo.Tests.Infrastructure
         {
             var src = TestContent.Sources();
             var puzzles = JArray.Parse(src.PuzzlesJson);
-            var effects = (JArray)puzzles[0]["rules"][0]["effects"];
-            effects[1]["emitEvent"]["type"] = "evt.does.not.exist";
-            effects[2]["queueDialogue"]["key"] = "dlg.missing";
+            var effects = (JArray)puzzles[0]["rules"][1]["effects"];
+            effects.Add(JObject.Parse("{\"emitEvent\": {\"type\": \"evt.does.not.exist\"}}"));
+            effects.Add(JObject.Parse("{\"queueDialogue\": {\"key\": \"dlg.missing\"}}"));
             src.PuzzlesJson = puzzles.ToString();
             var ex = Assert.Throws<ContentException>(() => ContentLoader.Load(src));
             StringAssert.Contains("evt.does.not.exist", ex.Message);
@@ -124,8 +113,5 @@ namespace Bonkadoo.Tests.Infrastructure
         private static GameSession NewSession(GameContent c) =>
             new GameSession(c.World, new InteractionEngine(c.Rules), new InMemoryEventStore());
 
-        private static InteractionRequest Choose(string puzzleId, string route, string scene, string requestId) =>
-            new InteractionRequest(requestId, InteractionVerb.UseItem, null, $"option.{puzzleId}.{route}", scene, 1,
-                new Dictionary<string, FactValue> { [$"input.{puzzleId}.choice"] = FactValue.Of(route) });
     }
 }

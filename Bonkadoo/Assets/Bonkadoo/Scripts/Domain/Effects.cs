@@ -4,6 +4,13 @@ using System.Globalization;
 
 namespace Bonkadoo.Domain
 {
+    public readonly struct DialogueLine
+    {
+        public string Key { get; }
+        public string Speaker { get; }
+        public DialogueLine(string key, string speaker) { Key = key; Speaker = speaker; }
+    }
+
     public sealed class EffectValidationException : Exception
     {
         public string Code { get; }
@@ -17,14 +24,16 @@ namespace Bonkadoo.Domain
     public sealed class EffectPlan
     {
         private readonly List<WorldEvent> _events = new List<WorldEvent>();
-        private readonly List<string> _dialogue = new List<string>();
+        private readonly List<DialogueLine> _dialogue = new List<DialogueLine>();
+        private readonly List<string> _conversations = new List<string>();
         private readonly List<string> _animations = new List<string>();
 
         public WorldState Scratch { get; }
         public InteractionRequest Request { get; }
         public string CausationId { get; }
         public IReadOnlyList<WorldEvent> Events => _events;
-        public IReadOnlyList<string> DialogueKeys => _dialogue;
+        public IReadOnlyList<DialogueLine> DialogueLines => _dialogue;
+        public IReadOnlyList<string> Conversations => _conversations;
         public IReadOnlyList<string> AnimationCues => _animations;
 
         public EffectPlan(WorldState committed, InteractionRequest request, string causationId)
@@ -42,7 +51,8 @@ namespace Bonkadoo.Domain
             _events.Add(evt);
         }
 
-        public void QueueDialogue(string key) => _dialogue.Add(key);
+        public void QueueDialogue(string key, string speaker) => _dialogue.Add(new DialogueLine(key, speaker));
+        public void StartConversation(string node) => _conversations.Add(node);
         public void QueueAnimation(string cue) => _animations.Add(cue);
     }
 
@@ -134,8 +144,17 @@ namespace Bonkadoo.Domain
     public sealed class QueueDialogueEffect : Effect
     {
         public string Key { get; }
-        public QueueDialogueEffect(string key) => Key = key;
-        public override void Plan(EffectPlan plan) => plan.QueueDialogue(Key);
+        public string Speaker { get; }
+        public QueueDialogueEffect(string key, string speaker = null) { Key = key; Speaker = speaker; }
+        public override void Plan(EffectPlan plan) => plan.QueueDialogue(Key, Speaker);
+    }
+
+    /// <summary>Starts a Yarn node after the interaction resolves; dialogue never writes state itself.</summary>
+    public sealed class StartConversationEffect : Effect
+    {
+        public string Node { get; }
+        public StartConversationEffect(string node) => Node = node;
+        public override void Plan(EffectPlan plan) => plan.StartConversation(Node);
     }
 
     public sealed class QueueAnimationEffect : Effect

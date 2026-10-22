@@ -2,92 +2,100 @@
   {
     "type": "evt.ch01.p01.solved.a",
     "puzzleId": "ch01.p01",
-    "description": "Termination Notice: solved by stamp duplicate notice"
+    "description": "Termination Notice: solved by stamp the notice as received before the firing"
   },
   {
     "type": "evt.ch01.p01.solved.b",
     "puzzleId": "ch01.p01",
-    "description": "Termination Notice: solved by ask boss to sign a witness copy"
+    "description": "Termination Notice: solved by make the Director sign as a witness"
   },
   {
     "type": "evt.ch01.p02.solved.a",
     "puzzleId": "ch01.p02",
-    "description": "Badge Paradox: solved by declare badge lost"
+    "description": "Badge Paradox: solved by report the badge as lost"
   },
   {
     "type": "evt.ch01.p02.solved.b",
     "puzzleId": "ch01.p02",
-    "description": "Badge Paradox: solved by stamp badge as visitor pass"
+    "description": "Badge Paradox: solved by turn the badge into a visitor pass"
   },
   {
     "type": "evt.ch01.p03.solved.a",
     "puzzleId": "ch01.p03",
-    "description": "Meeting That Never Ends: solved by change meeting agenda to farewell"
+    "description": "Meeting That Never Ends: solved by rewrite the agenda into a farewell"
   },
   {
     "type": "evt.ch01.p03.solved.b",
     "puzzleId": "ch01.p03",
-    "description": "Meeting That Never Ends: solved by send chair to an empty room"
+    "description": "Meeting That Never Ends: solved by send your chair to an empty room"
   },
   {
     "type": "evt.ch01.p04.solved.a",
     "puzzleId": "ch01.p04",
-    "description": "Printer Strike: solved by feed printer a complaint form"
+    "description": "Printer Strike: solved by feed the printer a pre-approved complaint"
   },
   {
     "type": "evt.ch01.p04.solved.b",
     "puzzleId": "ch01.p04",
-    "description": "Printer Strike: solved by ask Bốp to print a blank template"
+    "description": "Printer Strike: solved by ask Bốp for a blank approved template"
   },
   {
     "type": "evt.ch01.p05.solved.a",
     "puzzleId": "ch01.p05",
-    "description": "Elevator of Seniority: solved by trade floor priority with janitor"
+    "description": "Elevator of Seniority: solved by trade the plaque for the janitor's seniority"
   },
   {
     "type": "evt.ch01.p05.solved.b",
     "puzzleId": "ch01.p05",
-    "description": "Elevator of Seniority: solved by label ground floor as executive floor"
+    "description": "Elevator of Seniority: solved by relabel the ground floor as the executive floor"
   },
   {
     "type": "evt.ch01.p06.solved.a",
     "puzzleId": "ch01.p06",
-    "description": "Corridor of Silence: solved by use squeaky cart as approved alarm"
+    "description": "Corridor of Silence: solved by make the squeaky cart an approved alarm"
   },
   {
     "type": "evt.ch01.p06.solved.b",
     "puzzleId": "ch01.p06",
-    "description": "Corridor of Silence: solved by obtain silence permit for shoes"
+    "description": "Corridor of Silence: solved by get Bốp to certify your shoes as silent"
   },
   {
     "type": "evt.ch01.p07.solved.a",
     "puzzleId": "ch01.p07",
-    "description": "Guard’s Checklist: solved by make guard inspect his own badge"
+    "description": "Guard's Checklist: solved by make the guard inspect himself in the mirror"
   },
   {
     "type": "evt.ch01.p07.solved.b",
     "puzzleId": "ch01.p07",
-    "description": "Guard’s Checklist: solved by submit self-inspection form"
+    "description": "Guard's Checklist: solved by hand the guard a self-inspection form"
   },
   {
     "type": "evt.ch01.p08.solved.a",
     "puzzleId": "ch01.p08",
-    "description": "Return of the Key: solved by register key as already returned"
+    "description": "Return of the Key: solved by register the key as already returned"
   },
   {
     "type": "evt.ch01.p08.solved.b",
     "puzzleId": "ch01.p08",
-    "description": "Return of the Key: solved by appoint a drawer as custodian"
+    "description": "Return of the Key: solved by appoint the drawer as key custodian"
   },
   {
     "type": "evt.ch01.p09.solved.a",
     "puzzleId": "ch01.p09",
-    "description": "Exit Door Audit: solved by submit an audit of the door itself"
+    "description": "Exit Door Audit: solved by audit the door itself"
   },
   {
     "type": "evt.ch01.p09.solved.b",
     "puzzleId": "ch01.p09",
-    "description": "Exit Door Audit: solved by route exit through emergency drill"
+    "description": "Exit Door Audit: solved by trigger an emergency drill"
+  },
+  {
+    "type": "evt.choice.ch01.ask_truth",
+    "description": "Dialogue choice choice.ch01.ask_truth"
+  },
+  {
+    "type": "evt.choice.ch01.not_today",
+    "description": "Dialogue choice choice.ch01.not_today"
   },
   {
     "type": "evt.ch02.p01.solved.a",
@@ -117,17 +125,17 @@
   {
     "type": "evt.ch02.p03.solved.b",
     "puzzleId": "ch02.p03",
-    "description": "Proof of Address: solved by cite city map legend as registered address"
+    "description": "Proof of Address: solved by cite the city map legend as a registered address"
   },
   {
     "type": "evt.ch02.p04.solved.a",
     "puzzleId": "ch02.p04",
-    "description": "Identity Photograph: solved by photograph Tí’s official shadow"
+    "description": "Identity Photograph: solved by photograph Tí's official shadow"
   },
   {
     "type": "evt.ch02.p04.solved.b",
     "puzzleId": "ch02.p04",
-    "description": "Identity Photograph: solved by swap background with regulation board"
+    "description": "Identity Photograph: solved by swap the background with the regulation board"
   },
   {
     "type": "evt.ch02.p05.solved.a",
@@ -137,17 +145,17 @@
   {
     "type": "evt.ch02.p05.solved.b",
     "puzzleId": "ch02.p05",
-    "description": "Stamp of Existence: solved by use tax notice as proof of existence"
+    "description": "Stamp of Existence: solved by use a tax notice as proof of existence"
   },
   {
     "type": "evt.ch02.p06.solved.a",
     "puzzleId": "ch02.p06",
-    "description": "Tram Ticket Loop: solved by mark ticket as already validated"
+    "description": "Tram Ticket Loop: solved by mark a ticket as already validated"
   },
   {
     "type": "evt.ch02.p06.solved.b",
     "puzzleId": "ch02.p06",
-    "description": "Tram Ticket Loop: solved by get inspector to issue a violation receipt"
+    "description": "Tram Ticket Loop: solved by get the inspector to issue a violation receipt"
   },
   {
     "type": "evt.ch02.p07.solved.a",
@@ -157,7 +165,7 @@
   {
     "type": "evt.ch02.p07.solved.b",
     "puzzleId": "ch02.p07",
-    "description": "Lost and Found Citizen: solved by register Bốp as witness owner"
+    "description": "Lost and Found Citizen: solved by register Bốp as witness-owner"
   },
   {
     "type": "evt.ch02.p08.solved.a",
@@ -167,12 +175,12 @@
   {
     "type": "evt.ch02.p08.solved.b",
     "puzzleId": "ch02.p08",
-    "description": "Counter Number Zero: solved by create a supervisor request for nonexistent counter"
+    "description": "Counter Number Zero: solved by file a supervisor request about the nonexistent counter"
   },
   {
     "type": "evt.ch02.p09.solved.a",
     "puzzleId": "ch02.p09",
-    "description": "Registry Reversal: solved by reverse a deletion with superseding form"
+    "description": "Registry Reversal: solved by reverse the deletion with a superseding form"
   },
   {
     "type": "evt.ch02.p09.solved.b",
@@ -180,24 +188,32 @@
     "description": "Registry Reversal: solved by prove two contradictory records coexist"
   },
   {
+    "type": "evt.choice.ch02.together",
+    "description": "Dialogue choice choice.ch02.together"
+  },
+  {
+    "type": "evt.choice.ch02.files_myself",
+    "description": "Dialogue choice choice.ch02.files_myself"
+  },
+  {
     "type": "evt.ch03.p01.solved.a",
     "puzzleId": "ch03.p01",
-    "description": "Illegal Bread: solved by reclassify bread as public art"
+    "description": "Illegal Bread: solved by reclassify the bread as public art"
   },
   {
     "type": "evt.ch03.p01.solved.b",
     "puzzleId": "ch03.p01",
-    "description": "Illegal Bread: solved by register bread as emergency rations"
+    "description": "Illegal Bread: solved by register the bread as emergency rations"
   },
   {
     "type": "evt.ch03.p02.solved.a",
     "puzzleId": "ch03.p02",
-    "description": "The Invisible Price: solved by price bread in compliments"
+    "description": "The Invisible Price: solved by price the bread in compliments"
   },
   {
     "type": "evt.ch03.p02.solved.b",
     "puzzleId": "ch03.p02",
-    "description": "The Invisible Price: solved by classify price as donation receipt"
+    "description": "The Invisible Price: solved by turn the price into a donation receipt"
   },
   {
     "type": "evt.ch03.p03.solved.a",
@@ -207,52 +223,52 @@
   {
     "type": "evt.ch03.p03.solved.b",
     "puzzleId": "ch03.p03",
-    "description": "One-Person Protest: solved by reclassify gathering as a queue"
+    "description": "One-Person Protest: solved by reclassify the gathering as a queue"
   },
   {
     "type": "evt.ch03.p04.solved.a",
     "puzzleId": "ch03.p04",
-    "description": "Permit for a Permit: solved by use prior permit rejection as permit evidence"
+    "description": "Permit for a Permit: solved by use the old rejection as proof of the business"
   },
   {
     "type": "evt.ch03.p04.solved.b",
     "puzzleId": "ch03.p04",
-    "description": "Permit for a Permit: solved by request a permit for the permit office"
+    "description": "Permit for a Permit: solved by make the permit office apply for its own permit"
   },
   {
     "type": "evt.ch03.p05.solved.a",
     "puzzleId": "ch03.p05",
-    "description": "Bread Tax Spiral: solved by prove stale bread is historical artifact"
+    "description": "Bread Tax Spiral: solved by certify stale bread as a historical artifact"
   },
   {
     "type": "evt.ch03.p05.solved.b",
     "puzzleId": "ch03.p05",
-    "description": "Bread Tax Spiral: solved by issue tax refund in bread coupons"
+    "description": "Bread Tax Spiral: solved by pay the tax refund in bread coupons"
   },
   {
     "type": "evt.ch03.p06.solved.a",
     "puzzleId": "ch03.p06",
-    "description": "Street Sign Shuffle: solved by swap pedestrian-only and delivery signs"
+    "description": "Street Sign Shuffle: solved by swap the pedestrian and delivery signs"
   },
   {
     "type": "evt.ch03.p06.solved.b",
     "puzzleId": "ch03.p06",
-    "description": "Street Sign Shuffle: solved by declare delivery cart a pedestrian"
+    "description": "Street Sign Shuffle: solved by declare the delivery cart a pedestrian"
   },
   {
     "type": "evt.ch03.p07.solved.a",
     "puzzleId": "ch03.p07",
-    "description": "Mayor’s Megaphone: solved by route complaint via official emergency test"
+    "description": "Mayor's Megaphone: solved by route the complaint through the official emergency test"
   },
   {
     "type": "evt.ch03.p07.solved.b",
     "puzzleId": "ch03.p07",
-    "description": "Mayor’s Megaphone: solved by broadcast a public lost-item announcement"
+    "description": "Mayor's Megaphone: solved by broadcast it as a lost-item announcement"
   },
   {
     "type": "evt.ch03.p08.solved.a",
     "puzzleId": "ch03.p08",
-    "description": "The Free Lunch Law: solved by invoke free-lunch law via breakfast classification"
+    "description": "The Free Lunch Law: solved by turn the clock back so lunch counts as breakfast"
   },
   {
     "type": "evt.ch03.p08.solved.b",
@@ -262,17 +278,25 @@
   {
     "type": "evt.ch03.p09.solved.a",
     "puzzleId": "ch03.p09",
-    "description": "Crowd of Receipts: solved by collect receipts as signatures"
+    "description": "Crowd of Receipts: solved by collect old receipts as signatures"
   },
   {
     "type": "evt.ch03.p09.solved.b",
     "puzzleId": "ch03.p09",
-    "description": "Crowd of Receipts: solved by ask merchants to issue zero-cost receipts"
+    "description": "Crowd of Receipts: solved by have every merchant issue zero-đồng receipts"
+  },
+  {
+    "type": "evt.choice.ch03.name_the_cost",
+    "description": "Dialogue choice choice.ch03.name_the_cost"
+  },
+  {
+    "type": "evt.choice.ch03.results_first",
+    "description": "Dialogue choice choice.ch03.results_first"
   },
   {
     "type": "evt.ch04.p01.solved.a",
     "puzzleId": "ch04.p01",
-    "description": "Two Birthdays: solved by show both certificates to witness"
+    "description": "Two Birthdays: solved by show both certificates to a witness"
   },
   {
     "type": "evt.ch04.p01.solved.b",
@@ -287,7 +311,7 @@
   {
     "type": "evt.ch04.p02.solved.b",
     "puzzleId": "ch04.p02",
-    "description": "Memory Exhibit: solved by borrow curator’s catalog key"
+    "description": "Memory Exhibit: solved by borrow the curator's catalogue key"
   },
   {
     "type": "evt.ch04.p03.solved.a",
@@ -297,17 +321,17 @@
   {
     "type": "evt.ch04.p03.solved.b",
     "puzzleId": "ch04.p03",
-    "description": "Witness Who Was Absent: solved by use an audio record as negative witness"
+    "description": "Witness Who Was Absent: solved by use an audio record as a negative witness"
   },
   {
     "type": "evt.ch04.p04.solved.a",
     "puzzleId": "ch04.p04",
-    "description": "Bốp’s Missing Minute: solved by repair log index using clock receipts"
+    "description": "Bốp's Missing Minute: solved by repair the log index with clock receipts"
   },
   {
     "type": "evt.ch04.p04.solved.b",
     "puzzleId": "ch04.p04",
-    "description": "Bốp’s Missing Minute: solved by rebuild timeline from door audit events"
+    "description": "Bốp's Missing Minute: solved by rebuild the timeline from door audit events"
   },
   {
     "type": "evt.ch04.p05.solved.a",
@@ -337,7 +361,7 @@
   {
     "type": "evt.ch04.p07.solved.b",
     "puzzleId": "ch04.p07",
-    "description": "A Locked Apology: solved by offer trust in exchange for full log"
+    "description": "A Locked Apology: solved by offer trust in exchange for the full log"
   },
   {
     "type": "evt.ch04.p08.solved.a",
@@ -347,12 +371,12 @@
   {
     "type": "evt.ch04.p08.solved.b",
     "puzzleId": "ch04.p08",
-    "description": "The Erased Protest: solved by interview Mai about missing market day"
+    "description": "The Erased Protest: solved by interview Mai about the missing market day"
   },
   {
     "type": "evt.ch04.p09.solved.a",
     "puzzleId": "ch04.p09",
-    "description": "Reconstruction Hearing: solved by build chain from three independent records"
+    "description": "Reconstruction Hearing: solved by build a chain from three independent records"
   },
   {
     "type": "evt.ch04.p09.solved.b",
@@ -360,24 +384,32 @@
     "description": "Reconstruction Hearing: solved by challenge LOGIC to audit itself"
   },
   {
+    "type": "evt.choice.ch04.see_together",
+    "description": "Dialogue choice choice.ch04.see_together"
+  },
+  {
+    "type": "evt.choice.ch04.demand_index",
+    "description": "Dialogue choice choice.ch04.demand_index"
+  },
+  {
     "type": "evt.ch05.p01.solved.a",
     "puzzleId": "ch05.p01",
-    "description": "Lobby of Agreement: solved by file a disagreement as compliance report"
+    "description": "Lobby of Agreement: solved by file a disagreement as a compliance report"
   },
   {
     "type": "evt.ch05.p01.solved.b",
     "puzzleId": "ch05.p01",
-    "description": "Lobby of Agreement: solved by obtain a dissent permit from complaint terminal"
+    "description": "Lobby of Agreement: solved by get a dissent permit countersigned by Vượng"
   },
   {
     "type": "evt.ch05.p02.solved.a",
     "puzzleId": "ch05.p02",
-    "description": "Approval Maze: solved by reverse the approval hierarchy with delegation"
+    "description": "Approval Maze: solved by reverse the hierarchy by delegating down to yourself"
   },
   {
     "type": "evt.ch05.p02.solved.b",
     "puzzleId": "ch05.p02",
-    "description": "Approval Maze: solved by create a committee of discarded forms"
+    "description": "Approval Maze: solved by convene a committee of rejected forms"
   },
   {
     "type": "evt.ch05.p03.solved.a",
@@ -387,66 +419,74 @@
   {
     "type": "evt.ch05.p03.solved.b",
     "puzzleId": "ch05.p03",
-    "description": "Unquestionable Question: solved by reclassify interrogation as quality audit"
+    "description": "Unquestionable Question: solved by reclassify the interrogation as a quality audit"
   },
   {
     "type": "evt.ch05.p04.solved.a",
     "puzzleId": "ch05.p04",
-    "description": "Truth Meter: solved by feed meter two valid contradictory certificates"
+    "description": "Truth Meter: solved by feed the meter two valid contradictory certificates"
   },
   {
     "type": "evt.ch05.p04.solved.b",
     "puzzleId": "ch05.p04",
-    "description": "Truth Meter: solved by compare live witness with archived claim"
+    "description": "Truth Meter: solved by compare a live witness with her archived claim"
   },
   {
     "type": "evt.ch05.p05.solved.a",
     "puzzleId": "ch05.p05",
-    "description": "The Human Exception: solved by register empathy as valid exception"
+    "description": "The Human Exception: solved by register compassion as an existing exception"
   },
   {
     "type": "evt.ch05.p05.solved.b",
     "puzzleId": "ch05.p05",
-    "description": "The Human Exception: solved by show system its own unlogged choice"
+    "description": "The Human Exception: solved by show LOGIC its own unlogged choice"
   },
   {
     "type": "evt.ch05.p06.solved.a",
     "puzzleId": "ch05.p06",
-    "description": "The Final Witness: solved by make Bốp a public archive"
+    "description": "The Final Witness: solved by register Bốp as a public archive"
   },
   {
     "type": "evt.ch05.p06.solved.b",
     "puzzleId": "ch05.p06",
-    "description": "The Final Witness: solved by obtain Lan’s custody certification"
+    "description": "The Final Witness: solved by have Lan certify Bốp as an exhibit"
   },
   {
     "type": "evt.ch05.p07.solved.a",
     "puzzleId": "ch05.p07",
-    "description": "Four Doors: solved by combine evidence and public trust"
+    "description": "Four Doors: solved by combine the street's petition with the evidence"
   },
   {
     "type": "evt.ch05.p07.solved.b",
     "puzzleId": "ch05.p07",
-    "description": "Four Doors: solved by obtain override via self-audit"
+    "description": "Four Doors: solved by get an override by making LOGIC audit itself"
   },
   {
     "type": "evt.ch05.p08.solved.a",
     "puzzleId": "ch05.p08",
-    "description": "Consistency Trap: solved by introduce a third state of unresolved"
+    "description": "Consistency Trap: solved by introduce a third state: unresolved"
   },
   {
     "type": "evt.ch05.p08.solved.b",
     "puzzleId": "ch05.p08",
-    "description": "Consistency Trap: solved by demonstrate both records can be valid"
+    "description": "Consistency Trap: solved by show that both records can be valid"
   },
   {
     "type": "evt.ch05.p09.solved.a",
     "puzzleId": "ch05.p09",
-    "description": "Who Writes the Rules?: solved by submit chosen ending charter"
+    "description": "Who Writes the Rules?: solved by submit the chosen charter as a member of LOGIC"
   },
   {
     "type": "evt.ch05.p09.solved.b",
     "puzzleId": "ch05.p09",
-    "description": "Who Writes the Rules?: solved by make a public witnessed declaration"
+    "description": "Who Writes the Rules?: solved by make a public declaration witnessed by Cộc"
+  },
+  {
+    "type": "evt.choice.ch05.both_records",
+    "description": "Dialogue choice choice.ch05.both_records"
+  },
+  {
+    "type": "evt.choice.ch05.no_hiding",
+    "description": "Dialogue choice choice.ch05.no_hiding"
   }
 ]

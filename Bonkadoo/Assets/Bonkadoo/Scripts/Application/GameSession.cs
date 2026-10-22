@@ -60,6 +60,17 @@ namespace Bonkadoo.Application
             Commit(new[] { evt });
         }
 
+        /// <summary>Non-content facts (hint levels, settings mirrored into a run) journaled like everything else.</summary>
+        public void SetFact(string key, FactValue value, string requestId, long tick)
+        {
+            if (WorldKeys.IsTransient(key)) throw new ArgumentException("transient keys cannot be stored", nameof(key));
+            var evt = new WorldEvent(requestId + ":fact", WorldEventTypes.FlagSet, new Dictionary<string, string>
+            {
+                [PayloadKeys.Key] = key, [PayloadKeys.Kind] = value.Kind.ToString(), [PayloadKeys.Value] = value.Serialize(),
+            }, tick, requestId);
+            Commit(new[] { evt });
+        }
+
         private void Commit(IReadOnlyList<WorldEvent> events)
         {
             if (events.Count == 0) return;

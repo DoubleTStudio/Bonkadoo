@@ -1,7 +1,15 @@
 {
     "name": "Bonkadoo.Infrastructure.Unity",
     "rootNamespace": "Bonkadoo.Infrastructure.Unity",
-    "references": ["Bonkadoo.Domain", "Bonkadoo.Application", "Bonkadoo.Infrastructure"],
+    "references": [
+        "Bonkadoo.Domain",
+        "Bonkadoo.Application",
+        "Bonkadoo.Narrative",
+        "Bonkadoo.Infrastructure",
+        "UnityEngine.Purchasing",
+        "UnityEngine.Purchasing.Stores",
+        "Unity.Services.Core"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

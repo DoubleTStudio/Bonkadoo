@@ -1,0 +1,38 @@
+title: ch01_intro
+tags: ch01
+---
+vuong: Tí, you are fired. You finished this quarter's work by Tuesday. It makes everyone look bad. #line:ch01_intro.l001
+ti: So I can go home? #line:ch01_intro.l002
+logic: NOTICE - Fired employees cannot receive documents. Unfired employees cannot leave. #line:ch01_intro.l003
+bop: Congratulations. You are now legally stuck. I will be your assistant in being stuck. #line:ch01_intro.l004
+ti: Fine. If the rules are absurd, the rules can also be used. #line:ch01_intro.l005
+===
+
+title: ch01_quiet
+tags: ch01
+---
+The corridor is finally quiet. Bốp hovers lower than usual. #line:ch01_quiet.l001
+bop: Tí. If I ever knew something about you that you did not, would you want to know? #line:ch01_quiet.l002
+-> "Always. Tell me the truth." #line:ch01_quiet.o003
+    <<act choice.ch01.ask_truth>>
+    bop: Noted. Truth is expensive. I will start saving. #line:ch01_quiet.l004
+-> "Not today. Today I just want to go home." #line:ch01_quiet.o005
+    <<act choice.ch01.not_today>>
+    bop: Understood. Home first. Existential dread later. #line:ch01_quiet.l006
+ti: Why do you ask, anyway? #line:ch01_quiet.l007
+bop: No reason. Cubes ask things. It is a cube habit. #line:ch01_quiet.l008
+===
+
+title: ch01_outro
+tags: ch01
+---
+The exit door opens. A file slides out of the audit slot and lands at Tí's feet. #line:ch01_outro.l001
+ti: "Tí, dismissed 1998." I was hired in 2019. I was six in 1998. #line:ch01_outro.l002
+<<if metric("trust_bop") >= 2>>
+    bop: Tí... I have seen this record before. I should have told you. I will explain, I promise. #line:ch01_outro.l003
+<<else>>
+    bop: A clerical error. Probably. Ninety-one percent probably. #line:ch01_outro.l004
+<<endif>>
+logic: NOTICE - Your citizen record could not be found. Please visit the City Registry. #line:ch01_outro.l005
+ti: I just got fired, and now I do not exist. Great Tuesday. #line:ch01_outro.l006
+===

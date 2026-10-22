@@ -1,0 +1,46 @@
+title: ch03_intro
+tags: ch03
+---
+Dawn. The smell of fresh bread, and a brand-new notice taped to Mai's stall. #line:ch03_intro.l001
+mai: You must be Tí. Bốp said you are good with rules. I hope you are good with bread rules. #line:ch03_intro.l002
+logic: NOTICE - Bread sales require a Bread Licence. Bakeries are not eligible for Bread Licences. #line:ch03_intro.l003
+ti: So only people who do not make bread may sell bread. #line:ch03_intro.l004
+mai: Whatever we do, remember the people in line. A clever fix that empties their pockets is no fix. #line:ch03_intro.l005
+bop: Also, your citizen number still matches a record from an erased cycle. Unrelated. Mostly. #line:ch03_intro.l006
+===
+
+title: ch03_quiet
+tags: ch03
+---
+The cart rolls on. Bốp hovers beside Tí, watching the street settle. #line:ch03_quiet.l001
+bop: Every fix today moved a cost somewhere. I can calculate where. I usually do not mention it. #line:ch03_quiet.l002
+bop: Do you want me to say it out loud next time? Even if it slows us down? #line:ch03_quiet.l003
+-> "Yes. Tell me who pays, every time." #line:ch03_quiet.o004
+    <<act choice.ch03.name_the_cost>>
+    bop: Very well. I will be annoying, accurate, and on your side. #line:ch03_quiet.l005
+-> "Not now. Mai needs results, not reports." #line:ch03_quiet.o006
+    <<act choice.ch03.results_first>>
+    bop: Understood. I will keep the side effects in a folder. A large folder. #line:ch03_quiet.l007
+ti: Bốp. That erased cycle. Did people get hurt by fixes back then too? #line:ch03_quiet.l008
+bop: I do not have that file. Which is, itself, interesting. #line:ch03_quiet.l009
+===
+
+title: ch03_outro
+tags: ch03
+---
+The council stamps one line. "Bakeries" becomes "anyone who bakes". Mai's stall is legal. #line:ch03_outro.l001
+logic: AMENDMENT ACCEPTED. Recalculating dependent rules - 41,207. #line:ch03_outro.l002
+Every home oven now needs a licence. Inspectors need a licence to inspect ovens. Ovens apply. #line:ch03_outro.l003
+ti: We changed one word. #line:ch03_outro.l004
+<<if metric("public_trust") >= 1>>
+    mai: And the street will help untangle the rest. They trust you now. Do not waste it. #line:ch03_outro.l005
+<<else>>
+    mai: And the street will pay for the rest, like always. Next time, we ask them first. #line:ch03_outro.l006
+<<endif>>
+<<if has_event("evt.ch03.p09.solved.b")>>
+    bop: Also, 9,880 zero-đồng customers now exist on record. Some of them have tax files. #line:ch03_outro.l007
+<<endif>>
+logic: NOTICE - Conflicting records detected for citizen Tí. Both are official. Refer to the City Archive. #line:ch03_outro.l008
+mai: The Archive? Ask for Lan. She keeps the records nobody agrees on. Witnesses too. #line:ch03_outro.l009
+bop: Two official versions of you. In my experience, one of them gets erased. Let us be early. #line:ch03_outro.l010
+===

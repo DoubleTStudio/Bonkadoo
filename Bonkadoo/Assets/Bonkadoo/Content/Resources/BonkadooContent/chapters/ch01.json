@@ -2,9 +2,9 @@
   "id": "ch01",
   "title": "Last Day at Work",
   "locations": [
-    "Office",
-    "hallway",
-    "checkpoint"
+    "scene.ch01.office",
+    "scene.ch01.hallway",
+    "scene.ch01.checkpoint"
   ],
   "objective": "Find a lawful way to be fired and leave.",
   "reveal": "Tí finds a dismissal record dated before his hiring.",
@@ -24,5 +24,9 @@
     "Tí/Bốp quiet beat",
     "clue to next chapter"
   ],
-  "chapterCompleteFlag": "flag.ch01.complete"
+  "chapterCompleteFlag": "flag.ch01.complete",
+  "startScene": "scene.ch01.office",
+  "titleKey": "txt.chapter.ch01.title",
+  "objectiveKey": "txt.chapter.ch01.objective",
+  "revealKey": "txt.chapter.ch01.reveal"
 }

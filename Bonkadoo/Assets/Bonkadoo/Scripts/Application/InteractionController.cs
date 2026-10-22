@@ -15,9 +15,14 @@ namespace Bonkadoo.Application
         /// <summary>Optional transient context sent with the request (e.g. input.ch01.p01.choice = "a").</summary>
         public string InputKey { get; }
         public string InputValue { get; }
+        public string ExitTo { get; }
+        public bool StartUnlocked { get; }
 
-        public HotspotInfo(string id, HotspotKind kind, string inputKey = null, string inputValue = null)
+        public HotspotInfo(string id, HotspotKind kind, string inputKey = null, string inputValue = null, string exitTo = null,
+            bool startUnlocked = false)
         {
+            ExitTo = exitTo;
+            StartUnlocked = startUnlocked;
             if (string.IsNullOrEmpty(id)) throw new ArgumentException("id required", nameof(id));
             if (inputKey != null && !WorldKeys.IsTransient(inputKey))
                 throw new ArgumentException($"Hotspot input key '{inputKey}' must start with '{WorldKeys.InputPrefix}'");
@@ -63,6 +68,10 @@ namespace Bonkadoo.Application
 
         public event Action<string> SelectionChanged;
         public event Action<InteractionRequest, InteractionOutcome> Resolved;
+        /// <summary>(fromScene, toScene) after a scene change is committed; a natural break for ads.</summary>
+        public event Action<string, string> SceneChanged;
+
+        public GameSession Session => _session;
 
         public InteractionController(GameSession session, RequestIdFactory ids, ITickSource ticks)
         {
@@ -89,6 +98,9 @@ namespace Bonkadoo.Application
         public InteractionOutcome Tap(HotspotInfo hotspot)
         {
             if (hotspot == null) throw new ArgumentNullException(nameof(hotspot));
+            if (hotspot.Kind == HotspotKind.Exit && hotspot.ExitTo != null && SelectedItemId == null &&
+                (hotspot.StartUnlocked || _session.State.IsExitUnlocked(hotspot.Id)))
+                return EnterScene(hotspot.ExitTo);
             if (SelectedItemId != null)
             {
                 var item = SelectedItemId;
@@ -96,6 +108,30 @@ namespace Bonkadoo.Application
                 return Send(InteractionVerb.UseItem, item, hotspot);
             }
             return Send(DefaultVerb(hotspot.Kind), null, hotspot);
+        }
+
+        /// <summary>Journals the scene change, then sends an Enter request so content can react to arrival.</summary>
+        public InteractionOutcome EnterScene(string sceneId)
+        {
+            var from = _session.State.CurrentSceneId;
+            SetSelection(null);
+            _session.EnterScene(sceneId, _ids.Next(), _ticks.Now);
+            var outcome = Send(InteractionVerb.Enter, null, new HotspotInfo(sceneId, HotspotKind.Prop));
+            if (!string.Equals(from, sceneId, StringComparison.Ordinal)) SceneChanged?.Invoke(from, sceneId);
+            return outcome;
+        }
+
+        /// <summary>A dialogue choice: resolved by content rules like any other interaction.</summary>
+        public InteractionOutcome Choose(string choiceId) =>
+            Send(InteractionVerb.Talk, null, new HotspotInfo(choiceId, HotspotKind.Option));
+
+        /// <summary>Selected item applied to another inventory item.</summary>
+        public InteractionOutcome Combine(string targetItemId)
+        {
+            if (SelectedItemId == null || !_session.State.HasItem(targetItemId) || SelectedItemId == targetItemId) return null;
+            var source = SelectedItemId;
+            SetSelection(null);
+            return Send(InteractionVerb.CombineItems, source, new HotspotInfo(targetItemId, HotspotKind.Prop));
         }
 
         public InteractionOutcome DragItemOnto(string itemId, HotspotInfo hotspot)

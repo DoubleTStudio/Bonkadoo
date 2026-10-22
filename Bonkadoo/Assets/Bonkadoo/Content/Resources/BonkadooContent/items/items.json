@@ -1,0 +1,786 @@
+[
+  {
+    "id": "item.ch01.stamp",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.stamp",
+    "descKey": "txt.item.item.ch01.stamp.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch01.manual_page",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.manual_page",
+    "descKey": "txt.item.item.ch01.manual_page.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.dismissal_notice",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.dismissal_notice",
+    "descKey": "txt.item.item.ch01.dismissal_notice.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch01.lost_form",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.lost_form",
+    "descKey": "txt.item.item.ch01.lost_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.visitor_sticker",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.visitor_sticker",
+    "descKey": "txt.item.item.ch01.visitor_sticker.desc",
+    "color": "#2e86de"
+  },
+  {
+    "id": "item.ch01.marker",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.marker",
+    "descKey": "txt.item.item.ch01.marker.desc",
+    "color": "#27ae60"
+  },
+  {
+    "id": "item.ch01.room_booking",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.room_booking",
+    "descKey": "txt.item.item.ch01.room_booking.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.complaint_form",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.complaint_form",
+    "descKey": "txt.item.item.ch01.complaint_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.blank_template",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.blank_template",
+    "descKey": "txt.item.item.ch01.blank_template.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.exit_request",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.exit_request",
+    "descKey": "txt.item.item.ch01.exit_request.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch01.plaque",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.plaque",
+    "descKey": "txt.item.item.ch01.plaque.desc",
+    "color": "#b7950b"
+  },
+  {
+    "id": "item.ch01.exec_label",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.exec_label",
+    "descKey": "txt.item.item.ch01.exec_label.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.alarm_tag",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.alarm_tag",
+    "descKey": "txt.item.item.ch01.alarm_tag.desc",
+    "color": "#e67e22"
+  },
+  {
+    "id": "item.ch01.silence_form",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.silence_form",
+    "descKey": "txt.item.item.ch01.silence_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.checklist_copy",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.checklist_copy",
+    "descKey": "txt.item.item.ch01.checklist_copy.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.self_form",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.self_form",
+    "descKey": "txt.item.item.ch01.self_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.ledger_pen",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.ledger_pen",
+    "descKey": "txt.item.item.ch01.ledger_pen.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.custodian_form",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.custodian_form",
+    "descKey": "txt.item.item.ch01.custodian_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.audit_form",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.audit_form",
+    "descKey": "txt.item.item.ch01.audit_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch01.old_record",
+    "chapter": "ch01",
+    "labelKey": "txt.item.item.ch01.old_record",
+    "descKey": "txt.item.item.ch01.old_record.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch02.witness_form",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.witness_form",
+    "descKey": "txt.item.item.ch02.witness_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.reversal_form",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.reversal_form",
+    "descKey": "txt.item.item.ch02.reversal_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.roster_slip",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.roster_slip",
+    "descKey": "txt.item.item.ch02.roster_slip.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch02.spare_rope",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.spare_rope",
+    "descKey": "txt.item.item.ch02.spare_rope.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch02.expired_ticket",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.expired_ticket",
+    "descKey": "txt.item.item.ch02.expired_ticket.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.queue_number",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.queue_number",
+    "descKey": "txt.item.item.ch02.queue_number.desc",
+    "color": "#2e86de"
+  },
+  {
+    "id": "item.ch02.envelope",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.envelope",
+    "descKey": "txt.item.item.ch02.envelope.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.map_legend",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.map_legend",
+    "descKey": "txt.item.item.ch02.map_legend.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.address_proof",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.address_proof",
+    "descKey": "txt.item.item.ch02.address_proof.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch02.template_card",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.template_card",
+    "descKey": "txt.item.item.ch02.template_card.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.regulation_poster",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.regulation_poster",
+    "descKey": "txt.item.item.ch02.regulation_poster.desc",
+    "color": "#7f8c8d"
+  },
+  {
+    "id": "item.ch02.id_photo",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.id_photo",
+    "descKey": "txt.item.item.ch02.id_photo.desc",
+    "color": "#34495e"
+  },
+  {
+    "id": "item.ch02.death_record",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.death_record",
+    "descKey": "txt.item.item.ch02.death_record.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch02.tax_notice",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.tax_notice",
+    "descKey": "txt.item.item.ch02.tax_notice.desc",
+    "color": "#e67e22"
+  },
+  {
+    "id": "item.ch02.proof_of_life",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.proof_of_life",
+    "descKey": "txt.item.item.ch02.proof_of_life.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch02.sample_ticket",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.sample_ticket",
+    "descKey": "txt.item.item.ch02.sample_ticket.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.validated_ticket",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.validated_ticket",
+    "descKey": "txt.item.item.ch02.validated_ticket.desc",
+    "color": "#27ae60"
+  },
+  {
+    "id": "item.ch02.violation_receipt",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.violation_receipt",
+    "descKey": "txt.item.item.ch02.violation_receipt.desc",
+    "color": "#e74c3c"
+  },
+  {
+    "id": "item.ch02.found_tag",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.found_tag",
+    "descKey": "txt.item.item.ch02.found_tag.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.claim_ticket",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.claim_ticket",
+    "descKey": "txt.item.item.ch02.claim_ticket.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.owner_declaration",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.owner_declaration",
+    "descKey": "txt.item.item.ch02.owner_declaration.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.identity_file",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.identity_file",
+    "descKey": "txt.item.item.ch02.identity_file.desc",
+    "color": "#b7950b"
+  },
+  {
+    "id": "item.ch02.plate_one",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.plate_one",
+    "descKey": "txt.item.item.ch02.plate_one.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.request_slip",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.request_slip",
+    "descKey": "txt.item.item.ch02.request_slip.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.filled_request",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.filled_request",
+    "descKey": "txt.item.item.ch02.filled_request.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch02.supersede_form",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.supersede_form",
+    "descKey": "txt.item.item.ch02.supersede_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.supersede_filled",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.supersede_filled",
+    "descKey": "txt.item.item.ch02.supersede_filled.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch02.deletion_notice",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.deletion_notice",
+    "descKey": "txt.item.item.ch02.deletion_notice.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch02.contradiction_report",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.contradiction_report",
+    "descKey": "txt.item.item.ch02.contradiction_report.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch02.old_citizen_card",
+    "chapter": "ch02",
+    "labelKey": "txt.item.item.ch02.old_citizen_card",
+    "descKey": "txt.item.item.ch02.old_citizen_card.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch03.art_label",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.art_label",
+    "descKey": "txt.item.item.ch03.art_label.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch03.ration_form",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.ration_form",
+    "descKey": "txt.item.item.ch03.ration_form.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch03.compliment_note",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.compliment_note",
+    "descKey": "txt.item.item.ch03.compliment_note.desc",
+    "color": "#f5b7b1"
+  },
+  {
+    "id": "item.ch03.receipt_book",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.receipt_book",
+    "descKey": "txt.item.item.ch03.receipt_book.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.standee",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.standee",
+    "descKey": "txt.item.item.ch03.standee.desc",
+    "color": "#d35400"
+  },
+  {
+    "id": "item.ch03.queue_tickets",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.queue_tickets",
+    "descKey": "txt.item.item.ch03.queue_tickets.desc",
+    "color": "#2e86de"
+  },
+  {
+    "id": "item.ch03.rejection_letter",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.rejection_letter",
+    "descKey": "txt.item.item.ch03.rejection_letter.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.office_application",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.office_application",
+    "descKey": "txt.item.item.ch03.office_application.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.vendor_permit",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.vendor_permit",
+    "descKey": "txt.item.item.ch03.vendor_permit.desc",
+    "color": "#27ae60"
+  },
+  {
+    "id": "item.ch03.stale_loaf",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.stale_loaf",
+    "descKey": "txt.item.item.ch03.stale_loaf.desc",
+    "color": "#a04000"
+  },
+  {
+    "id": "item.ch03.refund_form",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.refund_form",
+    "descKey": "txt.item.item.ch03.refund_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.delivery_sign",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.delivery_sign",
+    "descKey": "txt.item.item.ch03.delivery_sign.desc",
+    "color": "#2e86de"
+  },
+  {
+    "id": "item.ch03.cart_shoes",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.cart_shoes",
+    "descKey": "txt.item.item.ch03.cart_shoes.desc",
+    "color": "#b7950b"
+  },
+  {
+    "id": "item.ch03.test_script",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.test_script",
+    "descKey": "txt.item.item.ch03.test_script.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.lost_notice",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.lost_notice",
+    "descKey": "txt.item.item.ch03.lost_notice.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.clock_key",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.clock_key",
+    "descKey": "txt.item.item.ch03.clock_key.desc",
+    "color": "#b7950b"
+  },
+  {
+    "id": "item.ch03.sponsor_slip",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.sponsor_slip",
+    "descKey": "txt.item.item.ch03.sponsor_slip.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.tasting_permit",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.tasting_permit",
+    "descKey": "txt.item.item.ch03.tasting_permit.desc",
+    "color": "#27ae60"
+  },
+  {
+    "id": "item.ch03.receipt_bundle",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.receipt_bundle",
+    "descKey": "txt.item.item.ch03.receipt_bundle.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.signed_receipts",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.signed_receipts",
+    "descKey": "txt.item.item.ch03.signed_receipts.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch03.zero_receipts",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.zero_receipts",
+    "descKey": "txt.item.item.ch03.zero_receipts.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch03.archive_notice",
+    "chapter": "ch03",
+    "labelKey": "txt.item.item.ch03.archive_notice",
+    "descKey": "txt.item.item.ch03.archive_notice.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch04.cert_pair",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.cert_pair",
+    "descKey": "txt.item.item.ch04.cert_pair.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch04.date_form",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.date_form",
+    "descKey": "txt.item.item.ch04.date_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.placard",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.placard",
+    "descKey": "txt.item.item.ch04.placard.desc",
+    "color": "#b7950b"
+  },
+  {
+    "id": "item.ch04.catalog_key",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.catalog_key",
+    "descKey": "txt.item.item.ch04.catalog_key.desc",
+    "color": "#b7950b"
+  },
+  {
+    "id": "item.ch04.attendance_list",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.attendance_list",
+    "descKey": "txt.item.item.ch04.attendance_list.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.audio_tape",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.audio_tape",
+    "descKey": "txt.item.item.ch04.audio_tape.desc",
+    "color": "#2c3e50"
+  },
+  {
+    "id": "item.ch04.clock_receipts",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.clock_receipts",
+    "descKey": "txt.item.item.ch04.clock_receipts.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.door_events",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.door_events",
+    "descKey": "txt.item.item.ch04.door_events.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.request_slip",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.request_slip",
+    "descKey": "txt.item.item.ch04.request_slip.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.suspicious_stamp",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.suspicious_stamp",
+    "descKey": "txt.item.item.ch04.suspicious_stamp.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch04.fresh_print",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.fresh_print",
+    "descKey": "txt.item.item.ch04.fresh_print.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.badge_history",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.badge_history",
+    "descKey": "txt.item.item.ch04.badge_history.desc",
+    "color": "#2e86de"
+  },
+  {
+    "id": "item.ch04.reset_slide",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.reset_slide",
+    "descKey": "txt.item.item.ch04.reset_slide.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch04.trust_form",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.trust_form",
+    "descKey": "txt.item.item.ch04.trust_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.old_map",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.old_map",
+    "descKey": "txt.item.item.ch04.old_map.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.mai_ledger",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.mai_ledger",
+    "descKey": "txt.item.item.ch04.mai_ledger.desc",
+    "color": "#27ae60"
+  },
+  {
+    "id": "item.ch04.chain_file",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.chain_file",
+    "descKey": "txt.item.item.ch04.chain_file.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch04.error_report",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.error_report",
+    "descKey": "txt.item.item.ch04.error_report.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch04.reset_log",
+    "chapter": "ch04",
+    "labelKey": "txt.item.item.ch04.reset_log",
+    "descKey": "txt.item.item.ch04.reset_log.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch05.compliance_report",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.compliance_report",
+    "descKey": "txt.item.item.ch05.compliance_report.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch05.dissent_form",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.dissent_form",
+    "descKey": "txt.item.item.ch05.dissent_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.dissent_permit",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.dissent_permit",
+    "descKey": "txt.item.item.ch05.dissent_permit.desc",
+    "color": "#2e86de"
+  },
+  {
+    "id": "item.ch05.delegation_slip",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.delegation_slip",
+    "descKey": "txt.item.item.ch05.delegation_slip.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.rejected_forms",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.rejected_forms",
+    "descKey": "txt.item.item.ch05.rejected_forms.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.committee_resolution",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.committee_resolution",
+    "descKey": "txt.item.item.ch05.committee_resolution.desc",
+    "color": "#b7950b"
+  },
+  {
+    "id": "item.ch05.blank_answer",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.blank_answer",
+    "descKey": "txt.item.item.ch05.blank_answer.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.quality_survey",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.quality_survey",
+    "descKey": "txt.item.item.ch05.quality_survey.desc",
+    "color": "#27ae60"
+  },
+  {
+    "id": "item.ch05.twin_certificates",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.twin_certificates",
+    "descKey": "txt.item.item.ch05.twin_certificates.desc",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "item.ch05.archived_claim",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.archived_claim",
+    "descKey": "txt.item.item.ch05.archived_claim.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.kindness_receipt",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.kindness_receipt",
+    "descKey": "txt.item.item.ch05.kindness_receipt.desc",
+    "color": "#e67e22"
+  },
+  {
+    "id": "item.ch05.log_gap",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.log_gap",
+    "descKey": "txt.item.item.ch05.log_gap.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.archive_cable",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.archive_cable",
+    "descKey": "txt.item.item.ch05.archive_cable.desc",
+    "color": "#34495e"
+  },
+  {
+    "id": "item.ch05.custody_form",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.custody_form",
+    "descKey": "txt.item.item.ch05.custody_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.custody_tag",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.custody_tag",
+    "descKey": "txt.item.item.ch05.custody_tag.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch05.street_petition",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.street_petition",
+    "descKey": "txt.item.item.ch05.street_petition.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch05.self_audit_form",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.self_audit_form",
+    "descKey": "txt.item.item.ch05.self_audit_form.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.pending_stamp",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.pending_stamp",
+    "descKey": "txt.item.item.ch05.pending_stamp.desc",
+    "color": "#c0392b"
+  },
+  {
+    "id": "item.ch05.dissent_list",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.dissent_list",
+    "descKey": "txt.item.item.ch05.dissent_list.desc",
+    "color": "#d9b26f"
+  },
+  {
+    "id": "item.ch05.charter",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.charter",
+    "descKey": "txt.item.item.ch05.charter.desc",
+    "color": "#f5f0e1"
+  },
+  {
+    "id": "item.ch05.witness_seal",
+    "chapter": "ch05",
+    "labelKey": "txt.item.item.ch05.witness_seal",
+    "descKey": "txt.item.item.ch05.witness_seal.desc",
+    "color": "#b7950b"
+  }
+]

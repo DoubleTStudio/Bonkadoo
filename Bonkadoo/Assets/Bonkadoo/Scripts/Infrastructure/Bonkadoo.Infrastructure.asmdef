@@ -1,12 +1,21 @@
 {
     "name": "Bonkadoo.Infrastructure",
     "rootNamespace": "Bonkadoo.Infrastructure",
-    "references": ["Bonkadoo.Domain", "Bonkadoo.Application"],
+    "references": [
+        "Bonkadoo.Domain",
+        "Bonkadoo.Application",
+        "Bonkadoo.Narrative"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": ["Newtonsoft.Json.dll"],
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll",
+        "YarnSpinner.dll",
+        "YarnSpinner.Compiler.dll",
+        "Yarn.Google.Protobuf.dll"
+    ],
     "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],

@@ -1,0 +1,174 @@
+using System;
+using Bonkadoo.Domain;
+
+namespace Bonkadoo.Application
+{
+    /// <summary>Counts active gameplay only; background and menus never count (ADS_AND_IAP).</summary>
+    public sealed class ActivePlayClock
+    {
+        /// <summary>Unity reports a huge delta after resume; one frame never counts for more than this.</summary>
+        public const double MaxFrameSeconds = 0.25;
+
+        public double SecondsSinceInterstitial { get; private set; }
+
+        public void Tick(double deltaSeconds, bool gameplayActive, bool appFocused)
+        {
+            if (!gameplayActive || !appFocused || deltaSeconds <= 0) return;
+            SecondsSinceInterstitial += Math.Min(deltaSeconds, MaxFrameSeconds);
+        }
+
+        public void ResetAfterInterstitial() => SecondsSinceInterstitial = 0;
+    }
+
+    public interface IAdService
+    {
+        bool IsInterstitialReady { get; }
+        void Initialize(Action<bool> consentResolved);
+        void LoadInterstitial();
+        /// <summary>Calls back exactly once with whether an impression happened. Must never throw or block.</summary>
+        void ShowInterstitial(Action<bool> closed);
+        void SetBannerVisible(bool visible);
+    }
+
+    public interface IEntitlements
+    {
+        bool RemoveAdsOwned { get; }
+        event Action<bool> Changed;
+    }
+
+    public interface IStoreService
+    {
+        string RemoveAdsProductId { get; }
+        bool IsReady { get; }
+        string LocalizedPrice { get; }
+        void PurchaseRemoveAds(Action<PurchaseResult> done);
+        void RestorePurchases(Action<bool> done);
+    }
+
+    public enum PurchaseResult { Purchased, Cancelled, Failed, Pending, Unavailable }
+
+    /// <summary>Decides at natural breaks; the transition always proceeds whether or not an ad shows.</summary>
+    public sealed class AdCoordinator
+    {
+        private readonly IAdPolicy _policy;
+        private readonly IAdService _ads;
+        private readonly IEntitlements _entitlements;
+        private readonly ActivePlayClock _clock;
+        private readonly Func<bool> _isFirstSession;
+
+        public bool ConsentResolved { get; private set; }
+        public bool DialogueActive { get; set; }
+        public bool PuzzleActive { get; set; }
+        public bool ShowingInterstitial { get; private set; }
+        public int Impressions { get; private set; }
+        public AdDecision LastDecision { get; private set; }
+
+        public AdCoordinator(IAdPolicy policy, IAdService ads, IEntitlements entitlements, ActivePlayClock clock,
+            Func<bool> isFirstSession)
+        {
+            _policy = policy ?? throw new ArgumentNullException(nameof(policy));
+            _ads = ads ?? throw new ArgumentNullException(nameof(ads));
+            _entitlements = entitlements ?? throw new ArgumentNullException(nameof(entitlements));
+            _clock = clock ?? throw new ArgumentNullException(nameof(clock));
+            _isFirstSession = isFirstSession ?? (() => false);
+            _entitlements.Changed += _ => RefreshBanner();
+        }
+
+        public void Start()
+        {
+            if (_entitlements.RemoveAdsOwned)
+            {
+                ConsentResolved = true;
+                RefreshBanner();
+                return;
+            }
+            try
+            {
+                _ads.Initialize(_ =>
+                {
+                    ConsentResolved = true;
+                    RefreshBanner();
+                    SafeLoad();
+                });
+            }
+            catch (Exception)
+            {
+                // ad SDK failure must never block play
+                ConsentResolved = false;
+            }
+        }
+
+        public AdContext Context(bool naturalBreak) => new AdContext
+        {
+            RemoveAdsOwned = _entitlements.RemoveAdsOwned,
+            IsFirstSession = _isFirstSession(),
+            ActivePlaySecondsSinceInterstitial = _clock.SecondsSinceInterstitial,
+            NaturalBreak = naturalBreak,
+            DialogueActive = DialogueActive,
+            PuzzleActive = PuzzleActive,
+            ConsentResolved = ConsentResolved,
+        };
+
+        /// <summary>Call at a scene/chapter break. Returns true if an interstitial was requested.</summary>
+        public bool OnNaturalBreak()
+        {
+            LastDecision = _policy.EvaluateInterstitial(Context(true));
+            if (LastDecision != AdDecision.Show || ShowingInterstitial) return false;
+            if (!SafeReady())
+            {
+                SafeLoad();
+                return false;
+            }
+            ShowingInterstitial = true;
+            try
+            {
+                _ads.ShowInterstitial(shown =>
+                {
+                    ShowingInterstitial = false;
+                    if (shown)
+                    {
+                        Impressions++;
+                        _clock.ResetAfterInterstitial();
+                    }
+                    SafeLoad();
+                });
+            }
+            catch (Exception)
+            {
+                ShowingInterstitial = false;
+                return false;
+            }
+            return true;
+        }
+
+        public void RefreshBanner()
+        {
+            try { _ads.SetBannerVisible(_policy.CanShowBanner(Context(false))); }
+            catch (Exception) { /* banner failures are cosmetic */ }
+        }
+
+        private bool SafeReady()
+        {
+            try { return _ads.IsInterstitialReady; }
+            catch (Exception) { return false; }
+        }
+
+        private void SafeLoad()
+        {
+            if (_entitlements.RemoveAdsOwned) return;
+            try { _ads.LoadInterstitial(); }
+            catch (Exception) { /* retried at next break */ }
+        }
+    }
+
+    /// <summary>No ads at all: Remove Ads owned, unsupported platform, or SDK absent. Offline-safe.</summary>
+    public sealed class NullAdService : IAdService
+    {
+        public bool IsInterstitialReady => false;
+        public bool BannerVisible { get; private set; }
+        public void Initialize(Action<bool> consentResolved) => consentResolved?.Invoke(false);
+        public void LoadInterstitial() { }
+        public void ShowInterstitial(Action<bool> closed) => closed?.Invoke(false);
+        public void SetBannerVisible(bool visible) => BannerVisible = visible;
+    }
+}

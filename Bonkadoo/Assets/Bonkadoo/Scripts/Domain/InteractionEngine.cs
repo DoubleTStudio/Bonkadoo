@@ -25,20 +25,27 @@ namespace Bonkadoo.Domain
         public string MatchedRuleId { get; }
         public string FeedbackKey { get; }
         public IReadOnlyList<WorldEvent> Events { get; }
+        public IReadOnlyList<DialogueLine> DialogueLines { get; }
         public IReadOnlyList<string> DialogueKeys { get; }
+        public IReadOnlyList<string> Conversations { get; }
         public IReadOnlyList<string> AnimationCues { get; }
         public string ErrorCode { get; }
         public string ErrorMessage { get; }
 
         public InteractionOutcome(OutcomeStatus status, string matchedRuleId, string feedbackKey,
-            IReadOnlyList<WorldEvent> events = null, IReadOnlyList<string> dialogueKeys = null,
-            IReadOnlyList<string> animationCues = null, string errorCode = null, string errorMessage = null)
+            IReadOnlyList<WorldEvent> events = null, IReadOnlyList<DialogueLine> dialogueLines = null,
+            IReadOnlyList<string> animationCues = null, string errorCode = null, string errorMessage = null,
+            IReadOnlyList<string> conversations = null)
         {
             Status = status;
             MatchedRuleId = matchedRuleId;
             FeedbackKey = feedbackKey;
             Events = events ?? NoEvents;
-            DialogueKeys = dialogueKeys ?? NoStrings;
+            DialogueLines = dialogueLines ?? Array.Empty<DialogueLine>();
+            var keys = new string[DialogueLines.Count];
+            for (var i = 0; i < keys.Length; i++) keys[i] = DialogueLines[i].Key;
+            DialogueKeys = keys;
+            Conversations = conversations ?? NoStrings;
             AnimationCues = animationCues ?? NoStrings;
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
@@ -97,9 +104,9 @@ namespace Bonkadoo.Domain
                     errorCode: ex.Code, errorMessage: $"{rule.Id}: {ex.Message}");
             }
 
-            var feedback = plan.DialogueKeys.Count > 0 ? plan.DialogueKeys[0] : null;
-            return new InteractionOutcome(OutcomeStatus.Committed, rule.Id, feedback, plan.Events, plan.DialogueKeys,
-                plan.AnimationCues);
+            var feedback = plan.DialogueLines.Count > 0 ? plan.DialogueLines[0].Key : null;
+            return new InteractionOutcome(OutcomeStatus.Committed, rule.Id, feedback, plan.Events, plan.DialogueLines,
+                plan.AnimationCues, conversations: plan.Conversations);
         }
     }
 }

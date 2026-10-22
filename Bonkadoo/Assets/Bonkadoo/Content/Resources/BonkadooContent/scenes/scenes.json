@@ -1,0 +1,1896 @@
+[
+  {
+    "id": "scene.ch01.office",
+    "chapter": "ch01",
+    "nameKey": "txt.scene.scene.ch01.office",
+    "background": "#cfd8c4",
+    "music": "office",
+    "hotspots": [
+      {
+        "id": "npc.vuong",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.vuong",
+        "x": 0.78,
+        "y": 0.45,
+        "w": 0.14,
+        "h": 0.42,
+        "character": "vuong"
+      },
+      {
+        "id": "prop.ch01.desk_stamp",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.desk_stamp",
+        "x": 0.18,
+        "y": 0.38,
+        "w": 0.12,
+        "h": 0.2
+      },
+      {
+        "id": "prop.ch01.notice",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.notice",
+        "x": 0.33,
+        "y": 0.36,
+        "w": 0.12,
+        "h": 0.2
+      },
+      {
+        "id": "prop.ch01.staff_manual",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.staff_manual",
+        "x": 0.08,
+        "y": 0.62,
+        "w": 0.1,
+        "h": 0.24
+      },
+      {
+        "id": "prop.ch01.badge_reader",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.badge_reader",
+        "x": 0.5,
+        "y": 0.55,
+        "w": 0.08,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch01.lost_tray",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.lost_tray",
+        "x": 0.42,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch01.visitor_box",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.visitor_box",
+        "x": 0.6,
+        "y": 0.75,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch01.agenda_board",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.agenda_board",
+        "x": 0.27,
+        "y": 0.72,
+        "w": 0.14,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch01.room_schedule",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.room_schedule",
+        "x": 0.9,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch01.meeting_chair",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.meeting_chair",
+        "x": 0.64,
+        "y": 0.33,
+        "w": 0.1,
+        "h": 0.18
+      },
+      {
+        "id": "exit.ch01.office_hall",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch01.office_hall",
+        "x": 0.95,
+        "y": 0.4,
+        "w": 0.08,
+        "h": 0.5,
+        "exitTo": "scene.ch01.hallway",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch01.hallway",
+    "chapter": "ch01",
+    "nameKey": "txt.scene.scene.ch01.hallway",
+    "background": "#d6cfe0",
+    "music": "office",
+    "hotspots": [
+      {
+        "id": "npc.bop",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.bop",
+        "x": 0.5,
+        "y": 0.62,
+        "w": 0.08,
+        "h": 0.14,
+        "character": "bop"
+      },
+      {
+        "id": "npc.janitor",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.janitor",
+        "x": 0.2,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "janitor"
+      },
+      {
+        "id": "prop.ch01.printer",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.printer",
+        "x": 0.08,
+        "y": 0.4,
+        "w": 0.1,
+        "h": 0.22
+      },
+      {
+        "id": "prop.ch01.complaint_box",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.complaint_box",
+        "x": 0.08,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch01.elevator",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.elevator",
+        "x": 0.36,
+        "y": 0.42,
+        "w": 0.12,
+        "h": 0.42
+      },
+      {
+        "id": "prop.ch01.plaque",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.plaque",
+        "x": 0.24,
+        "y": 0.8,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch01.floor_panel",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.floor_panel",
+        "x": 0.46,
+        "y": 0.44,
+        "w": 0.06,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch01.label_maker",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.label_maker",
+        "x": 0.6,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch01.alarm_sign",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.alarm_sign",
+        "x": 0.72,
+        "y": 0.7,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch01.squeaky_cart",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.squeaky_cart",
+        "x": 0.76,
+        "y": 0.36,
+        "w": 0.12,
+        "h": 0.2
+      },
+      {
+        "id": "prop.ch01.permit_kiosk",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.permit_kiosk",
+        "x": 0.88,
+        "y": 0.62,
+        "w": 0.08,
+        "h": 0.2
+      },
+      {
+        "id": "exit.ch01.hall_office",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch01.hall_office",
+        "x": 0.02,
+        "y": 0.2,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch01.office",
+        "startUnlocked": true
+      },
+      {
+        "id": "exit.ch01.hall_gate",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch01.hall_gate",
+        "x": 0.97,
+        "y": 0.3,
+        "w": 0.06,
+        "h": 0.4,
+        "exitTo": "scene.ch01.checkpoint",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch01.checkpoint",
+    "chapter": "ch01",
+    "nameKey": "txt.scene.scene.ch01.checkpoint",
+    "background": "#e3d3c1",
+    "music": "tension",
+    "hotspots": [
+      {
+        "id": "npc.coc",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.coc",
+        "x": 0.55,
+        "y": 0.45,
+        "w": 0.14,
+        "h": 0.44,
+        "character": "coc"
+      },
+      {
+        "id": "prop.ch01.checklist_board",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.checklist_board",
+        "x": 0.18,
+        "y": 0.68,
+        "w": 0.12,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch01.security_mirror",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.security_mirror",
+        "x": 0.32,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch01.form_rack",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.form_rack",
+        "x": 0.08,
+        "y": 0.4,
+        "w": 0.1,
+        "h": 0.22
+      },
+      {
+        "id": "prop.ch01.key_ledger",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.key_ledger",
+        "x": 0.72,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch01.locker_drawer",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.locker_drawer",
+        "x": 0.84,
+        "y": 0.74,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch01.exit_door",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.exit_door",
+        "x": 0.9,
+        "y": 0.4,
+        "w": 0.1,
+        "h": 0.48
+      },
+      {
+        "id": "prop.ch01.fire_alarm",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch01.fire_alarm",
+        "x": 0.4,
+        "y": 0.4,
+        "w": 0.06,
+        "h": 0.12
+      },
+      {
+        "id": "exit.ch01.gate_hall",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch01.gate_hall",
+        "x": 0.02,
+        "y": 0.2,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch01.hallway",
+        "startUnlocked": true
+      }
+    ]
+  },
+  {
+    "id": "scene.ch02.registry",
+    "chapter": "ch02",
+    "nameKey": "txt.scene.scene.ch02.registry",
+    "background": "#d4dccf",
+    "music": "office",
+    "hotspots": [
+      {
+        "id": "npc.lan_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.lan_ch02",
+        "x": 0.22,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "lan"
+      },
+      {
+        "id": "prop.ch02.roster",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.roster",
+        "x": 0.36,
+        "y": 0.38,
+        "w": 0.12,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch02.witness_forms",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.witness_forms",
+        "x": 0.08,
+        "y": 0.4,
+        "w": 0.1,
+        "h": 0.2
+      },
+      {
+        "id": "prop.ch02.correction_box",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.correction_box",
+        "x": 0.08,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "npc.coc_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.coc_ch02",
+        "x": 0.58,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.42,
+        "character": "coc"
+      },
+      {
+        "id": "prop.ch02.queue_rope",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.queue_rope",
+        "x": 0.46,
+        "y": 0.32,
+        "w": 0.08,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch02.ticket_machine",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.ticket_machine",
+        "x": 0.72,
+        "y": 0.42,
+        "w": 0.08,
+        "h": 0.2
+      },
+      {
+        "id": "prop.ch02.ticket_bin",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.ticket_bin",
+        "x": 0.72,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "npc.clerk_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.clerk_ch02",
+        "x": 0.85,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.36,
+        "character": "clerk"
+      },
+      {
+        "id": "prop.ch02.mailbox",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.mailbox",
+        "x": 0.24,
+        "y": 0.75,
+        "w": 0.08,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch02.city_map",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.city_map",
+        "x": 0.4,
+        "y": 0.74,
+        "w": 0.14,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch02.notice_board",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.notice_board",
+        "x": 0.56,
+        "y": 0.78,
+        "w": 0.12,
+        "h": 0.12
+      },
+      {
+        "id": "exit.ch02.registry_station",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch02.registry_station",
+        "x": 0.96,
+        "y": 0.4,
+        "w": 0.06,
+        "h": 0.5,
+        "exitTo": "scene.ch02.station",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch02.station",
+    "chapter": "ch02",
+    "nameKey": "txt.scene.scene.ch02.station",
+    "background": "#cfd9e0",
+    "music": "calm",
+    "hotspots": [
+      {
+        "id": "prop.ch02.photo_booth",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.photo_booth",
+        "x": 0.14,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4
+      },
+      {
+        "id": "prop.ch02.regulation_board",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.regulation_board",
+        "x": 0.14,
+        "y": 0.78,
+        "w": 0.12,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch02.station_lamp",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.station_lamp",
+        "x": 0.28,
+        "y": 0.6,
+        "w": 0.06,
+        "h": 0.3
+      },
+      {
+        "id": "npc.bop_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.bop_ch02",
+        "x": 0.36,
+        "y": 0.62,
+        "w": 0.08,
+        "h": 0.14,
+        "character": "bop"
+      },
+      {
+        "id": "npc.lan_station_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.lan_station_ch02",
+        "x": 0.46,
+        "y": 0.42,
+        "w": 0.1,
+        "h": 0.36,
+        "character": "lan"
+      },
+      {
+        "id": "prop.ch02.notary_stamp",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.notary_stamp",
+        "x": 0.56,
+        "y": 0.38,
+        "w": 0.08,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch02.dead_letter_bin",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.dead_letter_bin",
+        "x": 0.56,
+        "y": 0.74,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "npc.tram_inspector_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.tram_inspector_ch02",
+        "x": 0.68,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.38,
+        "character": "inspector"
+      },
+      {
+        "id": "prop.ch02.ticket_window",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.ticket_window",
+        "x": 0.8,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch02.validator",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.validator",
+        "x": 0.78,
+        "y": 0.36,
+        "w": 0.06,
+        "h": 0.14
+      },
+      {
+        "id": "npc.coc_tram_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.coc_tram_ch02",
+        "x": 0.88,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.4,
+        "character": "coc"
+      },
+      {
+        "id": "exit.ch02.station_registry",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch02.station_registry",
+        "x": 0.02,
+        "y": 0.3,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch02.registry",
+        "startUnlocked": true
+      },
+      {
+        "id": "exit.ch02.station_counter",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch02.station_counter",
+        "x": 0.97,
+        "y": 0.4,
+        "w": 0.05,
+        "h": 0.5,
+        "exitTo": "scene.ch02.counter",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch02.counter",
+    "chapter": "ch02",
+    "nameKey": "txt.scene.scene.ch02.counter",
+    "background": "#e0d6c8",
+    "music": "tension",
+    "hotspots": [
+      {
+        "id": "prop.ch02.lost_found",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.lost_found",
+        "x": 0.12,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.36
+      },
+      {
+        "id": "prop.ch02.claim_forms",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.claim_forms",
+        "x": 0.12,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "npc.lan_counter_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.lan_counter_ch02",
+        "x": 0.27,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.38,
+        "character": "lan"
+      },
+      {
+        "id": "npc.bop_counter_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.bop_counter_ch02",
+        "x": 0.36,
+        "y": 0.66,
+        "w": 0.08,
+        "h": 0.14,
+        "character": "bop"
+      },
+      {
+        "id": "prop.ch02.request_slips",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.request_slips",
+        "x": 0.3,
+        "y": 0.8,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "npc.counter_clerk_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.counter_clerk_ch02",
+        "x": 0.46,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.38,
+        "character": "clerk"
+      },
+      {
+        "id": "prop.ch02.number_plates",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.number_plates",
+        "x": 0.48,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch02.counter_zero",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.counter_zero",
+        "x": 0.62,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.36
+      },
+      {
+        "id": "prop.ch02.supersede_forms",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.supersede_forms",
+        "x": 0.66,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch02.records_terminal",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.records_terminal",
+        "x": 0.76,
+        "y": 0.42,
+        "w": 0.08,
+        "h": 0.2
+      },
+      {
+        "id": "npc.crowd_ch02",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.crowd_ch02",
+        "x": 0.8,
+        "y": 0.76,
+        "w": 0.12,
+        "h": 0.14,
+        "character": "crowd"
+      },
+      {
+        "id": "prop.ch02.archive_door",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch02.archive_door",
+        "x": 0.9,
+        "y": 0.42,
+        "w": 0.1,
+        "h": 0.44
+      },
+      {
+        "id": "exit.ch02.counter_station",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch02.counter_station",
+        "x": 0.02,
+        "y": 0.3,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch02.station",
+        "startUnlocked": true
+      }
+    ]
+  },
+  {
+    "id": "scene.ch03.bakery",
+    "chapter": "ch03",
+    "nameKey": "txt.scene.scene.ch03.bakery",
+    "background": "#ecd9b8",
+    "music": "calm",
+    "hotspots": [
+      {
+        "id": "npc.mai_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.mai_ch03",
+        "x": 0.5,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "mai"
+      },
+      {
+        "id": "npc.baker_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.baker_ch03",
+        "x": 0.2,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "baker"
+      },
+      {
+        "id": "npc.neighbors_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.neighbors_ch03",
+        "x": 0.82,
+        "y": 0.42,
+        "w": 0.16,
+        "h": 0.34,
+        "character": "crowd"
+      },
+      {
+        "id": "prop.ch03.bread_display",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.bread_display",
+        "x": 0.36,
+        "y": 0.36,
+        "w": 0.12,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch03.cash_tin",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.cash_tin",
+        "x": 0.64,
+        "y": 0.34,
+        "w": 0.08,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch03.price_board",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.price_board",
+        "x": 0.5,
+        "y": 0.78,
+        "w": 0.14,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch03.permit_notice",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.permit_notice",
+        "x": 0.34,
+        "y": 0.72,
+        "w": 0.12,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch03.art_poster",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.art_poster",
+        "x": 0.08,
+        "y": 0.75,
+        "w": 0.1,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch03.compliment_jar",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.compliment_jar",
+        "x": 0.64,
+        "y": 0.52,
+        "w": 0.08,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch03.standee",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.standee",
+        "x": 0.06,
+        "y": 0.4,
+        "w": 0.08,
+        "h": 0.3
+      },
+      {
+        "id": "prop.ch03.protest_circle",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.protest_circle",
+        "x": 0.68,
+        "y": 0.76,
+        "w": 0.12,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch03.ticket_dispenser",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.ticket_dispenser",
+        "x": 0.86,
+        "y": 0.74,
+        "w": 0.08,
+        "h": 0.14
+      },
+      {
+        "id": "exit.ch03.bakery_market",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch03.bakery_market",
+        "x": 0.97,
+        "y": 0.4,
+        "w": 0.06,
+        "h": 0.4,
+        "exitTo": "scene.ch03.market",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch03.market",
+    "chapter": "ch03",
+    "nameKey": "txt.scene.scene.ch03.market",
+    "background": "#d8e2c8",
+    "music": "calm",
+    "hotspots": [
+      {
+        "id": "npc.coc_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.coc_ch03",
+        "x": 0.55,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "coc"
+      },
+      {
+        "id": "npc.inspector_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.inspector_ch03",
+        "x": 0.75,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "inspector"
+      },
+      {
+        "id": "npc.mai_market_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.mai_market_ch03",
+        "x": 0.22,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "mai"
+      },
+      {
+        "id": "prop.ch03.rejection_bin",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.rejection_bin",
+        "x": 0.4,
+        "y": 0.32,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch03.permit_window",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.permit_window",
+        "x": 0.6,
+        "y": 0.76,
+        "w": 0.14,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch03.stale_loaf",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.stale_loaf",
+        "x": 0.08,
+        "y": 0.32,
+        "w": 0.08,
+        "h": 0.1
+      },
+      {
+        "id": "prop.ch03.tax_ledger",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.tax_ledger",
+        "x": 0.36,
+        "y": 0.55,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch03.ped_sign",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.ped_sign",
+        "x": 0.2,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch03.delivery_sign",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.delivery_sign",
+        "x": 0.38,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch03.shoe_stall",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.shoe_stall",
+        "x": 0.88,
+        "y": 0.72,
+        "w": 0.12,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch03.bread_cart",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.bread_cart",
+        "x": 0.88,
+        "y": 0.36,
+        "w": 0.1,
+        "h": 0.2
+      },
+      {
+        "id": "exit.ch03.market_bakery",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch03.market_bakery",
+        "x": 0.02,
+        "y": 0.55,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch03.bakery",
+        "startUnlocked": true
+      },
+      {
+        "id": "exit.ch03.market_plaza",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch03.market_plaza",
+        "x": 0.97,
+        "y": 0.55,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch03.plaza",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch03.plaza",
+    "chapter": "ch03",
+    "nameKey": "txt.scene.scene.ch03.plaza",
+    "background": "#e6d4c6",
+    "music": "tension",
+    "hotspots": [
+      {
+        "id": "npc.mayor_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.mayor_ch03",
+        "x": 0.5,
+        "y": 0.55,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "mayor"
+      },
+      {
+        "id": "npc.mai_plaza_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.mai_plaza_ch03",
+        "x": 0.22,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "mai"
+      },
+      {
+        "id": "npc.crowd_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.crowd_ch03",
+        "x": 0.78,
+        "y": 0.4,
+        "w": 0.2,
+        "h": 0.3,
+        "character": "crowd"
+      },
+      {
+        "id": "npc.bop_ch03",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.bop_ch03",
+        "x": 0.36,
+        "y": 0.7,
+        "w": 0.08,
+        "h": 0.12,
+        "character": "bop"
+      },
+      {
+        "id": "prop.ch03.pa_console",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.pa_console",
+        "x": 0.63,
+        "y": 0.62,
+        "w": 0.08,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch03.pa_schedule",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.pa_schedule",
+        "x": 0.66,
+        "y": 0.8,
+        "w": 0.1,
+        "h": 0.1
+      },
+      {
+        "id": "prop.ch03.town_clock",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.town_clock",
+        "x": 0.5,
+        "y": 0.83,
+        "w": 0.1,
+        "h": 0.1
+      },
+      {
+        "id": "prop.ch03.festival_banner",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.festival_banner",
+        "x": 0.2,
+        "y": 0.8,
+        "w": 0.16,
+        "h": 0.1
+      },
+      {
+        "id": "prop.ch03.soup_pot",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.soup_pot",
+        "x": 0.36,
+        "y": 0.32,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch03.receipt_spike",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.receipt_spike",
+        "x": 0.08,
+        "y": 0.4,
+        "w": 0.06,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch03.council_slot",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch03.council_slot",
+        "x": 0.9,
+        "y": 0.75,
+        "w": 0.08,
+        "h": 0.14
+      },
+      {
+        "id": "exit.ch03.plaza_market",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch03.plaza_market",
+        "x": 0.02,
+        "y": 0.6,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch03.market",
+        "startUnlocked": true
+      }
+    ]
+  },
+  {
+    "id": "scene.ch04.museum",
+    "chapter": "ch04",
+    "nameKey": "txt.scene.scene.ch04.museum",
+    "background": "#d8d0bf",
+    "music": "calm",
+    "hotspots": [
+      {
+        "id": "npc.curator_ch04",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.curator_ch04",
+        "x": 0.12,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "curator"
+      },
+      {
+        "id": "prop.ch04.reconcile_kiosk",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.reconcile_kiosk",
+        "x": 0.08,
+        "y": 0.76,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch04.birth_cert_case",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.birth_cert_case",
+        "x": 0.26,
+        "y": 0.36,
+        "w": 0.12,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch04.birthday_register",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.birthday_register",
+        "x": 0.24,
+        "y": 0.72,
+        "w": 0.12,
+        "h": 0.16
+      },
+      {
+        "id": "npc.lan_ch04",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.lan_ch04",
+        "x": 0.4,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "lan"
+      },
+      {
+        "id": "prop.ch04.placard_rack",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.placard_rack",
+        "x": 0.4,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch04.empty_plinth",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.empty_plinth",
+        "x": 0.53,
+        "y": 0.34,
+        "w": 0.1,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch04.guestbook",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.guestbook",
+        "x": 0.54,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "npc.coc_ch04",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.coc_ch04",
+        "x": 0.67,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "coc"
+      },
+      {
+        "id": "prop.ch04.audio_guide",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.audio_guide",
+        "x": 0.68,
+        "y": 0.78,
+        "w": 0.08,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch04.testimony_booth",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.testimony_booth",
+        "x": 0.8,
+        "y": 0.42,
+        "w": 0.1,
+        "h": 0.3
+      },
+      {
+        "id": "prop.ch04.sealed_door",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.sealed_door",
+        "x": 0.84,
+        "y": 0.75,
+        "w": 0.1,
+        "h": 0.16
+      },
+      {
+        "id": "exit.ch04.museum_stacks",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch04.museum_stacks",
+        "x": 0.96,
+        "y": 0.4,
+        "w": 0.06,
+        "h": 0.4,
+        "exitTo": "scene.ch04.stacks",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch04.stacks",
+    "chapter": "ch04",
+    "nameKey": "txt.scene.scene.ch04.stacks",
+    "background": "#c9cdbf",
+    "music": "calm",
+    "hotspots": [
+      {
+        "id": "exit.ch04.stacks_museum",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch04.stacks_museum",
+        "x": 0.02,
+        "y": 0.2,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch04.museum",
+        "startUnlocked": true
+      },
+      {
+        "id": "prop.ch04.time_clock",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.time_clock",
+        "x": 0.1,
+        "y": 0.62,
+        "w": 0.08,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch04.door_audit",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.door_audit",
+        "x": 0.12,
+        "y": 0.32,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch04.log_terminal",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.log_terminal",
+        "x": 0.26,
+        "y": 0.4,
+        "w": 0.12,
+        "h": 0.22
+      },
+      {
+        "id": "prop.ch04.card_catalog",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.card_catalog",
+        "x": 0.26,
+        "y": 0.76,
+        "w": 0.12,
+        "h": 0.14
+      },
+      {
+        "id": "npc.bop_ch04",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.bop_ch04",
+        "x": 0.38,
+        "y": 0.62,
+        "w": 0.08,
+        "h": 0.14,
+        "character": "bop"
+      },
+      {
+        "id": "npc.lan_ch04_stacks",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.lan_ch04_stacks",
+        "x": 0.5,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "lan"
+      },
+      {
+        "id": "prop.ch04.errors_shelf",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.errors_shelf",
+        "x": 0.66,
+        "y": 0.5,
+        "w": 0.12,
+        "h": 0.4
+      },
+      {
+        "id": "prop.ch04.stamp_desk",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.stamp_desk",
+        "x": 0.5,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch04.perfect_file",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.perfect_file",
+        "x": 0.66,
+        "y": 0.8,
+        "w": 0.08,
+        "h": 0.1
+      },
+      {
+        "id": "prop.ch04.ink_pad",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.ink_pad",
+        "x": 0.38,
+        "y": 0.8,
+        "w": 0.08,
+        "h": 0.1
+      },
+      {
+        "id": "prop.ch04.duplicate_files",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.duplicate_files",
+        "x": 0.82,
+        "y": 0.36,
+        "w": 0.12,
+        "h": 0.18
+      },
+      {
+        "id": "exit.ch04.stacks_lab",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch04.stacks_lab",
+        "x": 0.96,
+        "y": 0.5,
+        "w": 0.06,
+        "h": 0.4,
+        "exitTo": "scene.ch04.memory_lab",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch04.memory_lab",
+    "chapter": "ch04",
+    "nameKey": "txt.scene.scene.ch04.memory_lab",
+    "background": "#c4cfd6",
+    "music": "tension",
+    "hotspots": [
+      {
+        "id": "exit.ch04.lab_stacks",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch04.lab_stacks",
+        "x": 0.02,
+        "y": 0.2,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch04.stacks",
+        "startUnlocked": true
+      },
+      {
+        "id": "prop.ch04.memory_projector",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.memory_projector",
+        "x": 0.12,
+        "y": 0.7,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch04.apology_safe",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.apology_safe",
+        "x": 0.13,
+        "y": 0.34,
+        "w": 0.1,
+        "h": 0.16
+      },
+      {
+        "id": "npc.bop_ch04_lab",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.bop_ch04_lab",
+        "x": 0.28,
+        "y": 0.6,
+        "w": 0.08,
+        "h": 0.14,
+        "character": "bop"
+      },
+      {
+        "id": "prop.ch04.map_cabinet",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.map_cabinet",
+        "x": 0.28,
+        "y": 0.32,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch04.light_table",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.light_table",
+        "x": 0.42,
+        "y": 0.36,
+        "w": 0.12,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch04.city_calendar",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.city_calendar",
+        "x": 0.42,
+        "y": 0.76,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "npc.mai_ch04",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.mai_ch04",
+        "x": 0.56,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "mai"
+      },
+      {
+        "id": "prop.ch04.error_forms",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.error_forms",
+        "x": 0.58,
+        "y": 0.8,
+        "w": 0.08,
+        "h": 0.1
+      },
+      {
+        "id": "npc.lan_ch04_lab",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.lan_ch04_lab",
+        "x": 0.7,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "lan"
+      },
+      {
+        "id": "prop.ch04.logic_terminal",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.logic_terminal",
+        "x": 0.74,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch04.hearing_bench",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.hearing_bench",
+        "x": 0.88,
+        "y": 0.42,
+        "w": 0.14,
+        "h": 0.3
+      },
+      {
+        "id": "prop.ch04.broadcast_notice",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch04.broadcast_notice",
+        "x": 0.9,
+        "y": 0.76,
+        "w": 0.1,
+        "h": 0.14
+      }
+    ]
+  },
+  {
+    "id": "scene.ch05.lobby",
+    "chapter": "ch05",
+    "nameKey": "txt.scene.scene.ch05.lobby",
+    "background": "#dfe4ea",
+    "music": "tension",
+    "hotspots": [
+      {
+        "id": "npc.logic_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.logic_ch05",
+        "x": 0.5,
+        "y": 0.62,
+        "w": 0.14,
+        "h": 0.3,
+        "character": "logic"
+      },
+      {
+        "id": "npc.vuong_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.vuong_ch05",
+        "x": 0.66,
+        "y": 0.42,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "vuong"
+      },
+      {
+        "id": "prop.ch05.agreement_turnstile",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.agreement_turnstile",
+        "x": 0.82,
+        "y": 0.35,
+        "w": 0.12,
+        "h": 0.22
+      },
+      {
+        "id": "prop.ch05.compliance_kiosk",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.compliance_kiosk",
+        "x": 0.3,
+        "y": 0.4,
+        "w": 0.1,
+        "h": 0.22
+      },
+      {
+        "id": "prop.ch05.complaint_terminal",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.complaint_terminal",
+        "x": 0.15,
+        "y": 0.4,
+        "w": 0.1,
+        "h": 0.22
+      },
+      {
+        "id": "prop.ch05.org_chart",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.org_chart",
+        "x": 0.3,
+        "y": 0.74,
+        "w": 0.12,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch05.shredder_bin",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.shredder_bin",
+        "x": 0.06,
+        "y": 0.35,
+        "w": 0.08,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch05.approval_desk",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.approval_desk",
+        "x": 0.45,
+        "y": 0.32,
+        "w": 0.16,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch05.answer_catalog",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.answer_catalog",
+        "x": 0.14,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.16
+      },
+      {
+        "id": "prop.ch05.question_box",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.question_box",
+        "x": 0.66,
+        "y": 0.76,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch05.quality_poster",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.quality_poster",
+        "x": 0.82,
+        "y": 0.72,
+        "w": 0.1,
+        "h": 0.18
+      },
+      {
+        "id": "exit.ch05.lobby_core",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch05.lobby_core",
+        "x": 0.96,
+        "y": 0.45,
+        "w": 0.06,
+        "h": 0.5,
+        "exitTo": "scene.ch05.core",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch05.core",
+    "chapter": "ch05",
+    "nameKey": "txt.scene.scene.ch05.core",
+    "background": "#c9d6df",
+    "music": "tension",
+    "hotspots": [
+      {
+        "id": "npc.lan_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.lan_ch05",
+        "x": 0.25,
+        "y": 0.45,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "lan"
+      },
+      {
+        "id": "npc.mai_core_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.mai_core_ch05",
+        "x": 0.62,
+        "y": 0.42,
+        "w": 0.12,
+        "h": 0.4,
+        "character": "mai"
+      },
+      {
+        "id": "npc.bop_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.bop_ch05",
+        "x": 0.45,
+        "y": 0.66,
+        "w": 0.08,
+        "h": 0.14,
+        "character": "bop"
+      },
+      {
+        "id": "prop.ch05.truth_meter",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.truth_meter",
+        "x": 0.42,
+        "y": 0.38,
+        "w": 0.12,
+        "h": 0.26
+      },
+      {
+        "id": "prop.ch05.certificate_rack",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.certificate_rack",
+        "x": 0.08,
+        "y": 0.66,
+        "w": 0.1,
+        "h": 0.2
+      },
+      {
+        "id": "prop.ch05.exception_register",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.exception_register",
+        "x": 0.78,
+        "y": 0.7,
+        "w": 0.1,
+        "h": 0.18
+      },
+      {
+        "id": "prop.ch05.erasure_queue",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.erasure_queue",
+        "x": 0.8,
+        "y": 0.36,
+        "w": 0.1,
+        "h": 0.24
+      },
+      {
+        "id": "prop.ch05.decision_log",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.decision_log",
+        "x": 0.62,
+        "y": 0.76,
+        "w": 0.1,
+        "h": 0.14
+      },
+      {
+        "id": "prop.ch05.archive_port",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.archive_port",
+        "x": 0.28,
+        "y": 0.78,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch05.witness_stand",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.witness_stand",
+        "x": 0.12,
+        "y": 0.36,
+        "w": 0.12,
+        "h": 0.2
+      },
+      {
+        "id": "exit.ch05.core_lobby",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch05.core_lobby",
+        "x": 0.02,
+        "y": 0.3,
+        "w": 0.04,
+        "h": 0.3,
+        "exitTo": "scene.ch05.lobby",
+        "startUnlocked": true
+      },
+      {
+        "id": "exit.ch05.core_roof",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch05.core_roof",
+        "x": 0.96,
+        "y": 0.5,
+        "w": 0.06,
+        "h": 0.4,
+        "exitTo": "scene.ch05.roof",
+        "startUnlocked": false
+      }
+    ]
+  },
+  {
+    "id": "scene.ch05.roof",
+    "chapter": "ch05",
+    "nameKey": "txt.scene.scene.ch05.roof",
+    "background": "#e8d9c4",
+    "music": "tension",
+    "hotspots": [
+      {
+        "id": "npc.logic_roof_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.logic_roof_ch05",
+        "x": 0.5,
+        "y": 0.82,
+        "w": 0.16,
+        "h": 0.12,
+        "character": "logic"
+      },
+      {
+        "id": "npc.mai_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.mai_ch05",
+        "x": 0.08,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.38,
+        "character": "mai"
+      },
+      {
+        "id": "npc.coc_ch05",
+        "kind": "Npc",
+        "labelKey": "txt.hotspot.npc.coc_ch05",
+        "x": 0.92,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.38,
+        "character": "coc"
+      },
+      {
+        "id": "prop.ch05.door_patch",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.door_patch",
+        "x": 0.2,
+        "y": 0.55,
+        "w": 0.12,
+        "h": 0.36,
+        "color": "#5d8aa8"
+      },
+      {
+        "id": "prop.ch05.door_rewrite",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.door_rewrite",
+        "x": 0.4,
+        "y": 0.55,
+        "w": 0.12,
+        "h": 0.36,
+        "color": "#c0392b"
+      },
+      {
+        "id": "prop.ch05.door_reveal",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.door_reveal",
+        "x": 0.6,
+        "y": 0.55,
+        "w": 0.12,
+        "h": 0.36,
+        "color": "#d4ac0d"
+      },
+      {
+        "id": "prop.ch05.door_walk",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.door_walk",
+        "x": 0.8,
+        "y": 0.55,
+        "w": 0.12,
+        "h": 0.36,
+        "color": "#7f8c8d"
+      },
+      {
+        "id": "prop.ch05.audit_terminal",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.audit_terminal",
+        "x": 0.9,
+        "y": 0.8,
+        "w": 0.08,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch05.future_panel",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.future_panel",
+        "x": 0.3,
+        "y": 0.82,
+        "w": 0.1,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch05.broadcast_antenna",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.broadcast_antenna",
+        "x": 0.72,
+        "y": 0.82,
+        "w": 0.08,
+        "h": 0.12
+      },
+      {
+        "id": "prop.ch05.binary_switch",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.binary_switch",
+        "x": 0.3,
+        "y": 0.28,
+        "w": 0.1,
+        "h": 0.08
+      },
+      {
+        "id": "prop.ch05.charter_lectern",
+        "kind": "Prop",
+        "labelKey": "txt.hotspot.prop.ch05.charter_lectern",
+        "x": 0.5,
+        "y": 0.28,
+        "w": 0.1,
+        "h": 0.08
+      },
+      {
+        "id": "exit.ch05.roof_core",
+        "kind": "Exit",
+        "labelKey": "txt.hotspot.exit.ch05.roof_core",
+        "x": 0.1,
+        "y": 0.8,
+        "w": 0.1,
+        "h": 0.1,
+        "exitTo": "scene.ch05.core",
+        "startUnlocked": true
+      }
+    ]
+  }
+]

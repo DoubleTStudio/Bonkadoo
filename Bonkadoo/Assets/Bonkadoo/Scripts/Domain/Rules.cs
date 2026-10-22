@@ -39,12 +39,16 @@ namespace Bonkadoo.Domain
         public IReadOnlyList<string> Hotspots { get; }
         public IReadOnlyList<string> Prerequisites { get; }
         public string FailureKey { get; }
+        public string FailureSpeaker { get; }
         public IReadOnlyList<string> HintKeys { get; }
+        public string ChapterId { get; }
         public string CompletionFlag => "flag." + Id + ".complete";
 
         public PuzzleDefinition(string id, string sceneId, IEnumerable<string> hotspots, IEnumerable<string> prerequisites,
-            string failureKey, IEnumerable<string> hintKeys)
+            string failureKey, IEnumerable<string> hintKeys, string failureSpeaker = null, string chapterId = null)
         {
+            FailureSpeaker = failureSpeaker;
+            ChapterId = chapterId;
             Id = id;
             SceneId = sceneId;
             Hotspots = hotspots.ToArray();
@@ -89,6 +93,24 @@ namespace Bonkadoo.Domain
         }
 
         public bool TryGetPuzzle(string id, out PuzzleDefinition puzzle) => _puzzlesById.TryGetValue(id, out puzzle);
+
+        /// <summary>First puzzle in authored order in this scene whose prerequisites are met and that is not complete.</summary>
+        public PuzzleDefinition ActivePuzzle(IReadOnlyWorldState state)
+        {
+            foreach (var p in _puzzles)
+                if (string.Equals(p.SceneId, state.CurrentSceneId, StringComparison.Ordinal) && p.PrerequisitesMet(state) &&
+                    !state.HasFlag(p.CompletionFlag))
+                    return p;
+            return null;
+        }
+
+        /// <summary>Speaker for a fallback line, so failure feedback is voiced like any other line.</summary>
+        public string FallbackSpeaker(string feedbackKey)
+        {
+            foreach (var p in _puzzles)
+                if (string.Equals(p.FailureKey, feedbackKey, StringComparison.Ordinal)) return p.FailureSpeaker;
+            return null;
+        }
 
         /// <summary>
         /// Prefers the active puzzle (prereqs met, not complete) that owns the target in this scene,

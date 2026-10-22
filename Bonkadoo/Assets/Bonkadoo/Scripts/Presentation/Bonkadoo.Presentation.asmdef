@@ -1,7 +1,14 @@
 {
     "name": "Bonkadoo.Presentation",
     "rootNamespace": "Bonkadoo.Presentation",
-    "references": ["Bonkadoo.Domain", "Bonkadoo.Application", "Bonkadoo.Infrastructure", "Bonkadoo.Infrastructure.Unity", "Unity.InputSystem"],
+    "references": [
+        "Bonkadoo.Domain",
+        "Bonkadoo.Application",
+        "Bonkadoo.Narrative",
+        "Bonkadoo.Infrastructure",
+        "Bonkadoo.Infrastructure.Unity",
+        "Unity.InputSystem"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

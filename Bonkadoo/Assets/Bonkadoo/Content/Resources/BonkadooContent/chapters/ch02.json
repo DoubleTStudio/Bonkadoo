@@ -2,12 +2,12 @@
   "id": "ch02",
   "title": "Invalid Citizen",
   "locations": [
-    "Registry",
-    "tram station",
-    "public counter"
+    "scene.ch02.registry",
+    "scene.ch02.station",
+    "scene.ch02.counter"
   ],
-  "objective": "Prove Tí exists despite invalid ID.",
-  "reveal": "Bốp recognizes a citizen number from an erased administrative cycle.",
+  "objective": "Prove Tí exists despite an invalid ID.",
+  "reveal": "Bốp recognizes Tí's citizen number from an erased administrative cycle.",
   "puzzles": [
     "ch02.p01",
     "ch02.p02",
@@ -24,5 +24,9 @@
     "Tí/Bốp quiet beat",
     "clue to next chapter"
   ],
-  "chapterCompleteFlag": "flag.ch02.complete"
+  "chapterCompleteFlag": "flag.ch02.complete",
+  "startScene": "scene.ch02.registry",
+  "titleKey": "txt.chapter.ch02.title",
+  "objectiveKey": "txt.chapter.ch02.objective",
+  "revealKey": "txt.chapter.ch02.reveal"
 }

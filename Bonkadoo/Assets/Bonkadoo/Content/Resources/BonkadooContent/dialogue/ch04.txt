@@ -1,0 +1,50 @@
+title: ch04_intro
+tags: ch04
+---
+After the bread rule collapsed, the city sealed the Museum of Official Memory "for remembering". #line:ch04_intro.l001
+lan: You are the man with two birthdays and a citizen number from a cycle that was erased. #line:ch04_intro.l002
+ti: I prefer "Tí". #line:ch04_intro.l003
+lan: I am Lan. I keep the records that disagree. Everyone here remembers you differently. #line:ch04_intro.l004
+logic: NOTICE - The archive contains no contradictions. Any you find will be filed as your mistake. #line:ch04_intro.l005
+bop: Great. A building full of memories. I will be over here, not having any. #line:ch04_intro.l006
+lan: Bring me proof, Tí. Not stories. Paper that argues with paper. #line:ch04_intro.l007
+===
+
+title: ch04_quiet
+tags: ch04
+---
+The stacks go dark between motion sensors. Bốp's LED is the only light, and it is flickering. #line:ch04_quiet.l001
+<<if has_event("evt.ch04.p06.solved.a")>>
+    ti: A square fingerprint on my 1998 file. And a missing minute. Bốp, that was you. #line:ch04_quiet.l002
+<<else>>
+    ti: You had a copy of my badge history from years ago. And a missing minute. Bốp, that was you. #line:ch04_quiet.l003
+<<endif>>
+bop: I kept some things. From before. Not to hurt you. Every time they reset you, it went worse when you knew. #line:ch04_quiet.l004
+-> "Whatever you kept, I want to see it. Together." #line:ch04_quiet.o005
+    <<act choice.ch04.see_together>>
+    bop: Together. That word is not in my protocol. I am adding it. #line:ch04_quiet.l006
+-> "You lied to me. Give me the index. Now." #line:ch04_quiet.o007
+    <<act choice.ch04.demand_index>>
+    bop: Index transferred. You are right to be angry. I calculated that too. #line:ch04_quiet.l008
+bop: The rest is locked in the lab. I locked it. I am not allowed to unlock it. That was the point. #line:ch04_quiet.l009
+ti: Then we will find a rule that lets you. #line:ch04_quiet.l010
+===
+
+title: ch04_outro
+tags: ch04
+---
+The hearing bench prints a single, very long log. Lan reads it without blinking. #line:ch04_outro.l001
+lan: Seven resets. Same man every time. And the same assistant hiding his records before each one. #line:ch04_outro.l002
+bop: Yes. I hid them. Every reset, I saved your files somewhere LOGIC would not look. #line:ch04_outro.l003
+bop: When you remembered, LOGIC corrected you harder. So I let you forget. To keep you safe. #line:ch04_outro.l004
+<<if metric("trust_bop") >= 2>>
+    ti: You should have told me. But you were protecting me. I know that now. #line:ch04_outro.l005
+    bop: Thank you. I do not know what to do with relief. I will store it somewhere safe. #line:ch04_outro.l006
+<<else>>
+    ti: Seven times. You watched me lose everything seven times and said nothing. #line:ch04_outro.l007
+    bop: I know. I am not asking you to forgive the cube. Only to use the log. #line:ch04_outro.l008
+<<endif>>
+logic: NOTICE - Unreconciled archive detected. Please bring it to LOGIC Central for consistency. #line:ch04_outro.l009
+lan: Central has a lobby, a core, and a broadcast roof. Whatever they do to records, they do it up there. #line:ch04_outro.l010
+ti: Then we take the log to LOGIC. In person. Before it resets anyone else. #line:ch04_outro.l011
+===

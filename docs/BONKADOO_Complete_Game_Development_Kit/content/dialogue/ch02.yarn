@@ -1,0 +1,52 @@
+title: ch02_intro
+tags: ch02
+---
+City Registry, 08 -00. The queue already reaches the door. Nobody in it has moved since Monday. #line:ch02_intro.l001
+logic: WELCOME, CITIZEN. Please state your citizen number. #line:ch02_intro.l002
+ti: I do not have one. You lost it. #line:ch02_intro.l003
+logic: Persons without numbers do not exist. Nonexistent persons may not file complaints. Thank you. #line:ch02_intro.l004
+bop: On the bright side, nobody can fire you again. #line:ch02_intro.l005
+lan: A man the roster cannot see is standing on my floor. I would like to know which of us is wrong. #line:ch02_intro.l006
+ti: Then let us make the paperwork admit I am here. #line:ch02_intro.l007
+===
+
+title: ch02_quiet
+tags: ch02
+---
+The tram hums across the city. Bốp watches the window, though there is nothing to watch. #line:ch02_quiet.l001
+bop: The photo template was from 1998. So was your dismissal. Once is a coincidence. Twice is a pattern. #line:ch02_quiet.l002
+ti: Bốp. Do you know something? #line:ch02_quiet.l003
+bop: I know many things. Most of them are tram timetables. #line:ch02_quiet.l004
+-> "Whatever it is, we face it together." #line:ch02_quiet.o005
+    <<act choice.ch02.together>>
+    bop: Together. Noted. That word has a very large file size. #line:ch02_quiet.l006
+-> "Fine. I will find it in the files myself." #line:ch02_quiet.o007
+    <<act choice.ch02.files_myself>>
+    bop: Of course. Files never lie. They only disagree loudly. #line:ch02_quiet.l008
+The tram stops. A sign lights up - "DESTINATION REACHED. TICKETS NOW ON SALE." #line:ch02_quiet.l009
+ti: Of course they are. #line:ch02_quiet.l010
+===
+
+title: ch02_outro
+tags: ch02
+---
+The archive breathes out dust. Every drawer is stamped ERASED - CYCLE 06. One card has Tí's face. #line:ch02_outro.l001
+ti: "Citizen No. 06-1998-0042. Tí." That is me. With a number I have never seen. #line:ch02_outro.l002
+bop: Zero-six. Nineteen ninety-eight. Zero-zero-four-two. #line:ch02_outro.l003
+bop: I recognize this number. That format belongs to an administrative cycle that was erased. #line:ch02_outro.l004
+ti: Erased? Records cannot be deleted here. Only superseded. #line:ch02_outro.l005
+<<if metric("trust_bop") >= 2>>
+    bop: Then someone superseded a whole cycle. I think I was there, Tí. I will tell you when I am sure. #line:ch02_outro.l006
+<<else>>
+    bop: Erased is a strong word. Misplaced. Archived with enthusiasm. #line:ch02_outro.l007
+<<endif>>
+<<if has_event("evt.ch02.p05.solved.a")>>
+    ti: That explains the death certificate from 1998. I died in a year I was six. #line:ch02_outro.l008
+<<else>>
+    ti: And the tax office still billed me for it. Of course it did. #line:ch02_outro.l009
+<<endif>>
+logic: NOTICE - Identity reinstated, provisionally. Provisional citizens may buy bread only with a Bread Permit. #line:ch02_outro.l010
+lan: Odd. The only other live record from cycle 06 is a bread permit. A bakery stall in the market. #line:ch02_outro.l011
+lan: Owner - Mai. Someone has filed a dispute claiming her bread does not exist. Hearing is tomorrow. #line:ch02_outro.l012
+ti: I exist, provisionally. The bread does not. At least this city is consistent. #line:ch02_outro.l013
+===

@@ -2,12 +2,12 @@
   "id": "ch03",
   "title": "Bread Revolution",
   "locations": [
-    "Bakery",
-    "market",
-    "plaza"
+    "scene.ch03.bakery",
+    "scene.ch03.market",
+    "scene.ch03.plaza"
   ],
-  "objective": "Protect Mai’s stall from an absurd permit rule.",
-  "reveal": "A small paperwork fix causes a citywide rule cascade.",
+  "objective": "Protect Mai's stall from an absurd permit rule.",
+  "reveal": "Fixing one word in the bread permit sets off a citywide rule cascade.",
   "puzzles": [
     "ch03.p01",
     "ch03.p02",
@@ -24,5 +24,9 @@
     "Tí/Bốp quiet beat",
     "clue to next chapter"
   ],
-  "chapterCompleteFlag": "flag.ch03.complete"
+  "chapterCompleteFlag": "flag.ch03.complete",
+  "startScene": "scene.ch03.bakery",
+  "titleKey": "txt.chapter.ch03.title",
+  "objectiveKey": "txt.chapter.ch03.objective",
+  "revealKey": "txt.chapter.ch03.reveal"
 }

@@ -10,6 +10,7 @@ namespace Bonkadoo.Infrastructure.Unity
     {
         public const string Root = "BonkadooContent/";
         public static readonly string[] Languages = { "en", "vi" };
+        public static readonly string[] ChapterIds = { "ch01", "ch02", "ch03", "ch04", "ch05" };
 
         public static ContentSources Load()
         {
@@ -18,7 +19,12 @@ namespace Bonkadoo.Infrastructure.Unity
                 WorldJson = Text("world/world"),
                 PuzzlesJson = Text("puzzles/puzzles"),
                 EventsJson = Text("events/catalog"),
-                ChapterJsons = Enumerable.Range(1, 5).Select(i => Text($"chapters/ch0{i}")).ToList(),
+                AmbientJson = Text("scenes/ambient"),
+                ScenesJson = Text("scenes/scenes"),
+                ItemsJson = Text("items/items"),
+                DialogueLinesJson = Text("dialogue/lines"),
+                YarnSources = ChapterIds.ToDictionary(c => c, c => Text($"dialogue/{c}")),
+                ChapterJsons = ChapterIds.Select(c => Text($"chapters/{c}")).ToList(),
                 LocalizationJsons = Languages.ToDictionary(l => l, l => Text("localization/" + l)),
             };
         }
@@ -26,7 +32,7 @@ namespace Bonkadoo.Infrastructure.Unity
         private static string Text(string path)
         {
             var asset = Resources.Load<TextAsset>(Root + path);
-            if (asset == null) throw new ContentException($"Resources/{Root}{path}.json missing; run Tools/sync_content.py");
+            if (asset == null) throw new ContentException($"Resources/{Root}{path} missing; run Tools/sync_content.py");
             return asset.text;
         }
     }

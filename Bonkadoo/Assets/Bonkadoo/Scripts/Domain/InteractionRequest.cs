@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace Bonkadoo.Domain
 {
-    public enum InteractionVerb { Tap, Drag, UseItem, CombineItems, Talk, Inspect }
+    /// <summary>Enter is sent by navigation when a scene is entered (ADR-0003); players never produce it.</summary>
+    public enum InteractionVerb { Tap, Drag, UseItem, CombineItems, Talk, Inspect, Enter }
 
     public sealed class InteractionRequest
     {

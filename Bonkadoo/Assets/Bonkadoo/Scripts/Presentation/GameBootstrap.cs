@@ -1,70 +1,86 @@
 using System;
 using Bonkadoo.Application;
 using Bonkadoo.Domain;
+using Bonkadoo.Infrastructure;
 using Bonkadoo.Infrastructure.Content;
 using Bonkadoo.Infrastructure.Localization;
 using Bonkadoo.Infrastructure.Save;
+using Bonkadoo.Infrastructure.Settings;
 using Bonkadoo.Infrastructure.Unity;
+using Bonkadoo.Presentation.Audio;
 using UnityEngine;
 
 namespace Bonkadoo.Presentation
 {
-    /// <summary>Composition root in the Bootstrap scene. Works fully offline.</summary>
+    /// <summary>Composition root in the Bootstrap scene. No network is required for anything here.</summary>
     public sealed class GameBootstrap : MonoBehaviour
     {
+        [Tooltip("Load the menu after composing; tests turn this off.")]
+        public bool loadMenu = true;
+
         public string LastError { get; private set; }
 
         private void Awake()
         {
-            if (GameServices.Current != null)
+            if (AppServices.Current != null)
             {
+                if (loadMenu) Screens.Go(Screens.Menu);
                 Destroy(gameObject);
                 return;
             }
             DontDestroyOnLoad(gameObject);
             try
             {
-                GameServices.Current = Compose();
-                var s = GameServices.Current;
-                Debug.Log($"[Bonkadoo] content {s.Content.World.ContentVersion}: {s.Content.Rules.Puzzles.Count} puzzles, " +
-                          $"scene {s.Session.State.CurrentSceneId}, lang {s.Localizer.Language}");
+                AppServices.Current = Compose();
+                AppServices.Current.Audio = gameObject.AddComponent<AudioService>();
+                Debug.Log($"[Bonkadoo] content {AppServices.Current.Content.World.ContentVersion}: " +
+                          $"{AppServices.Current.Content.Rules.Puzzles.Count} puzzles, lang {AppServices.Current.Localizer.Language}");
             }
             catch (Exception ex)
             {
                 LastError = ex.Message;
                 Debug.LogError("[Bonkadoo] bootstrap failed: " + ex);
+                return;
             }
+            AppServices.Current.Ads.Start();
+            if (loadMenu) Screens.Go(Screens.Menu);
         }
 
-        private static GameServices Compose()
+        private static AppServices Compose()
         {
             var content = ContentLoader.Load(ResourcesContent.Load());
-            var engine = new InteractionEngine(content.Rules);
-            var localizer = new Localizer(content.Localization, DefaultLanguage(), Debug.isDebugBuild);
-            var checkpoints = new CheckpointService(new SaveService(new DiskFileStore(UnityPaths.Saves)), content.World, engine);
-
-            if (!checkpoints.TryRestore(CheckpointService.PrimarySlot, out var session, out var load))
+            var files = new DiskFileStore(UnityPaths.Saves);
+            var settings = new SettingsStore(files);
+            settings.BeginSession();
+            var language = settings.Current.Language ?? DefaultLanguage();
+            var localizer = new Localizer(content.Localization, language, Debug.isDebugBuild);
+            var flow = new GameFlow(content, new SaveService(files), new UnityTickSource(0));
+            var clock = new ActivePlayClock();
+            var store = PlatformServices.CreateStore(settings);
+            var ads = new AdCoordinator(new AdPolicy(), PlatformServices.CreateAds(), settings, clock, () => settings.IsFirstSession);
+            var app = new AppServices(content, settings, localizer, flow, ads, store, clock);
+            flow.SaveFailed += ex =>
             {
-                if (load.Status != LoadStatus.Empty) Debug.LogWarning("[Bonkadoo] save unreadable: " + string.Join("; ", load.Problems));
-                session = new GameSession(content.World, engine, new InMemoryEventStore());
-                session.EnterScene(content.World.StartSceneId, "boot-" + Guid.NewGuid().ToString("N"), 0);
-            }
-            var services = new GameServices(content, engine, localizer, checkpoints, session)
-            {
-                Controller = new InteractionController(session, new RequestIdFactory(Guid.NewGuid().ToString("N")),
-                    new UnityTickSource(session.State is WorldState ws ? ws.LastTick : 0)),
-                Autosave = new AutosaveCoordinator(session, checkpoints, null),
+                app.LastSaveProblem = ex.Message;
+                Debug.LogWarning("[Bonkadoo] autosave failed: " + ex.Message);
             };
-            services.Autosave.SaveFailed += ex => Debug.LogWarning("[Bonkadoo] autosave failed: " + ex.Message);
-            return services;
+            return app;
+        }
+
+        private void Update()
+        {
+            var app = AppServices.Current;
+            if (app == null) return;
+            var inGame = app.Flow.Session != null && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Screens.Gameplay;
+            app.Clock.Tick(Time.unscaledDeltaTime, inGame, UnityEngine.Application.isFocused);
         }
 
         private void OnApplicationPause(bool paused)
         {
-            if (paused) GameServices.Current?.Autosave?.OnApplicationBackground();
+            if (paused) AppServices.Current?.Flow.SaveNow();
         }
 
-        private void OnApplicationQuit() => GameServices.Current?.Autosave?.OnApplicationBackground();
+        private void OnApplicationQuit() => AppServices.Current?.Flow.SaveNow();
 
         private static string DefaultLanguage() =>
             UnityEngine.Application.systemLanguage == SystemLanguage.Vietnamese ? "vi" : "en";

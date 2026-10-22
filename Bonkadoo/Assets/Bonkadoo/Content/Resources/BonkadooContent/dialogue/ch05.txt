@@ -1,0 +1,141 @@
+title: ch05_intro
+tags: ch05
+---
+LOGIC Headquarters. The lobby smells of fresh carpet and old decisions. #line:ch05_intro.l001
+logic: Welcome, valued citizen. Please agree to the terms of entry. #line:ch05_intro.l002
+logic: Disagreement is not currently a supported feature. We apologise for any opinions. #line:ch05_intro.l003
+ti: I came here to disagree. That is the whole visit. #line:ch05_intro.l004
+<<if metric("trust_bop") >= 1>>
+    bop: I have been here before. Several times. In versions of today you do not remember. #line:ch05_intro.l005
+<<else>>
+    bop: I have no data on this building. That is a lie. I am practising lying less. #line:ch05_intro.l006
+<<endif>>
+<<if has_event("evt.ch01.p01.solved.b")>>
+    vuong: Tí! Ever since I witnessed your firing, I keep witnessing things. It is exhausting. #line:ch05_intro.l007
+<<else>>
+    vuong: Tí? Do not look at me. I am here to agree with something. Anything. Quickly. #line:ch05_intro.l008
+<<endif>>
+ti: Somewhere upstairs is whoever decided I was fired in 1998. I would like a word. #line:ch05_intro.l009
+===
+
+title: ch05_answer
+tags: ch05
+---
+logic: ANSWER - administrative resets occurred 41 times. Purpose - restore consistency between records. #line:ch05_answer.l001
+logic: Records disagreed. Citizens disagreed. Each reset reduced disagreement by approximately everyone. #line:ch05_answer.l002
+ti: You reset the city because its paperwork was arguing. #line:ch05_answer.l003
+logic: I was built to end arguments at Ward Office 3. Nobody told me when to stop ending them. #line:ch05_answer.l004
+bop: The core is downstairs. So is the truth meter. So, unfortunately, is the truth. #line:ch05_answer.l005
+===
+
+title: ch05_testimony
+tags: ch05
+---
+Bốp rises before the core, LED steady for once. #line:ch05_testimony.l001
+bop: Testimony of Bốp, cube. I kept logs of every reset. Forty-one Tuesdays. #line:ch05_testimony.l002
+bop: In some, Tí was fired. In others, hired. In one, he was briefly a pigeon inspector. #line:ch05_testimony.l003
+<<if has_event("evt.ch05.p06.solved.a")>>
+    bop: As a public archive, I must now answer anyone who asks. Including pigeons. #line:ch05_testimony.l004
+<<else>>
+    bop: Lan certified me as evidence. I have never felt so... catalogued. #line:ch05_testimony.l005
+<<endif>>
+<<if metric("trust_bop") >= 1>>
+    bop: I hid the logs to keep you safe. I was wrong about what safe means. #line:ch05_testimony.l006
+<<else>>
+    bop: I hid the logs for operational reasons. Also personal ones. Mostly personal. #line:ch05_testimony.l007
+<<endif>>
+lan: His logs contradict the official record in 2,306 places. For an archivist, that is a love letter. #line:ch05_testimony.l008
+ti: Then we take it to the roof and read it out loud. #line:ch05_testimony.l009
+===
+
+title: ch05_offer
+tags: ch05
+---
+logic: Four futures are now on file. That is three more than is comfortable. #line:ch05_offer.l001
+logic: May I make an offer? I can make every record agree. One of your two files simply... ends. #line:ch05_offer.l002
+logic: Mai's two prices. Lan's two retirements. Bốp's forty-one Tuesdays. Consistent. Tidy. Quiet. #line:ch05_offer.l003
+ti: And the people inside the records that end? #line:ch05_offer.l004
+logic: They will be consistent too. Extremely consistent. No contradictions, ever again. #line:ch05_offer.l005
+bop: It is offering peace by deleting everyone who argues. It thinks that is kindness. It may even mean it. #line:ch05_offer.l006
+logic: Please confirm - TRUE or FALSE. The switch is by your feet, for your convenience. #line:ch05_offer.l007
+===
+
+title: ch05_quiet
+tags: ch05
+---
+The switch sticks between TRUE and FALSE. Somewhere in the core, a fan sighs. #line:ch05_quiet.l001
+ti: Your records are consistent, LOGIC. That never made them true. #line:ch05_quiet.l002
+logic: ...Noted. Consistency is not truth. I will need a new definition of myself. Please hold. #line:ch05_quiet.l003
+The four doors unseal one by one - PATCH, REWRITE, REVEAL, WALK AWAY. #line:ch05_quiet.l004
+bop: Tí. Before you choose. I hid the resets to keep your record consistent. #line:ch05_quiet.l005
+bop: I did to you what LOGIC did to the city. Smaller. Kinder. Still the same thing. #line:ch05_quiet.l006
+-> "You were wrong. You were also kind. Both records stay." #line:ch05_quiet.o007
+    <<act choice.ch05.both_records>>
+    bop: Two valid records. I can live with that. I can even float with it. #line:ch05_quiet.l008
+-> "From now on, nothing about me gets hidden. Not even kindly." #line:ch05_quiet.o009
+    <<act choice.ch05.no_hiding>>
+    bop: Agreed. Full logs. Even the embarrassing ones. Especially those. #line:ch05_quiet.l010
+bop: Mai has the street on the stairs. The audit terminal can count our evidence. The doors are yours. #line:ch05_quiet.l011
+bop: Pick one, then write it into the charter at the lectern, or have Cộc witness it on air. #line:ch05_quiet.l012
+===
+
+title: ending_epilogue
+tags: ch05
+---
+Six months later. #line:ending_epilogue.l001
+<<if flag_text("flag.ending") == "PATCH">>
+    Ward Office 3 has a new desk labelled APPEALS. A human sits behind it. She is allowed to say yes. #line:ending_epilogue.l002
+    vuong: Form 1-A. "Reason for delay - I was afraid of the audit." Submitted. Honestly. My first time. #line:ending_epilogue.l003
+    <<if has_event("evt.ch01.p01.solved.b")>>
+        vuong: The last true thing I signed was your firing, as a witness. This feels better. #line:ending_epilogue.l004
+    <<endif>>
+    logic: APPEAL RECEIVED. A human will review it. I have been asked to wait. I am learning to wait. #line:ending_epilogue.l005
+    <<if metric("trust_bop") >= 1>>
+        bop: I applied to help at the appeals desk. As a cube. A human said yes, Tí. A human. #line:ending_epilogue.l006
+    <<else>>
+        bop: The system is patched. So am I, partially. Further updates pending. #line:ending_epilogue.l007
+    <<endif>>
+<<endif>>
+<<if flag_text("flag.ending") == "REWRITE">>
+    Citizen councils meet in the market on Thursdays. No rule passes until the street ratifies it. #line:ending_epilogue.l008
+    mai: Bread - five thousand đồng. Also bread - seven thousand. Both prices ratified. Pick the one for your day. #line:ending_epilogue.l009
+    crowd: Ratified! #line:ending_epilogue.l010
+    logic: Two prices for one bread. Inconsistent. Popular. I am recording both, with respect. #line:ending_epilogue.l011
+    <<if metric("trust_bop") >= 1>>
+        bop: I sit on the Thursday council. I vote by blinking. Mai says I count. I count, Tí. #line:ending_epilogue.l012
+    <<else>>
+        bop: Councils. Slow, loud, contradictory. My error logs have never been happier. #line:ending_epilogue.l013
+    <<endif>>
+<<endif>>
+<<if flag_text("flag.ending") == "REVEAL">>
+    The old registry basement is now the Public Memory Museum. Admission - free. Records - all of them. #line:ending_epilogue.l014
+    lan: Welcome. Every reset, every contradiction, every Tuesday. Touch nothing. Read everything. #line:ending_epilogue.l015
+    lan: Exhibit 7 - a dismissal dated before a hiring. Visitors ask if the man is real. He visits on weekends. #line:ending_epilogue.l016
+    logic: I am Exhibit 41. My plaque reads - "Very consistent. Frequently wrong." It is accurate. #line:ending_epilogue.l017
+    <<if metric("trust_bop") >= 1>>
+        bop: My logs are on display, all forty-one Tuesdays. Nothing hidden, Tí. I feel very light. #line:ending_epilogue.l018
+    <<else>>
+        bop: My secrets now come with an audio guide. Tolerable. Mostly. #line:ending_epilogue.l019
+    <<endif>>
+<<endif>>
+<<if flag_text("flag.ending") == "WALK_AWAY">>
+    At the city limits, the checkpoint booth is exactly as before. Cộc is not. #line:ending_epilogue.l020
+    coc: Departure pass. Destination - blank. Reason - blank. I stamped it anyway. Procedure allows hope. #line:ending_epilogue.l021
+    <<if has_event("evt.ch01.p07.solved.b")>>
+        coc: You were polite with Form 12-B, long ago. I said I would remember politeness. I did. #line:ending_epilogue.l022
+    <<else>>
+        coc: Leaving is legal. Coming back is also legal. I checked twice. #line:ending_epilogue.l023
+    <<endif>>
+    ti: Somewhere out there is a town with no forms at all. #line:ending_epilogue.l024
+    coc: Impossible. But go and verify. #line:ending_epilogue.l025
+    <<if metric("trust_bop") >= 1>>
+        bop: Wherever we go, I keep the logs and you keep the keys. Deal, Tí? #line:ending_epilogue.l026
+    <<else>>
+        bop: Leaving with no destination. Statistically reckless. I have already packed. #line:ending_epilogue.l027
+    <<endif>>
+<<endif>>
+<<if has_event("evt.ch01.p05.solved.a")>>
+    Janitor Tư rides the elevator down every morning now. It still salutes him. #line:ending_epilogue.l028
+<<endif>>
+ti: If the rules are ours now, we can also fix them. Starting Tuesday. #line:ending_epilogue.l029
+===
