@@ -1,0 +1,28 @@
+{
+  "id": "ch03",
+  "title": "Bread Revolution",
+  "locations": [
+    "Bakery",
+    "market",
+    "plaza"
+  ],
+  "objective": "Protect Mai’s stall from an absurd permit rule.",
+  "reveal": "A small paperwork fix causes a citywide rule cascade.",
+  "puzzles": [
+    "ch03.p01",
+    "ch03.p02",
+    "ch03.p03",
+    "ch03.p04",
+    "ch03.p05",
+    "ch03.p06",
+    "ch03.p07",
+    "ch03.p08",
+    "ch03.p09"
+  ],
+  "requiredCallbacks": [
+    "method-dependent NPC reaction",
+    "Tí/Bốp quiet beat",
+    "clue to next chapter"
+  ],
+  "chapterCompleteFlag": "flag.ch03.complete"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ch05",
+  "title": "Who Is Wrong?",
+  "locations": [
+    "LOGIC lobby",
+    "core",
+    "broadcast roof"
+  ],
+  "objective": "Confront LOGIC and choose the city’s future.",
+  "reveal": "Tí learns consistency is not the same as truth.",
+  "puzzles": [
+    "ch05.p01",
+    "ch05.p02",
+    "ch05.p03",
+    "ch05.p04",
+    "ch05.p05",
+    "ch05.p06",
+    "ch05.p07",
+    "ch05.p08",
+    "ch05.p09"
+  ],
+  "requiredCallbacks": [
+    "method-dependent NPC reaction",
+    "Tí/Bốp quiet beat",
+    "clue to next chapter"
+  ],
+  "chapterCompleteFlag": "flag.ch05.complete"
+}

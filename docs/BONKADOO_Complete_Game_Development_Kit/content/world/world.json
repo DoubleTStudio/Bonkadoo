@@ -1,0 +1,12 @@
+{
+  "contentVersion": "1.0.0",
+  "metrics": [
+    { "key": "trust_bop", "min": -3, "max": 3, "initial": 0 },
+    { "key": "public_trust", "min": -3, "max": 3, "initial": 0 },
+    { "key": "officer_suspicion", "min": 0, "max": 3, "initial": 0 },
+    { "key": "evidence_count", "min": 0, "max": 8, "initial": 0 },
+    { "key": "rule_instability", "min": 0, "max": 5, "initial": 0 }
+  ],
+  "npcDisposition": { "min": -3, "max": 3, "initial": 0 },
+  "startScene": "scene.ch01.01"
+}

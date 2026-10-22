@@ -1,0 +1,2 @@
+# Audio bible
+Light playful plucked/percussive score, dry bureaucratic UI ticks, comedic stamps, rubbery movement, subtle tension in archive and LOGIC core. Short adaptive loops by chapter; do not over-score punchlines. Distinct sound motifs for contradiction, official approval, suspicious record and Bốp memory. Provide mute/music/SFX sliders, captions for essential audio cues, no audio-only solutions. Original/commercially licensed stems and SFX only. Deliver WAV masters, compressed runtime variants, cue IDs, licensing and loudness review.

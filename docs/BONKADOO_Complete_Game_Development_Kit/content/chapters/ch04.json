@@ -1,0 +1,28 @@
+{
+  "id": "ch04",
+  "title": "The Misrememberers",
+  "locations": [
+    "Archive",
+    "museum",
+    "memory lab"
+  ],
+  "objective": "Reconstruct the contradictory reset archive.",
+  "reveal": "Bốp admits hiding records from previous resets.",
+  "puzzles": [
+    "ch04.p01",
+    "ch04.p02",
+    "ch04.p03",
+    "ch04.p04",
+    "ch04.p05",
+    "ch04.p06",
+    "ch04.p07",
+    "ch04.p08",
+    "ch04.p09"
+  ],
+  "requiredCallbacks": [
+    "method-dependent NPC reaction",
+    "Tí/Bốp quiet beat",
+    "clue to next chapter"
+  ],
+  "chapterCompleteFlag": "flag.ch04.complete"
+}

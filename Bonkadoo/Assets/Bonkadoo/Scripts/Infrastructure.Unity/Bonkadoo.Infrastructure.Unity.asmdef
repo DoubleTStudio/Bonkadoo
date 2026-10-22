@@ -1,0 +1,14 @@
+{
+    "name": "Bonkadoo.Infrastructure.Unity",
+    "rootNamespace": "Bonkadoo.Infrastructure.Unity",
+    "references": ["Bonkadoo.Domain", "Bonkadoo.Application", "Bonkadoo.Infrastructure"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

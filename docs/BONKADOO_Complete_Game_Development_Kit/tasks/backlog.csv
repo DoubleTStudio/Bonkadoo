@@ -1,0 +1,22 @@
+id,milestone,task,skill,acceptance,status,dependency
+T001,M0,Project skeleton,unity-architecture,Unity opens; assemblies compile; smoke test,DONE,
+T002,M0,Content validator,content-validation,All 45 seeds validate; CI fails on bad IDs,DONE,T001
+T003,M0,Domain rule engine,gameplay-system,Deterministic priority; atomic effects; invalid fallback,DONE,T002
+T004,M0,Event journal and save,save-system,Replay idempotent; corruption fallback; migration tests,DONE,T003
+T005,M1,Office scene and input,mobile-ux,Tap/use/drag works on Android+iOS,IN_PROGRESS,T004
+T006,M1,Office Escape puzzles p01–p03,puzzle-authoring,Two solution paths and callbacks tested,TODO,T005
+T007,M1,Yarn dialogue adapter,narrative-writing,Dialogues localized and state-safe,TODO,T006
+T008,M1,Character animation prototype,art-production,Tí/Bốp/Vượng/Cộc readable at phone scale,TODO,T007
+T009,M1,Vertical slice playtest,automated-testing,15–20 players; recorded comprehension/fun metrics,TODO,T008
+T010,M2,"Hints, NPC memory, inventory",gameplay-system,No softlocks; hint ladder; callback tests,TODO,T009
+T011,M2,"Replay, checkpoint, migration",save-system,Replay branch does not overwrite main save,TODO,T010
+T012,M3,Chapter 1 full content,puzzle-authoring,"9 puzzles, callbacks, VI/EN, device QA",TODO,T011
+T013,M3,Chapter 2 full content,puzzle-authoring,"9 puzzles, callbacks, VI/EN, device QA",TODO,T012
+T014,M4,Chapter 3 full content,puzzle-authoring,"9 puzzles, callbacks, VI/EN, device QA",TODO,T013
+T015,M4,Chapter 4 full content,puzzle-authoring,"9 puzzles, callbacks, VI/EN, device QA",TODO,T014
+T016,M4,Chapter 5 and endings,narrative-writing,9 puzzles and 4 ending routes tested,TODO,T015
+T017,M4,Art/audio finalization,art-production,License and asset consistency approved,TODO,T016
+T018,M5,AdMob policy integration,ads-and-iap,300s gate and scene-break tests; no ad blocking,TODO,T017
+T019,M5,Remove Ads IAP,ads-and-iap,Sandbox purchase/restore/refund cases,TODO,T018
+T020,M5,Device QA and localization,automated-testing,Real-device matrix and accessibility reviewed,TODO,T019
+T021,M6,Store release preparation,release-management,"Privacy, signing, screenshots, store approval checklist",TODO,T020

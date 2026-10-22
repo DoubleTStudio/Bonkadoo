@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bonkadoo puzzle",
+  "type": "object",
+  "required": [
+    "id",
+    "chapter",
+    "scene",
+    "title",
+    "goal",
+    "ruleTwist",
+    "hotspots",
+    "rules",
+    "solutions",
+    "failureResponses",
+    "hints",
+    "consequenceEvents",
+    "testCases"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "chapter": {
+      "type": "string"
+    },
+    "scene": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "string"
+    },
+    "ruleTwist": {
+      "type": "string"
+    },
+    "featuredNPC": {
+      "type": "string"
+    },
+    "inventoryItem": {
+      "type": "string"
+    },
+    "hotspots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "priority",
+          "when",
+          "effects",
+          "once"
+        ]
+      }
+    },
+    "solutions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "strategy",
+          "steps",
+          "ruleId",
+          "eventId"
+        ]
+      }
+    },
+    "failureResponses": {
+      "type": "array",
+      "minItems": 1
+    },
+    "hints": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "string"
+      }
+    },
+    "consequenceEvents": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "callbacks": {
+      "type": "array"
+    },
+    "prerequisites": {
+      "type": "array"
+    },
+    "testCases": {
+      "type": "array",
+      "minItems": 3
+    }
+  },
+  "additionalProperties": false
+}

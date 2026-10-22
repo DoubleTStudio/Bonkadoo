@@ -1,0 +1,28 @@
+{
+  "id": "ch01",
+  "title": "Last Day at Work",
+  "locations": [
+    "Office",
+    "hallway",
+    "checkpoint"
+  ],
+  "objective": "Find a lawful way to be fired and leave.",
+  "reveal": "Tí finds a dismissal record dated before his hiring.",
+  "puzzles": [
+    "ch01.p01",
+    "ch01.p02",
+    "ch01.p03",
+    "ch01.p04",
+    "ch01.p05",
+    "ch01.p06",
+    "ch01.p07",
+    "ch01.p08",
+    "ch01.p09"
+  ],
+  "requiredCallbacks": [
+    "method-dependent NPC reaction",
+    "Tí/Bốp quiet beat",
+    "clue to next chapter"
+  ],
+  "chapterCompleteFlag": "flag.ch01.complete"
+}

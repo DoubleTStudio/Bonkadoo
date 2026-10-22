@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "id": "TC-001",
+      "scenario": "duplicate interaction request ID",
+      "expected": "one committed event"
+    },
+    {
+      "id": "TC-002",
+      "scenario": "interrupt save mid-write",
+      "expected": "previous checkpoint recovered"
+    },
+    {
+      "id": "TC-003",
+      "scenario": "interstitial at 299 active seconds",
+      "expected": "not shown"
+    },
+    {
+      "id": "TC-004",
+      "scenario": "interstitial at 301s during puzzle",
+      "expected": "not shown"
+    },
+    {
+      "id": "TC-005",
+      "scenario": "interstitial at 301s at scene break",
+      "expected": "eligible if consent and no first-session grace"
+    },
+    {
+      "id": "TC-006",
+      "scenario": "Remove Ads owned",
+      "expected": "no banner or interstitial"
+    },
+    {
+      "id": "TC-007",
+      "scenario": "airplane mode launch and finish chapter",
+      "expected": "no blocked progression"
+    },
+    {
+      "id": "TC-008",
+      "scenario": "all 4 endings",
+      "expected": "reachable from legal fixtures"
+    },
+    {
+      "id": "TC-009",
+      "scenario": "VI/EN language switch",
+      "expected": "all UI and dialogue localized"
+    },
+    {
+      "id": "TC-010",
+      "scenario": "replay branch",
+      "expected": "primary save untouched"
+    }
+  ]
+}

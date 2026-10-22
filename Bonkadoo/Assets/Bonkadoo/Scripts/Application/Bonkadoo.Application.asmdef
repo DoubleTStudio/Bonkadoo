@@ -1,0 +1,14 @@
+{
+    "name": "Bonkadoo.Application",
+    "rootNamespace": "Bonkadoo.Application",
+    "references": ["Bonkadoo.Domain"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}
