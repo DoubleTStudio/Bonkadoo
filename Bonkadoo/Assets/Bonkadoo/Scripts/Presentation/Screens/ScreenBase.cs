@@ -15,7 +15,7 @@ namespace Bonkadoo.Presentation.Screens
         {
             if (App == null)
             {
-                Screens.Go(Screens.Bootstrap);
+                Nav.Go(Nav.Bootstrap);
                 return;
             }
             Canvas = UiKit.Canvas(GetType().Name + "Canvas");

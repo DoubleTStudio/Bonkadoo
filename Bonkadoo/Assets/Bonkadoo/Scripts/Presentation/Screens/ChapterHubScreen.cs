@@ -11,12 +11,12 @@ namespace Bonkadoo.Presentation.Screens
         {
             if (App.Flow.Session == null && !App.Flow.Continue())
             {
-                Screens.Go(Screens.Menu);
+                Nav.Go(Nav.Menu);
                 return;
             }
             UiKit.Label("Title", Root, "ui.hub.title", 72, UiKit.Ink).GetComponent<RectTransform>()
                 .Anchor(new Vector2(0.1f, 0.86f), new Vector2(0.9f, 0.98f));
-            UiKit.Button("Hub:Back", Root, "ui.back", () => Screens.Go(Screens.Menu)).GetComponent<RectTransform>()
+            UiKit.Button("Hub:Back", Root, "ui.back", () => Nav.Go(Nav.Menu)).GetComponent<RectTransform>()
                 .Anchor(new Vector2(0.01f, 0.88f), new Vector2(0.12f, 0.98f));
 
             var list = UiKit.Rect("Chapters", Root).Anchor(new Vector2(0.08f, 0.04f), new Vector2(0.92f, 0.84f));
@@ -36,13 +36,13 @@ namespace Bonkadoo.Presentation.Screens
                 if (!unlocked) continue;
                 var id = ch.Id;
                 if (ch.Id == current && !App.Flow.GameComplete)
-                    UiKit.Button("Hub:Continue:" + id, row, "ui.hub.continue", () => Screens.Go(Screens.Gameplay), UiKit.Accent).Size(300);
+                    UiKit.Button("Hub:Continue:" + id, row, "ui.hub.continue", () => Nav.Go(Nav.Gameplay), UiKit.Accent).Size(300);
                 else if (!complete)
-                    UiKit.Button("Hub:Play:" + id, row, "ui.hub.play", () => { App.Flow.StartChapter(id); Screens.Go(Screens.Gameplay); }, UiKit.Accent).Size(300);
+                    UiKit.Button("Hub:Play:" + id, row, "ui.hub.play", () => { App.Flow.StartChapter(id); Nav.Go(Nav.Gameplay); }, UiKit.Accent).Size(300);
                 if (App.Flow.CanReplay(id))
                     UiKit.Button("Hub:Replay:" + id, row, "ui.hub.replay", () =>
                     {
-                        if (App.Flow.StartReplay(id)) Screens.Go(Screens.Gameplay);
+                        if (App.Flow.StartReplay(id)) Nav.Go(Nav.Gameplay);
                     }).Size(300);
             }
         }

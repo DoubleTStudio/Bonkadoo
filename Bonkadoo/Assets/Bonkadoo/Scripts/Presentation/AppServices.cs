@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 namespace Bonkadoo.Presentation
 {
-    public static class Screens
+    public static class Nav
     {
         public const string Bootstrap = "Bootstrap";
         public const string Menu = "Menu";

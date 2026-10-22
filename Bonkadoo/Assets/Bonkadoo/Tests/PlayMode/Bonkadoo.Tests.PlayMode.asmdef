@@ -9,8 +9,7 @@
         "Bonkadoo.Infrastructure.Unity",
         "Bonkadoo.Presentation",
         "UnityEngine.TestRunner",
-        "Unity.InputSystem",
-        "Unity.InputSystem.TestFramework"
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

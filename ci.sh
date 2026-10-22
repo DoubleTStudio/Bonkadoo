@@ -9,6 +9,12 @@ UNITY_CLI="${UNITY_CLI:-$(command -v unity || echo "$HOME/.unity/bin/unity")}"
 
 step() { printf '\n== %s\n' "$1"; }
 
+step "generated content up to date with chapter specs"
+python3 "$KIT/tools/author/build.py" --check
+
+step "route simulation (all puzzles, both routes, endings)"
+python3 "$KIT/tools/author/simulate.py"
+
 step "content validator"
 python3 "$KIT/tools/validate_content.py"
 

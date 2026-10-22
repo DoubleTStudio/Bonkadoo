@@ -24,7 +24,7 @@ namespace Bonkadoo.Presentation
         {
             if (AppServices.Current != null)
             {
-                if (loadMenu) Screens.Go(Screens.Menu);
+                if (loadMenu) Nav.Go(Nav.Menu);
                 Destroy(gameObject);
                 return;
             }
@@ -43,7 +43,7 @@ namespace Bonkadoo.Presentation
                 return;
             }
             AppServices.Current.Ads.Start();
-            if (loadMenu) Screens.Go(Screens.Menu);
+            if (loadMenu) Nav.Go(Nav.Menu);
         }
 
         private static AppServices Compose()
@@ -71,7 +71,7 @@ namespace Bonkadoo.Presentation
         {
             var app = AppServices.Current;
             if (app == null) return;
-            var inGame = app.Flow.Session != null && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Screens.Gameplay;
+            var inGame = app.Flow.Session != null && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == Nav.Gameplay;
             app.Clock.Tick(Time.unscaledDeltaTime, inGame, UnityEngine.Application.isFocused);
         }
 

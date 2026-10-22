@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Bonkadoo/Scenes/Bootstrap.unity
     guid: 69cc027d2641f4850bee3d6a82d63aff
+  - enabled: 1
+    path: Assets/Bonkadoo/Scenes/Menu.unity
+    guid: bc7070f29fcf94a8e908ceef30e43f1f
+  - enabled: 1
+    path: Assets/Bonkadoo/Scenes/ChapterHub.unity
+    guid: 83c3eba9c18ab4eb98916d764fdc7212
+  - enabled: 1
+    path: Assets/Bonkadoo/Scenes/Gameplay.unity
+    guid: 2e6119ee18a724ad6a1728d050997a72
+  - enabled: 1
+    path: Assets/Bonkadoo/Scenes/Credits.unity
+    guid: 700d4e50f296043a5a1123aed5032645
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

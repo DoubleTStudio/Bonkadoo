@@ -15,6 +15,7 @@ namespace Bonkadoo.Tests.Unity
         [TestCase("Bonkadoo.Domain")]
         [TestCase("Bonkadoo.Application")]
         [TestCase("Bonkadoo.Infrastructure")]
+        [TestCase("Bonkadoo.Narrative")]
         public void EngineFreeAssembliesDoNotReferenceUnity(string assemblyName)
         {
             var asm = AppDomain.CurrentDomain.GetAssemblies().Single(a => a.GetName().Name == assemblyName);
@@ -27,9 +28,10 @@ namespace Bonkadoo.Tests.Unity
         {
             var resources = Path.Combine("Assets", "Bonkadoo", "Content", "Resources", "BonkadooContent");
             foreach (var rel in new[] { "world/world.json", "puzzles/puzzles.json", "events/catalog.json", "localization/en.json",
-                         "localization/vi.json", "chapters/ch01.json", "chapters/ch05.json" })
+                         "localization/vi.json", "chapters/ch01.json", "chapters/ch05.json", "scenes/scenes.json", "scenes/ambient.json",
+                         "items/items.json", "dialogue/lines.json", "dialogue/ch03.yarn" })
             {
-                var synced = File.ReadAllBytes(Path.Combine(resources, rel));
+                var synced = File.ReadAllBytes(Path.Combine(resources, rel.EndsWith(".yarn") ? rel.Replace(".yarn", ".txt") : rel));
                 var kit = File.ReadAllBytes(TestContent.ContentPath(rel));
                 CollectionAssert.AreEqual(kit, synced, $"{rel} drifted; run Tools/sync_content.py");
             }
@@ -43,11 +45,22 @@ namespace Bonkadoo.Tests.Unity
         }
 
         [Test]
-        public void BootstrapSceneIsFirstInBuild()
+        public void BuildHasTheFiveArchitectureScenesBootstrapFirst()
         {
-            Assert.IsNotEmpty(EditorBuildSettings.scenes);
-            StringAssert.EndsWith("Bootstrap.unity", EditorBuildSettings.scenes[0].path);
+            var names = EditorBuildSettings.scenes.Select(s => Path.GetFileNameWithoutExtension(s.path)).ToArray();
+            CollectionAssert.AreEqual(new[] { "Bootstrap", "Menu", "ChapterHub", "Gameplay", "Credits" }, names);
         }
+
+        [Test]
+        public void NarrativeCompilesInsideUnityWithPackageDlls()
+        {
+            var content = ContentLoader.Load(ResourcesContent.Load());
+            var flow = new Bonkadoo.Infrastructure.GameFlow(content,
+                new Bonkadoo.Infrastructure.Save.SaveService(new Bonkadoo.Infrastructure.Save.InMemoryFileStore()), new Ticks());
+            Assert.Greater(flow.Narrative.Nodes.Count, 15);
+        }
+
+        private sealed class Ticks : Bonkadoo.Application.ITickSource { public long Now => 1; }
 
         [Test]
         public void LandscapeOnly()

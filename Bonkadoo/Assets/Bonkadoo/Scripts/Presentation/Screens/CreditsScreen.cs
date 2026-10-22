@@ -24,7 +24,7 @@ namespace Bonkadoo.Presentation.Screens
                 .Anchor(new Vector2(0.1f, 0.5f), new Vector2(0.9f, 0.6f));
             UiKit.Label("CreditsBody", Root, "ui.credits.body", 34, UiKit.Muted).GetComponent<RectTransform>()
                 .Anchor(new Vector2(0.15f, 0.16f), new Vector2(0.85f, 0.5f));
-            UiKit.Button("Credits:Back", Root, "ui.back", () => Screens.Go(Screens.Menu), UiKit.Accent).GetComponent<RectTransform>()
+            UiKit.Button("Credits:Back", Root, "ui.back", () => Nav.Go(Nav.Menu), UiKit.Accent).GetComponent<RectTransform>()
                 .Anchor(new Vector2(0.4f, 0.03f), new Vector2(0.6f, 0.13f));
         }
     }

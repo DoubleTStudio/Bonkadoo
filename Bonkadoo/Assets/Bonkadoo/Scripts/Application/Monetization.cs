@@ -62,6 +62,9 @@ namespace Bonkadoo.Application
         public bool ShowingInterstitial { get; private set; }
         public int Impressions { get; private set; }
         public AdDecision LastDecision { get; private set; }
+        /// <summary>Whether the banner should currently occupy its reserved strip.</summary>
+        public bool BannerVisible { get; private set; }
+        public event Action<bool> BannerChanged;
 
         public AdCoordinator(IAdPolicy policy, IAdService ads, IEntitlements entitlements, ActivePlayClock clock,
             Func<bool> isFirstSession)
@@ -143,8 +146,12 @@ namespace Bonkadoo.Application
 
         public void RefreshBanner()
         {
-            try { _ads.SetBannerVisible(_policy.CanShowBanner(Context(false))); }
-            catch (Exception) { /* banner failures are cosmetic */ }
+            var visible = _policy.CanShowBanner(Context(false));
+            try { _ads.SetBannerVisible(visible); }
+            catch (Exception) { visible = false; }
+            if (visible == BannerVisible) return;
+            BannerVisible = visible;
+            BannerChanged?.Invoke(visible);
         }
 
         private bool SafeReady()

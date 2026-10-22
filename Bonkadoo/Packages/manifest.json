@@ -53,7 +53,5 @@
     "com.unity.ugui": "2.0.0",
     "dev.yarnspinner.unity": "https://github.com/YarnSpinnerTool/YarnSpinner-Unity.git#v3.2.8"
   },
-  "testables": [
-    "com.unity.inputsystem"
-  ]
+  "testables": []
 }

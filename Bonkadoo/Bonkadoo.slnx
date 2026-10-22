@@ -6,5 +6,6 @@
   <Project Path="Bonkadoo.Tests.PlayMode.csproj" />
   <Project Path="Bonkadoo.Application.csproj" />
   <Project Path="Bonkadoo.Infrastructure.Unity.csproj" />
+  <Project Path="Bonkadoo.Narrative.csproj" />
   <Project Path="Bonkadoo.Editor.csproj" />
 </Solution>

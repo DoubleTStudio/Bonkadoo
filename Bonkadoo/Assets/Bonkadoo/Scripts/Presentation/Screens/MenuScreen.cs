@@ -32,12 +32,12 @@ namespace Bonkadoo.Presentation.Screens
             }, hasSave ? UiKit.Calm : UiKit.Accent).Size(-1, 100);
             if (hasSave) UiKit.Button("Menu:Chapters", column, "ui.menu.chapters", () =>
             {
-                if (App.Flow.Session != null || App.Flow.Continue()) Screens.Go(Screens.ChapterHub);
+                if (App.Flow.Session != null || App.Flow.Continue()) Nav.Go(Nav.ChapterHub);
             }).Size(-1, 100);
             UiKit.Button("Menu:Settings", column, "ui.menu.settings", () => SettingsPanel.Open(this)).Size(-1, 100);
             _removeAds = UiKit.Button("Menu:RemoveAds", column, "ui.menu.remove_ads", BuyRemoveAds);
             _removeAds.Size(-1, 100);
-            UiKit.Button("Menu:Credits", column, "ui.menu.credits", () => Screens.Go(Screens.Credits)).Size(-1, 100);
+            UiKit.Button("Menu:Credits", column, "ui.menu.credits", () => Nav.Go(Nav.Credits)).Size(-1, 100);
             RefreshRemoveAds();
             App.Settings.Changed += OnSettingsChanged;
 
@@ -63,7 +63,7 @@ namespace Bonkadoo.Presentation.Screens
         private void Continue()
         {
             App.Audio?.Play(Cue.Tap);
-            if (App.Flow.Continue()) Screens.Go(Screens.Gameplay);
+            if (App.Flow.Continue()) Nav.Go(Nav.Gameplay);
             else Toast("ui.save.corrupt");
         }
 
@@ -71,7 +71,7 @@ namespace Bonkadoo.Presentation.Screens
         {
             App.Audio?.Play(Cue.Tap);
             App.Flow.NewGame();
-            Screens.Go(Screens.Gameplay);
+            Nav.Go(Nav.Gameplay);
         }
 
         private void BuyRemoveAds()
