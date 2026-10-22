@@ -39,8 +39,9 @@ for mode in EditMode PlayMode; do
   python3 - "$out" <<'PY'
 import sys, xml.etree.ElementTree as ET
 r = ET.parse(sys.argv[1]).getroot()
-print(f"{r.get('result')}: {r.get('passed')}/{r.get('total')} passed, {r.get('failed')} failed")
-sys.exit(0 if r.get('result') == 'Passed' and int(r.get('total')) > 0 else 1)
+print(f"{r.get('result')}: {r.get('passed')}/{r.get('total')} passed, {r.get('failed')} failed, {r.get('skipped')} skipped")
+# opt-in tests (e.g. screenshot capture) are Ignored, so the run result can be "Skipped:Ignored"
+sys.exit(0 if int(r.get('failed')) == 0 and int(r.get('passed')) > 0 else 1)
 PY
 done
 echo; echo "ALL GATES PASSED"

@@ -25,6 +25,7 @@ namespace Bonkadoo.Editor
         public static void Apply()
         {
             ConfigurePlayer();
+            ConfigureIcon();
             ConfigureAdMob();
             EnsureScenes();
             AssetDatabase.SaveAssets();
@@ -51,6 +52,24 @@ namespace Bonkadoo.Editor
             PlayerSettings.iOS.targetOSVersionString = "15.0";
             // offline-first: no internet permission is required to play (D06); IAP/ads add their own when integrated
             PlayerSettings.Android.forceInternetPermission = false;
+        }
+
+        // placeholder until art direction delivers the real icon (T017)
+        private const string IconPath = "Assets/Bonkadoo/Art/Placeholder/app_icon.png";
+
+        private static void ConfigureIcon()
+        {
+            var importer = AssetImporter.GetAtPath(IconPath) as TextureImporter;
+            if (importer == null) return;
+            if (importer.textureType != TextureImporterType.Default || importer.mipmapEnabled || !importer.isReadable)
+            {
+                importer.textureType = TextureImporterType.Default;
+                importer.mipmapEnabled = false;
+                importer.isReadable = true;
+                importer.SaveAndReimport();
+            }
+            var icon = AssetDatabase.LoadAssetAtPath<Texture2D>(IconPath);
+            PlayerSettings.SetIcons(UnityEditor.Build.NamedBuildTarget.Unknown, new[] { icon }, IconKind.Any);
         }
 
         /// <summary>

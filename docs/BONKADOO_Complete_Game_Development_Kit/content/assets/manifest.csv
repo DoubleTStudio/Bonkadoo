@@ -203,3 +203,4 @@ chr.janitor,character,all,concept-needed,unlicensed/unproduced
 chr.mayor,character,all,concept-needed,unlicensed/unproduced
 chr.printer,character,all,concept-needed,unlicensed/unproduced
 chr.sign,character,all,concept-needed,unlicensed/unproduced
+app.icon,icon,all,placeholder-original,original (generated; replace before release)

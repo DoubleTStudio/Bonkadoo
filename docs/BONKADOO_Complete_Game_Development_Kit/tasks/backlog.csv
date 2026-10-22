@@ -16,7 +16,7 @@ T014,M4,Chapter 3 full content,puzzle-authoring,"9 puzzles, callbacks, VI/EN, de
 T015,M4,Chapter 4 full content,puzzle-authoring,"9 puzzles, callbacks, VI/EN, device QA",IMPLEMENTED (editorial + device QA pending),T014
 T016,M4,Chapter 5 and endings,narrative-writing,9 puzzles and 4 ending routes tested,IMPLEMENTED (editorial + device QA pending),T015
 T017,M4,Art/audio finalization,art-production,License and asset consistency approved,BLOCKED (licensed art/audio),T016
-T018,M5,AdMob policy integration,ads-and-iap,300s gate and scene-break tests; no ad blocking,IN_PROGRESS (policy done; SDK + ad unit IDs pending),T017
+T018,M5,AdMob policy integration,ads-and-iap,300s gate and scene-break tests; no ad blocking,IMPLEMENTED (real AdMob IDs + device cadence check pending),T017
 T019,M5,Remove Ads IAP,ads-and-iap,Sandbox purchase/restore/refund cases,IMPLEMENTED (store sandbox pending),T018
 T020,M5,Device QA and localization,automated-testing,Real-device matrix and accessibility reviewed,BLOCKED (physical devices),T019
 T021,M6,Store release preparation,release-management,"Privacy, signing, screenshots, store approval checklist","BLOCKED (store accounts, legal)",T020
