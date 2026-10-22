@@ -17,27 +17,28 @@ namespace Bonkadoo.Presentation.Screens
         {
             App.Audio?.PlayMusic("calm");
             var title = UiKit.Label("Title", Root, "ui.title", 150, UiKit.Ink);
-            title.GetComponent<RectTransform>().Anchor(new Vector2(0.05f, 0.7f), new Vector2(0.95f, 0.95f));
+            title.GetComponent<RectTransform>().Anchor(new Vector2(0.05f, 0.76f), new Vector2(0.95f, 0.98f));
             UiKit.Label("Subtitle", Root, "ui.subtitle", 48, UiKit.Accent).GetComponent<RectTransform>()
-                .Anchor(new Vector2(0.1f, 0.62f), new Vector2(0.9f, 0.72f));
+                .Anchor(new Vector2(0.1f, 0.67f), new Vector2(0.9f, 0.76f));
 
-            var column = UiKit.Rect("Buttons", Root).Anchor(new Vector2(0.3f, 0.08f), new Vector2(0.7f, 0.6f));
-            UiKit.Column(column, 18);
+            // six 44pt buttons must fit the shortest landscape safe area (found on a 2424x1080 device)
+            var column = UiKit.Rect("Buttons", Root).Anchor(new Vector2(0.3f, 0.02f), new Vector2(0.7f, 0.66f));
+            UiKit.Column(column, 10);
             var hasSave = App.Flow.HasMainSave;
-            if (hasSave) UiKit.Button("Menu:Continue", column, "ui.menu.continue", Continue, UiKit.Accent).Size(-1, 100);
+            if (hasSave) UiKit.Button("Menu:Continue", column, "ui.menu.continue", Continue, UiKit.Accent).Size(-1, 92);
             UiKit.Button("Menu:New", column, "ui.menu.new", () =>
             {
                 if (hasSave) Confirm("ui.confirm.new_game", NewGame);
                 else NewGame();
-            }, hasSave ? UiKit.Calm : UiKit.Accent).Size(-1, 100);
+            }, hasSave ? UiKit.Calm : UiKit.Accent).Size(-1, 92);
             if (hasSave) UiKit.Button("Menu:Chapters", column, "ui.menu.chapters", () =>
             {
                 if (App.Flow.Session != null || App.Flow.Continue()) Nav.Go(Nav.ChapterHub);
-            }).Size(-1, 100);
-            UiKit.Button("Menu:Settings", column, "ui.menu.settings", () => SettingsPanel.Open(this)).Size(-1, 100);
+            }).Size(-1, 92);
+            UiKit.Button("Menu:Settings", column, "ui.menu.settings", () => SettingsPanel.Open(this)).Size(-1, 92);
             _removeAds = UiKit.Button("Menu:RemoveAds", column, "ui.menu.remove_ads", BuyRemoveAds);
-            _removeAds.Size(-1, 100);
-            UiKit.Button("Menu:Credits", column, "ui.menu.credits", () => Nav.Go(Nav.Credits)).Size(-1, 100);
+            _removeAds.Size(-1, 92);
+            UiKit.Button("Menu:Credits", column, "ui.menu.credits", () => Nav.Go(Nav.Credits)).Size(-1, 92);
             RefreshRemoveAds();
             App.Settings.Changed += OnSettingsChanged;
 

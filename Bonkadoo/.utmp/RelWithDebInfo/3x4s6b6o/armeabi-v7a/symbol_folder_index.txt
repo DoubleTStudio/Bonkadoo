@@ -1,0 +1,1 @@
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3x4s6b6o/obj/armeabi-v7a

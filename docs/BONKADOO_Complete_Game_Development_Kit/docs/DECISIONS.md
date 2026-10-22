@@ -20,3 +20,9 @@
 | D17 | Interstitial first-session grace = whole first session (GAP_REPORT S9) | reversible; revisit after playtest |
 | D18 | Provisional bundle ID `com.omnicasa.bonkadoo`, company "Omnicasa" | provisional; confirm before any store upload |
 | D19 | Newtonsoft via Unity's editor-bundled `com.unity.nuget.newtonsoft-json` 3.2.2 (offline-resolvable) | accepted M0 |
+| D20 | Remove Ads product id `com.omnicasa.bonkadoo.removeads` (non-consumable) via Unity IAP 4.15.1 | provisional; must match store consoles |
+| D21 | Content format v2 + Yarn Spinner 3.2.8 runtime-compiled dialogue (ADR-0003) | accepted |
+| D22 | Placeholder art is procedural (shapes, colours, labels); audio is procedurally synthesized; both original, no third-party assets | interim until T017 |
+| D23 | Gameplay stage built in uGUI (labelled hotspot buttons, EventSystem drag/drop) instead of world-space sprites | accepted; production art drops into the same Image slots |
+| D24 | Release builds without an integrated ad SDK show no ads at all (NullAdService); dev builds use a simulated ad service | interim until T018 SDK + ad unit IDs |
+| D25 | Interstitial "puzzle active" = item selected or drag in progress; scene/chapter transitions are the natural breaks | reversible |

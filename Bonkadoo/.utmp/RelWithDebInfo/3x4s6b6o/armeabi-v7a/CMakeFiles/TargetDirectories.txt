@@ -1,0 +1,8 @@
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/hoangq/Projects/Omnicasa.BKD/source/Bonkadoo/.utmp/RelWithDebInfo/3x4s6b6o/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir
