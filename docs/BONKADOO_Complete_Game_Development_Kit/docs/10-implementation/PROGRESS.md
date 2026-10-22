@@ -13,9 +13,9 @@ human gate (art, playtest, devices, accounts, legal).
 | `tools/validate_content.py` | PASS, 0 errors, 0 warnings |
 | Validator negative fixtures | 31/31 |
 | Unity Resources in sync with kit | in sync |
-| dotnet engine-free tests | 128/128 |
-| Unity EditMode | 137/137 |
-| Unity PlayMode (UI end-to-end) | 4/4 |
+| dotnet engine-free tests | 129/129 |
+| Unity EditMode | 138/138 |
+| Unity PlayMode (UI end-to-end) | 4/4 (+1 opt-in screenshot capture, ignored by default) |
 
 ## Backlog
 | Task | Status | Evidence / what remains |
@@ -50,3 +50,16 @@ human gate (art, playtest, devices, accounts, legal).
 - No analytics or crash reporting (none required for offline play; decision pending).
 - IAP needs the Unity project linked to a Unity Cloud project (account step); until then UGS init is skipped.
 - Yarn version skew: Unity uses 3.2.8 DLLs, the dotnet test project uses NuGet 3.2.2 (same API).
+
+## Handoff (AGENTS.md)
+- **Goal:** implement the kit as a playable Unity game through M5, with evidence; human-gated items left explicit.
+- **Files:** `source/Bonkadoo/**` (Unity project + CoreTests), kit `tools/author/**`, `tools/validate_content.py`,
+  `content/**` (generated), `docs/adr/ADR-0001..0003`, `docs/DECISIONS.md` D13–D28, `docs/10-implementation/*`,
+  `docs/08-delivery/RELEASE_PREP.md`, `tasks/backlog.csv`, `source/ci.sh`, `source/README.md`.
+- **Contracts:** ARCHITECTURE, DATA_CONTRACTS, INTERACTION_IMPLEMENTATION_NOTES, ADS_AND_IAP, ENDING_MATRIX, UX_LOCALIZATION.
+- **Evidence:** gate table above (`source/ci.sh` → ALL GATES PASSED), Android emulator and iOS simulator runs, screenshots.
+- **Risks:** draft copy and placeholder art/audio; puzzles not playtested; no physical-device data (performance,
+  thermal, notches); AdMob/IAP untested with real accounts; autosave cost on low-tier devices.
+- **Next tasks (human first):** editorial VI/EN pass → external playtest of ch01 (T009) → art/audio direction (T008, T017)
+  → AdMob + store accounts, product/ad IDs as CI secrets (T018, T019) → device matrix QA (T020) → signing, privacy,
+  rating, store submission (T021).
