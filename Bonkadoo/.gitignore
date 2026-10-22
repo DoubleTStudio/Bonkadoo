@@ -16,3 +16,4 @@
 *.p12
 *.mobileprovision
 .DS_Store
+/Assets/Bonkadoo/Content/Resources/admob_ids.json*

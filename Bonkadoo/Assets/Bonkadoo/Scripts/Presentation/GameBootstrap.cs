@@ -42,6 +42,7 @@ namespace Bonkadoo.Presentation
                 Debug.LogError("[Bonkadoo] bootstrap failed: " + ex);
                 return;
             }
+            AppServices.Current.Ads.SdkError += ex => Debug.LogWarning("[Bonkadoo] ad SDK: " + ex.Message);
             AppServices.Current.Ads.Start();
             if (loadMenu) Nav.Go(Nav.Menu);
         }

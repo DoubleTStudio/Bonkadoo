@@ -1,11 +1,11 @@
 ﻿<Solution>
   <Project Path="Bonkadoo.Presentation.csproj" />
+  <Project Path="Bonkadoo.Infrastructure.Unity.csproj" />
   <Project Path="Bonkadoo.Tests.EditMode.csproj" />
   <Project Path="Bonkadoo.Domain.csproj" />
   <Project Path="Bonkadoo.Infrastructure.csproj" />
   <Project Path="Bonkadoo.Tests.PlayMode.csproj" />
   <Project Path="Bonkadoo.Application.csproj" />
-  <Project Path="Bonkadoo.Infrastructure.Unity.csproj" />
   <Project Path="Bonkadoo.Narrative.csproj" />
   <Project Path="Bonkadoo.Editor.csproj" />
 </Solution>

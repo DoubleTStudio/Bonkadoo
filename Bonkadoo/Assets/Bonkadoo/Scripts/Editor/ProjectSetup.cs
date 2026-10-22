@@ -25,6 +25,7 @@ namespace Bonkadoo.Editor
         public static void Apply()
         {
             ConfigurePlayer();
+            ConfigureAdMob();
             EnsureScenes();
             AssetDatabase.SaveAssets();
             Debug.Log("[Bonkadoo] project setup applied");
@@ -50,6 +51,39 @@ namespace Bonkadoo.Editor
             PlayerSettings.iOS.targetOSVersionString = "15.0";
             // offline-first: no internet permission is required to play (D06); IAP/ads add their own when integrated
             PlayerSettings.Android.forceInternetPermission = false;
+        }
+
+        /// <summary>
+        /// App IDs come from CI secrets (BONKADOO_ADMOB_ANDROID_APP_ID / _IOS_APP_ID); Google's sample app IDs keep
+        /// local builds working. GMA's settings class is internal, so it is reached by reflection.
+        /// </summary>
+        private static void ConfigureAdMob()
+        {
+            var type = Type.GetType("GoogleMobileAds.Editor.GoogleMobileAdsSettings, GoogleMobileAds.Editor");
+            var load = type?.GetMethod("LoadInstance", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic |
+                                                       System.Reflection.BindingFlags.Public);
+            if (load == null) return;
+            var settings = load.Invoke(null, null) as ScriptableObject;
+            if (settings == null) return;
+            var so = new SerializedObject(settings);
+            Set(so, "adMobAndroidAppId", Env("BONKADOO_ADMOB_ANDROID_APP_ID", Bonkadoo.Infrastructure.Unity.AdMobConfig.SampleAndroidAppId));
+            Set(so, "adMobIOSAppId", Env("BONKADOO_ADMOB_IOS_APP_ID", Bonkadoo.Infrastructure.Unity.AdMobConfig.SampleIosAppId));
+            Set(so, "userTrackingUsageDescription",
+                "Your data is used to show ads that are more relevant. The game works the same if you decline.");
+            so.ApplyModifiedPropertiesWithoutUndo();
+            EditorUtility.SetDirty(settings);
+        }
+
+        private static void Set(SerializedObject so, string field, string value)
+        {
+            var prop = so.FindProperty(field);
+            if (prop != null) prop.stringValue = value;
+        }
+
+        internal static string Env(string name, string fallback)
+        {
+            var v = Environment.GetEnvironmentVariable(name);
+            return string.IsNullOrWhiteSpace(v) ? fallback : v.Trim();
         }
 
         private static void EnsureScenes()

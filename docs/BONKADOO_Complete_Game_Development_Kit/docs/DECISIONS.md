@@ -26,3 +26,6 @@
 | D23 | Gameplay stage built in uGUI (labelled hotspot buttons, EventSystem drag/drop) instead of world-space sprites | accepted; production art drops into the same Image slots |
 | D24 | Release builds without an integrated ad SDK show no ads at all (NullAdService); dev builds use a simulated ad service | interim until T018 SDK + ad unit IDs |
 | D25 | Interstitial "puzzle active" = item selected or drag in progress; scene/chapter transitions are the natural breaks | reversible |
+| D26 | No analytics or telemetry SDK in v1; ad SDK impressions are the only third-party data flow (behind consent) | reversible; product decision |
+| D27 | Google Mobile Ads 11.5.0 via OpenUPM (11.6 needs the sign-in-gated Unity registry EDM); sample IDs locally, real IDs from CI secrets; release + sample IDs => no ads | accepted |
+| D28 | Banner: fixed 320x50dp at top, gameplay screen only; all gameplay UI is inset below its measured height | accepted |

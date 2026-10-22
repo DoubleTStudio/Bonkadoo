@@ -37,7 +37,10 @@ namespace Bonkadoo.Infrastructure.Unity
         {
             try
             {
-                if (UnityServices.State == ServicesInitializationState.Uninitialized) await UnityServices.InitializeAsync();
+                // linking a Unity Cloud project is an account step (human gate); without it UGS init only throws
+                if (!string.IsNullOrEmpty(UnityEngine.Application.cloudProjectId) &&
+                    UnityServices.State == ServicesInitializationState.Uninitialized)
+                    await UnityServices.InitializeAsync();
             }
             catch (Exception ex)
             {

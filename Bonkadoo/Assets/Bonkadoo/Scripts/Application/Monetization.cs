@@ -28,6 +28,8 @@ namespace Bonkadoo.Application
         /// <summary>Calls back exactly once with whether an impression happened. Must never throw or block.</summary>
         void ShowInterstitial(Action<bool> closed);
         void SetBannerVisible(bool visible);
+        /// <summary>Screen pixels the banner occupies at the top edge (0 when hidden or unknown).</summary>
+        float BannerHeightPixels { get; }
     }
 
     public interface IEntitlements
@@ -60,11 +62,30 @@ namespace Bonkadoo.Application
         public bool DialogueActive { get; set; }
         public bool PuzzleActive { get; set; }
         public bool ShowingInterstitial { get; private set; }
+        private bool _bannerAllowedHere;
+
+        /// <summary>Banners appear only on surfaces that reserve space for them (gameplay), never menus.</summary>
+        public bool BannerAllowedHere
+        {
+            get => _bannerAllowedHere;
+            set { _bannerAllowedHere = value; RefreshBanner(); }
+        }
+
+        public float BannerHeightPixels
+        {
+            get
+            {
+                try { return BannerVisible ? _ads.BannerHeightPixels : 0f; }
+                catch (Exception) { return 0f; }
+            }
+        }
         public int Impressions { get; private set; }
         public AdDecision LastDecision { get; private set; }
         /// <summary>Whether the banner should currently occupy its reserved strip.</summary>
         public bool BannerVisible { get; private set; }
         public event Action<bool> BannerChanged;
+        /// <summary>SDK failures are contained, but reported so they can be logged.</summary>
+        public event Action<Exception> SdkError;
 
         public AdCoordinator(IAdPolicy policy, IAdService ads, IEntitlements entitlements, ActivePlayClock clock,
             Func<bool> isFirstSession)
@@ -94,10 +115,11 @@ namespace Bonkadoo.Application
                     SafeLoad();
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // ad SDK failure must never block play
                 ConsentResolved = false;
+                SdkError?.Invoke(ex);
             }
         }
 
@@ -136,9 +158,10 @@ namespace Bonkadoo.Application
                     SafeLoad();
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 ShowingInterstitial = false;
+                SdkError?.Invoke(ex);
                 return false;
             }
             return true;
@@ -146,9 +169,13 @@ namespace Bonkadoo.Application
 
         public void RefreshBanner()
         {
-            var visible = _policy.CanShowBanner(Context(false));
+            var visible = _bannerAllowedHere && _policy.CanShowBanner(Context(false));
             try { _ads.SetBannerVisible(visible); }
-            catch (Exception) { visible = false; }
+            catch (Exception ex)
+            {
+                visible = false;
+                SdkError?.Invoke(ex);
+            }
             if (visible == BannerVisible) return;
             BannerVisible = visible;
             BannerChanged?.Invoke(visible);
@@ -164,7 +191,7 @@ namespace Bonkadoo.Application
         {
             if (_entitlements.RemoveAdsOwned) return;
             try { _ads.LoadInterstitial(); }
-            catch (Exception) { /* retried at next break */ }
+            catch (Exception ex) { SdkError?.Invoke(ex); }
         }
     }
 
@@ -173,6 +200,7 @@ namespace Bonkadoo.Application
     {
         public bool IsInterstitialReady => false;
         public bool BannerVisible { get; private set; }
+        public float BannerHeightPixels => 0f;
         public void Initialize(Action<bool> consentResolved) => consentResolved?.Invoke(false);
         public void LoadInterstitial() { }
         public void ShowInterstitial(Action<bool> closed) => closed?.Invoke(false);

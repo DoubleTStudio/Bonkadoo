@@ -1,8 +1,13 @@
 {
     "name": "Bonkadoo.Editor",
     "rootNamespace": "Bonkadoo.Editor",
-    "references": ["Bonkadoo.Presentation"],
-    "includePlatforms": ["Editor"],
+    "references": [
+        "Bonkadoo.Presentation",
+        "Bonkadoo.Infrastructure.Unity"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

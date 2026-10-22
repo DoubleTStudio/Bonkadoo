@@ -98,6 +98,7 @@ namespace Bonkadoo.Tests.Monetization
             public bool Ready = true, Throw, NeverCallsBack;
             public int Shows, Loads;
             public bool? Banner;
+            public float BannerHeightPixels => 100f;
             public bool IsInterstitialReady => Throw ? throw new InvalidOperationException("sdk") : Ready;
             public void Initialize(Action<bool> consentResolved) { if (Throw) throw new InvalidOperationException("sdk"); consentResolved(true); }
             public void LoadInterstitial() { Loads++; if (Throw) throw new InvalidOperationException("sdk"); }
@@ -124,7 +125,7 @@ namespace Bonkadoo.Tests.Monetization
             _ads = new FakeAds();
             _owned = new Owned();
             _clock = new ActivePlayClock();
-            _coordinator = new AdCoordinator(new AdPolicy(), _ads, _owned, _clock, () => false);
+            _coordinator = new AdCoordinator(new AdPolicy(), _ads, _owned, _clock, () => false) { BannerAllowedHere = true };
         }
 
         private void Play(double seconds)
@@ -175,6 +176,18 @@ namespace Bonkadoo.Tests.Monetization
             Play(400);
             Assert.IsFalse(_coordinator.OnNaturalBreak());
             Assert.AreEqual(AdDecision.RemoveAdsOwned, _coordinator.LastDecision);
+        }
+
+        [Test]
+        public void BannerOnlyWhereSpaceIsReserved()
+        {
+            _coordinator.Start();
+            _coordinator.BannerAllowedHere = false;
+            Assert.AreEqual(false, _ads.Banner);
+            Assert.AreEqual(0f, _coordinator.BannerHeightPixels);
+            _coordinator.BannerAllowedHere = true;
+            Assert.AreEqual(true, _ads.Banner);
+            Assert.AreEqual(100f, _coordinator.BannerHeightPixels);
         }
 
         [Test]

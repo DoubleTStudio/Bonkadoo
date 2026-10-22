@@ -17,6 +17,12 @@
     "precompiledReferences": [],
     "autoReferenced": false,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.google.ads.mobile",
+            "expression": "11.0.0",
+            "define": "BONKADOO_ADMOB"
+        }
+    ],
     "noEngineReferences": false
 }

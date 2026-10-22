@@ -17,12 +17,13 @@ namespace Bonkadoo.Presentation.Screens
     /// </summary>
     public sealed class GameplayScreen : ScreenBase
     {
-        private const float TopBar = 0.11f, InventoryHeight = 0.17f, BannerHeight = 0.08f;
+        private const float TopBar = 0.11f, InventoryHeight = 0.17f;
 
         private StageView _stage;
         private InventoryBar _inventory;
         private DialoguePanel _dialogue;
-        private RectTransform _stageArea, _banner;
+        private RectTransform _stageArea, _banner, _content;
+        private float _bannerInset = -1;
         private LocalizedText _sceneName, _objective, _caption;
         private Button _hint;
         private GameObject _overlay;
@@ -45,7 +46,12 @@ namespace Bonkadoo.Presentation.Screens
                 return;
             }
 
-            var top = UiKit.Rect("TopBar", Root).Anchor(new Vector2(0, 1 - TopBar), Vector2.one);
+            // banner (when shown) sits above everything; gameplay content is inset below its real height
+            _banner = UiKit.Image("BannerSlot", Root, new Color(1, 1, 1, 0.1f)).rectTransform;
+            UiKit.Label("BannerLabel", _banner, "ui.ad.banner_test", 22, UiKit.Muted).GetComponent<RectTransform>().Stretch();
+            _content = UiKit.Rect("Content", Root).Stretch();
+
+            var top = UiKit.Rect("TopBar", _content).Anchor(new Vector2(0, 1 - TopBar), Vector2.one);
             UiKit.Button("Game:Menu", top, "ui.game.menu", OpenPause).GetComponent<RectTransform>()
                 .Anchor(new Vector2(0, 0.08f), new Vector2(0.11f, 0.92f), new Vector2(12, 0), Vector2.zero);
             _sceneName = UiKit.Label("SceneName", top, null, 36, Color.white, TextAnchor.UpperCenter);
@@ -57,16 +63,13 @@ namespace Bonkadoo.Presentation.Screens
             _hint = UiKit.Button("Game:Hint", top, "ui.game.hint", RevealHint, UiKit.Accent);
             _hint.GetComponent<RectTransform>().Anchor(new Vector2(0.89f, 0.08f), new Vector2(1f, 0.92f), Vector2.zero, new Vector2(-12, 0));
 
-            _banner = UiKit.Image("BannerSlot", Root, new Color(1, 1, 1, 0.08f)).rectTransform;
-            _banner.Anchor(new Vector2(0.3f, 1 - TopBar - BannerHeight), new Vector2(0.7f, 1 - TopBar));
-            UiKit.Label("BannerLabel", _banner, "ui.ad.banner_test", 22, UiKit.Muted).GetComponent<RectTransform>().Stretch();
-
-            _stageArea = UiKit.Rect("StageHolder", Root);
+            _stageArea = UiKit.Rect("StageHolder", _content);
+            _stageArea.Anchor(new Vector2(0, InventoryHeight), new Vector2(1, 1 - TopBar), new Vector2(16, 8), new Vector2(-16, -4));
             _stage = StageView.Create(_stageArea);
             _stage.HotspotTapped += OnHotspotTapped;
             _stage.ItemDropped += (v, item) => Resolve(() => flow.Controller.DragItemOnto(item, v.Info));
 
-            var invArea = UiKit.Rect("InventoryArea", Root).Anchor(Vector2.zero, new Vector2(1, InventoryHeight));
+            var invArea = UiKit.Rect("InventoryArea", _content).Anchor(Vector2.zero, new Vector2(1, InventoryHeight));
             _inventory = InventoryBar.Create(invArea, Canvas, App.Content.Scenes);
             _inventory.ItemTapped += id =>
             {
@@ -83,25 +86,25 @@ namespace Bonkadoo.Presentation.Screens
 
             if (flow.IsReplay)
             {
-                var replay = UiKit.Image("ReplayBanner", Root, new Color(0.88f, 0.48f, 0.37f, 0.9f));
+                var replay = UiKit.Image("ReplayBanner", _content, new Color(0.88f, 0.48f, 0.37f, 0.9f));
                 replay.rectTransform.Anchor(new Vector2(0.25f, InventoryHeight), new Vector2(0.75f, InventoryHeight + 0.05f));
                 UiKit.Label("Text", replay.transform, "ui.replay.banner", 24, Color.white).GetComponent<RectTransform>().Stretch();
             }
 
-            _caption = UiKit.Label("Caption", Root, null, 26, UiKit.Accent, TextAnchor.UpperRight);
+            _caption = UiKit.Label("Caption", _content, null, 26, UiKit.Accent, TextAnchor.UpperRight);
             _caption.GetComponent<RectTransform>().Anchor(new Vector2(0.55f, 1 - TopBar - 0.06f), new Vector2(0.99f, 1 - TopBar));
             AudioService.CaptionRaised += OnCaption;
 
-            _dialogue = DialoguePanel.Create(Root);
+            _dialogue = DialoguePanel.Create(_content);
             _dialogue.Bind(flow.Conversation);
             _dialogue.Idle += OnDialogueIdle;
 
             flow.OutcomeResolved += OnOutcome;
             flow.SceneChanged += OnSceneChanged;
             flow.SessionStarted += OnSessionStarted;
-            App.Ads.BannerChanged += OnBannerChanged;
             SimulatedAdService.InterstitialRequested += ShowTestInterstitial;
-            OnBannerChanged(App.Ads.BannerVisible);
+            App.Ads.BannerAllowedHere = true;
+            LayoutBanner();
             ShowScene();
             if (flow.Conversation != null && flow.Conversation.IsActive) _dialogue.Sync();
         }
@@ -114,7 +117,7 @@ namespace Bonkadoo.Presentation.Screens
             App.Flow.OutcomeResolved -= OnOutcome;
             App.Flow.SceneChanged -= OnSceneChanged;
             App.Flow.SessionStarted -= OnSessionStarted;
-            App.Ads.BannerChanged -= OnBannerChanged;
+            App.Ads.BannerAllowedHere = false;
             App.Ads.DialogueActive = false;
             App.Ads.PuzzleActive = false;
         }
@@ -138,12 +141,17 @@ namespace Bonkadoo.Presentation.Screens
             App.Audio?.PlayMusic(scene.Music);
         }
 
-        private void OnBannerChanged(bool visible)
+        /// <summary>Insets all gameplay UI below the banner so it never covers controls or puzzle objects (ADS_AND_IAP).</summary>
+        private void LayoutBanner()
         {
-            // the stage shrinks below the banner so ads never cover puzzle objects (ADS_AND_IAP)
-            _banner.gameObject.SetActive(visible && Debug.isDebugBuild);
-            var topEdge = 1 - TopBar - (visible ? BannerHeight : 0);
-            _stageArea.Anchor(new Vector2(0, InventoryHeight), new Vector2(1, topEdge), new Vector2(16, 8), new Vector2(-16, -4));
+            var px = App.Ads.BannerHeightPixels;
+            if (Mathf.Approximately(px, _bannerInset)) return;
+            _bannerInset = px;
+            var scale = Canvas.scaleFactor > 0 ? Canvas.scaleFactor : 1f;
+            var inset = px / scale;
+            _banner.gameObject.SetActive(px > 0 && Debug.isDebugBuild);
+            _banner.Anchor(new Vector2(0, 1), Vector2.one, new Vector2(0, -inset), Vector2.zero);
+            _content.offsetMax = new Vector2(0, -inset);
         }
 
         private void OnHotspotTapped(HotspotView view)
@@ -236,6 +244,7 @@ namespace Bonkadoo.Presentation.Screens
         private void Update()
         {
             if (App?.Flow.Session == null) return;
+            LayoutBanner();
             var busy = _dialogue != null && _dialogue.IsBusy;
             App.Ads.DialogueActive = busy;
             App.Ads.PuzzleActive = _draggingItem != null || App.Flow.Controller.SelectedItemId != null;
